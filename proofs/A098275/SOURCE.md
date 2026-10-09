@@ -1,6 +1,5 @@
-# A098275 — source and statement moved
+# A098275 — Source and Statement
 
-The maintained source and statement is now at
-[`proofs/new-results/A098275/SOURCE.md`](../new-results/A098275/SOURCE.md).
+See the maintained [source and statement](../new-proofs/A098275/SOURCE.md) in **New Proofs**.
 
 This page preserves older links. The `v1.0.0` release is unchanged.

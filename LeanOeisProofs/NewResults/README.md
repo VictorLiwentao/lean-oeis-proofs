@@ -1,5 +1,3 @@
-# Proposed new mathematical results
+# Compatibility imports
 
-The proof modules in this folder are candidates for new mathematical results; their priority remains unestablished. The old module paths remain compatibility imports, and theorem names are unchanged.
-
-See the [proof notes and category information](../../proofs/new-results/).
+The maintained modules are in [NewProofs](../NewProofs/). This directory preserves previously published import paths; it is not a separate proof category.

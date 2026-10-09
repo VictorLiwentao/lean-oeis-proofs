@@ -1,6 +1,5 @@
-# A280246 — proof moved
+# A280246 — Proof
 
-The maintained proof is now at
-[`proofs/new-results/A280246/PROOF.md`](../new-results/A280246/PROOF.md).
+See the maintained [proof](../new-proofs/A280246/PROOF.md) in **New Proofs**.
 
 This page preserves older links. The `v1.0.0` release is unchanged.

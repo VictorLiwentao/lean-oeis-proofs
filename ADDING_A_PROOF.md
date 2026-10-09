@@ -6,24 +6,25 @@ Author: Wentao Li
 
 Record the exact verified commit, the original OEIS definition, the conjecture clause and domain, the Lean compiler result, and the main theorem's axiom footprint. An unfinished proof or a proof of a surrogate sequence is not a completed OEIS result.
 
-## 2. Choose a category
+## 2. Choose one of the two categories
 
-| Lean category | Proof-note category | Use when |
-| --- | --- | --- |
-| `NewResults` | `new-results` | The result is proposed as new mathematics. Record the bounded prior-art search and explicitly state any unresolved priority. |
-| `KnownResults` | `known-results` | A prior mathematical proof is known. Cite it and explain what the Lean formalization adds. |
-| `UnderReview` | `under-review` | The proof is verified, but classification is unresolved, a prior general theorem may cover it, or there is existing Lean overlap. |
+| Category | Lean folder | Proof-note folder | Contribution |
+| --- | --- | --- | --- |
+| **New Proofs** | `NewProofs` | `new-proofs` | A new mathematical proof or disproof, with Lean verification. Record the original conjecture and prior-work search. |
+| **Lean Formalizations of Known Results** | `Formalizations` | `formalizations` | A Lean formalization of an existing mathematical proof. Cite the original proof and credit its authors. |
 
-Record mathematical novelty and earlier Lean coverage separately. A new proof of a known theorem is still known mathematics. A disproof is a result, but numerical evidence alone is not a proof. Classify each conjecture clause separately when a sequence has several targets; split files if their categories differ.
+Record the exact contribution and any earlier Lean coverage in `SOURCE.md`. Keep literature-search notes and unresolved publication questions on the individual source page, rather than labeling a completed proof as unverified. An unresolved mathematical argument stays in the research workspace until it is proved. Numerical evidence is not a proof.
+
+Classify each conjecture clause separately when a sequence has multiple targets. Do not treat OEIS publication or a successful Lean check alone as evidence of first-ever mathematical priority.
 
 ## 3. Add the formal source and proof notes
 
 Use the following layout, substituting the chosen category and an exact-target suffix when needed:
 
 ```text
-LeanOeisProofs/NewResults/AXXXXXX.lean
-proofs/new-results/AXXXXXX/SOURCE.md
-proofs/new-results/AXXXXXX/PROOF.md
+LeanOeisProofs/NewProofs/AXXXXXX.lean
+proofs/new-proofs/AXXXXXX/SOURCE.md
+proofs/new-proofs/AXXXXXX/PROOF.md
 ```
 
 `SOURCE.md` must record the statement, quantifiers, original mathematical author, dated source links, main Lean theorem, verification evidence, mathematical novelty assessment, and earlier Lean coverage. Cite the original proof for known mathematics. State the limits and date of any search claiming that no exact earlier proof was found.
@@ -49,7 +50,7 @@ Check redistribution licenses before copying external helper code. Preserve math
 Add the categorized module to `LeanOeisProofs.lean`, for example:
 
 ```lean
-import LeanOeisProofs.NewResults.AXXXXXX
+import LeanOeisProofs.NewProofs.AXXXXXX
 ```
 
 Update the root README and the relevant category index with the exact target, contribution status, proof note and Lean source. When moving a published module, leave its old path as a compatibility import; preserve theorem names and old documentation links. Never move an existing release tag.
@@ -60,7 +61,7 @@ Run:
 
 ```bash
 lake build
-lake env lean LeanOeisProofs/NewResults/AXXXXXX.lean
+lake env lean LeanOeisProofs/NewProofs/AXXXXXX.lean
 ```
 
 Inspect `#print axioms <main theorem>` and check the proof's transitive dependencies. The completed general theorem must not depend on `sorryAx`, custom mathematical axioms, or compiler-trust axioms from `native_decide`. Keep numerical experiments separate from a general proof.

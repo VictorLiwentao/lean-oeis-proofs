@@ -1,70 +1,63 @@
-# OEIS Proofs and Lean Formalizations
+# OEIS: New Proofs and Lean Formalizations
 
-Author: Wentao Li
+**Wentao Li**
 
-This repository collects proposed new results about OEIS sequences and Lean 4 formalizations of known mathematics. Each result includes the exact statement, a readable proof, and a reproducible formalization in Mathlib.
+Mathematical proofs about OEIS sequences, with readable explanations and Lean 4 verification. The collection has two categories:
 
-Each formalization targets the original OEIS definition of the sequence, rather than a recurrence-defined or otherwise surrogate sequence.
-
-## Browse by contribution
-
-| Category | What it means | Proof notes | Lean sources |
+| Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
-| **NewResults** | Proposed new mathematical proofs or disproofs. Priority remains unestablished unless separately documented. | [new-results](proofs/new-results/) | [NewResults](LeanOeisProofs/NewResults/) |
-| **KnownResults** | Lean formalizations of previously proved mathematics, with the original mathematical source credited. | [known-results](proofs/known-results/) | [KnownResults](LeanOeisProofs/KnownResults/) |
-| **UnderReview** | Verified results with unresolved novelty, suspected prior-theorem coverage, or existing Lean overlap. | [under-review](proofs/under-review/) | [UnderReview](LeanOeisProofs/UnderReview/) |
+| **New Proofs** | New mathematical proofs and disproofs developed by Wentao Li, with Lean verification. | [New Proofs](proofs/new-proofs/) | [NewProofs](LeanOeisProofs/NewProofs/) |
+| **Lean Formalizations of Known Results** | Formalizations of existing mathematical proofs, with attribution to the original authors. | [Formalizations](proofs/formalizations/) | [Formalizations](LeanOeisProofs/Formalizations/) |
 
-Lean verification and mathematical novelty are separate. A `NewResults` folder does not establish first-ever discovery; a `KnownResults` folder does not establish the first Lean formalization. Each result's `SOURCE.md` records those assessments separately, including the date and limits of the prior-art search.
+## New Proofs
 
-## Published results
+All three proofs below are complete, Lean-verified, and published in this repository.
 
-The three existing results are proposed new results, with priority unestablished in the October 7, 2026 review. The other categories are ready for future additions and currently contain no proof modules.
-
-| OEIS / exact target | Result | Proof | Lean |
+| OEIS / target | Result | Readable proof | Lean proof |
 | --- | --- | --- | --- |
-| [A280246](https://oeis.org/A280246) | \(a(n)\) is odd iff \(\psi(n)\) is odd, for \(n>0\) | [proof](proofs/new-results/A280246/PROOF.md) | [Lean](LeanOeisProofs/NewResults/A280246.lean) |
-| [A098275, C1](https://oeis.org/A098275) | \((n+1)\mid a(n)\) for all \(n\ge 0\) | [proof](proofs/new-results/A098275/PROOF.md) | [Lean](LeanOeisProofs/NewResults/A098275.lean) |
-| [A220119, C1](https://oeis.org/A220119) | \((n+1)(n+2)\mid a(n)\) for all \(n>0\) | [proof](proofs/new-results/A220119/PROOF.md) | [Lean](LeanOeisProofs/NewResults/A220119.lean) |
+| [A220119, Conjecture 1](https://oeis.org/A220119) | `a(n)` is divisible by `(n+1)(n+2)` for every `n > 0` | [Proof](proofs/new-proofs/A220119/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A220119.lean) |
+| [A280246](https://oeis.org/A280246) | `a(n)` is odd iff the sum of totatives of `n` is odd, for `n > 0` | [Proof](proofs/new-proofs/A280246/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A280246.lean) |
+| [A098275, Conjecture 1](https://oeis.org/A098275) | `a(n)` is divisible by `n+1` for every `n >= 0` | [Proof](proofs/new-proofs/A098275/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A098275.lean) |
 
-Each result has a neighboring `SOURCE.md` recording the original definition and exact conjecture. A098275 and A220119 cover the divisibility clauses only; their separate second conjectures are not claimed. A280246's OEIS entry credits Li (2026).
+Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original attribution, publication links, and prior-work notes. The A220119 and A098275 proofs cover their divisibility conjectures. A280246's OEIS entry credits Li (2026).
 
-The original `LeanOeisProofs/Axxxxxx.lean` paths remain working compatibility imports, and the old proof-note paths point to their new locations. The `v1.0.0` tag and its existing OEIS links are unchanged.
+## Lean Formalizations of Known Results
 
-The Lean library and module root is `LeanOeisProofs`. Adding a later result does not require renaming it.
+This section is ready for additions. No proof has been imported into it yet. Each future entry will identify the original mathematical proof and explain the Lean contribution.
 
-## Verification
+## Repository layout
 
-Lean is pinned by `lean-toolchain`. Mathlib and its transitive dependencies are pinned by `lake-manifest.json`.
+```text
+LeanOeisProofs/
+  NewProofs/          Lean proofs of the new contributions
+  Formalizations/    Lean formalizations of known results
+proofs/
+  new-proofs/        Readable proofs and exact statements
+  formalizations/    Explanations and original references
+verification/        Compiler and axiom-check records
+```
 
-On a fresh checkout, first run:
+Older module paths and proof-note paths remain compatibility links. The existing `v1.0.0` release and OEIS links are preserved.
+
+## Verify the proofs
+
+Lean is pinned by `lean-toolchain`; Mathlib and its dependencies are pinned by `lake-manifest.json`.
 
 ```bash
 lake exe cache get
 lake build
 ```
 
-This builds the library, including the A220119 dependency on A098275.
-
-After that, individual files may optionally be checked with:
+After the build, an individual proof can also be checked with:
 
 ```bash
-lake env lean LeanOeisProofs/NewResults/A280246.lean
-lake env lean LeanOeisProofs/NewResults/A098275.lean
-lake env lean LeanOeisProofs/NewResults/A220119.lean
+lake env lean LeanOeisProofs/NewProofs/A220119.lean
 ```
 
-Each main theorem reports the axiom footprint `[propext, Classical.choice, Quot.sound]`. No custom mathematical axioms are introduced. The general theorems contain no `sorry`, `admit`, `sorryAx`, custom axiom, or `native_decide` proof.
+The main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Their proofs contain no `sorry`, `admit`, custom mathematical axioms, or `native_decide`. See the [verification records](verification/README.md).
 
-## AI assistance
+## Attribution and contributions
 
-AI systems materially assisted mathematical exploration, proof search, critique, and Lean formalization.
+AI systems materially assisted mathematical exploration, proof search, critique, and Lean formalization. See [PROVENANCE.md](PROVENANCE.md) for attribution and the research record, and [ADDING_A_PROOF.md](ADDING_A_PROOF.md) for the publication workflow.
 
-Author: Wentao Li
-
-Details of the research workflow and independently performed checks are recorded in [PROVENANCE.md](PROVENANCE.md).
-
-For future additions, follow [ADDING_A_PROOF.md](ADDING_A_PROOF.md), including attribution of the original mathematics and any reused formalization.
-
-## License
-
-The contents of this repository are licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
+Licensed under the [Apache License, Version 2.0](LICENSE).

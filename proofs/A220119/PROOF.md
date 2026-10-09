@@ -1,6 +1,5 @@
-# A220119 — proof moved
+# A220119 — Proof
 
-The maintained proof is now at
-[`proofs/new-results/A220119/PROOF.md`](../new-results/A220119/PROOF.md).
+See the maintained [proof](../new-proofs/A220119/PROOF.md) in **New Proofs**.
 
 This page preserves older links. The `v1.0.0` release is unchanged.

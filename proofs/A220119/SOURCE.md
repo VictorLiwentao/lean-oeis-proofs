@@ -1,6 +1,5 @@
-# A220119 — source and statement moved
+# A220119 — Source and Statement
 
-The maintained source and statement is now at
-[`proofs/new-results/A220119/SOURCE.md`](../new-results/A220119/SOURCE.md).
+See the maintained [source and statement](../new-proofs/A220119/SOURCE.md) in **New Proofs**.
 
 This page preserves older links. The `v1.0.0` release is unchanged.

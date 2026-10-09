@@ -51,33 +51,32 @@ Publication cleanup consisted of authorship and license headers, public document
 
 **A280246.** The research record describes an elementary classification of those \(n\) for which \(\psi(n)\) is odd, together with divisor-closure of that class, and a separate 2-adic argument not used in the Lean file. Independent proof and skeptic trajectories were run; the compiled formalization follows the classification.
 
-**A098275.** The compiled proof is the Vandermonde–ballot–Catalan argument recorded in [`proofs/new-results/A098275/PROOF.md`](proofs/new-results/A098275/PROOF.md). The research record names three AI-assisted trajectories used at that stage: a direct prover (Cursor Fable), an alternate prover (Cursor Grok 4.6), and a skeptic (Cursor Grok 4.6). The alternate route is not the Lean proof.
+**A098275.** The compiled proof is the Vandermonde–ballot–Catalan argument recorded in [`proofs/new-proofs/A098275/PROOF.md`](proofs/new-proofs/A098275/PROOF.md). The research record names three AI-assisted trajectories used at that stage: a direct prover (Cursor Fable), an alternate prover (Cursor Grok 4.6), and a skeptic (Cursor Grok 4.6). The alternate route is not the Lean proof.
 
-**A220119.** The compiled proof is the elementary Vandermonde convolution and prime-power reflection argument recorded in [`proofs/new-results/A220119/PROOF.md`](proofs/new-results/A220119/PROOF.md). An earlier constant-term approach is not part of the verified theorem and is not included here. Several independent branches reproduced the elementary route before formalization. Specific model names for those branches are not recorded with enough certainty to list.
+**A220119.** The compiled proof is the elementary Vandermonde convolution and prime-power reflection argument recorded in [`proofs/new-proofs/A220119/PROOF.md`](proofs/new-proofs/A220119/PROOF.md). An earlier constant-term approach is not part of the verified theorem and is not included here. Several independent branches reproduced the elementary route before formalization. Specific model names for those branches are not recorded with enough certainty to list.
 
 ## Axiom footprint
 
 For each main theorem, Lean reports the axiom footprint `[propext, Classical.choice, Quot.sound]`. These are the standard Lean axioms, not additional mathematical hypotheses of the theorems. No custom axiom is introduced in the formalizations.
 
-## Organization update — October 8, 2026
+## Repository organization — October 8, 2026
 
-The three published formalizations now live in `LeanOeisProofs/NewResults/`,
-with proof notes under `proofs/new-results/`. This category means proposed new
-mathematical results whose priority is still unestablished. It does not convert
-the bounded novelty review into a first-discovery claim.
+The published collection has two categories: **New Proofs** and **Lean
+Formalizations of Known Results**. A220119-C1, A280246, and A098275-C1 are completed
+new proofs with Lean verification. Their canonical modules are in
+`LeanOeisProofs/NewProofs/`, with readable proofs under `proofs/new-proofs/`.
 
-`KnownResults` is reserved for formalizations of previously proved mathematics;
-`UnderReview` is reserved for verified results whose classification is unresolved,
-including suspected prior-theorem coverage or existing Lean overlap. Each future
-addition must record the original mathematical and formalization sources.
+The formalizations section is ready for future additions and currently contains
+no proof modules. Original mathematical authors and reused formalization sources
+will be credited with each addition.
 
-The October 8 organization change preserves the mathematical definitions, theorem
-statements and proof bodies. Only module imports and documentation paths change.
-The original module paths remain compatibility imports, and the published
-`v1.0.0` tag is unchanged.
+Prior-work notes are kept on each source page, separately from the proof's
+verification status.
 
-All three reorganized proof modules, all three compatibility modules, and the root
-library were rebuilt with the pinned Lean compiler on October 8. The main theorem
-axioms remain `[propext, Classical.choice, Quot.sound]`. Lake itself crashed on
-this machine; this was a direct compiler check, not a successful `lake build`.
-See the [verification record](verification/README.md) for the method and output.
+The original module names and the earlier `NewResults` module names remain
+compatibility imports. Existing proof-note links and the `v1.0.0` release are
+preserved. The reorganization changes only import paths and documentation;
+mathematical definitions, statements and proof bodies are unchanged.
+
+See the [verification records](verification/README.md) for the checks of each
+published layout. The earlier compiler record is preserved as historical evidence.

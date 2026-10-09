@@ -1,6 +1,5 @@
-# A098275 — proof moved
+# A098275 — Proof
 
-The maintained proof is now at
-[`proofs/new-results/A098275/PROOF.md`](../new-results/A098275/PROOF.md).
+See the maintained [proof](../new-proofs/A098275/PROOF.md) in **New Proofs**.
 
 This page preserves older links. The `v1.0.0` release is unchanged.

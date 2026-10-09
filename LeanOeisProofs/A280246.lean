@@ -6,7 +6,7 @@ Authors: Wentao Li
 import LeanOeisProofs.NewResults.A280246
 
 /-!
-Compatibility import. The proof is now in `LeanOeisProofs/NewResults/A280246.lean`.
-The theorem names are unchanged. See `proofs/new-results/A280246/SOURCE.md`
-for the exact statement and the distinction between proof verification and novelty.
+Compatibility import. The proof is now in `LeanOeisProofs/NewProofs/A280246.lean`.
+The theorem names are unchanged. See `proofs/new-proofs/A280246/SOURCE.md`
+for the exact statement, contribution, and publication links.
 -/
