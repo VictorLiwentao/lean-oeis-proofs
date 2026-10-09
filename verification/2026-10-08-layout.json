@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-08",
+  "toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "method": "Direct pinned Lean compiler; fresh outputs, dependencies at lake-manifest commits; Lake --version printed its version then exited 133 (SIGTRAP). No old project oleans in LEAN_PATH.",
+  "compiler_options": [
+    "relaxedAutoImplicit=false",
+    "pp.unicode.fun=true",
+    "weak.linter.mathlibStandardSet=true",
+    "maxSynthPendingDepth=3"
+  ],
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "commit": "85e3a25e006c35636f0e53b0e9296caca2685bc0"
+    },
+    {
+      "name": "plausible",
+      "commit": "d9598f07b1bc701f1e3aae163d2681c1fd978793"
+    },
+    {
+      "name": "LeanSearchClient",
+      "commit": "ba67e212be1197b84c1f1f6299488a10a3002713"
+    },
+    {
+      "name": "importGraph",
+      "commit": "d8823026ac7ef130c253089d95685f9877b95323"
+    },
+    {
+      "name": "proofwidgets",
+      "commit": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f"
+    },
+    {
+      "name": "aesop",
+      "commit": "18889deb9e83ea7420ef51c160d6f88552e744e3"
+    },
+    {
+      "name": "Qq",
+      "commit": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3"
+    },
+    {
+      "name": "batteries",
+      "commit": "d54dddc581e08be364c278052863524bff7a99a9"
+    },
+    {
+      "name": "Cli",
+      "commit": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+    }
+  ],
+  "modules": [
+    {
+      "module": "LeanOeisProofs/NewResults/A098275.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 95.2,
+      "sha256": "bbd2a78474eedfff84c9026ebe69478a8bf3993d4813ecffbb0d9fe1f467d24b",
+      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewResults/A280246.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 95.3,
+      "sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
+      "output": "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewResults/A220119.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 74.0,
+      "sha256": "9c1d85be6c59e93f086da322223032f9fdb04c9da15862bd7346d6fde04e5196",
+      "output": "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/A098275.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 65.3,
+      "sha256": "8df27735b05d61456a0d8a7d1cbb9b0d235ed17edd1992913a059771a2a52744",
+      "output": ""
+    },
+    {
+      "module": "LeanOeisProofs/A280246.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 61.7,
+      "sha256": "a2ae9a08cb76193b8114923f09b7ffa63a7b3c5301ac24ef1fbaa0405c8011ec",
+      "output": ""
+    },
+    {
+      "module": "LeanOeisProofs/A220119.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 60.2,
+      "sha256": "97ba080d960f643b9938a43a90043a5d66c896d088ec1259351615d44dacae0e",
+      "output": ""
+    },
+    {
+      "module": "LeanOeisProofs.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 59.7,
+      "sha256": "514067b4b8141c2943c9d6eb85684cf50d791e4f6aca9e4c7fa5c24089b2e6b1",
+      "output": ""
+    }
+  ],
+  "all_modules_passed": true,
+  "source_comparison": "The three mathematical sources match parent df9d9b8 after normalization of the A220119 import path and the A098275 documentation link; definitions, statements and proof bodies unchanged.",
+  "release_tag_object_preserved": "e0c19a7f803a7376a702094e40e2f005013a7a02",
+  "command_template": "LEAN_PATH=<fresh output directory>:<pinned package .lake/build/lib/lean paths> <pinned lean binary> -DrelaxedAutoImplicit=false -Dpp.unicode.fun=true -Dweak.linter.mathlibStandardSet=true -DmaxSynthPendingDepth=3 -o <fresh module .olean> <module .lean>"
+}
