@@ -59,24 +59,20 @@ Publication cleanup consisted of authorship and license headers, public document
 
 For each main theorem, Lean reports the axiom footprint `[propext, Classical.choice, Quot.sound]`. These are the standard Lean axioms, not additional mathematical hypotheses of the theorems. No custom axiom is introduced in the formalizations.
 
-## Repository organization — October 8, 2026
+## Repository organization — October 9, 2026
 
-The published collection has two categories: **New Proofs** and **Lean
-Formalizations of Known Results**. A220119-C1, A280246, and A098275-C1 are completed
-new proofs with Lean verification. Their canonical modules are in
-`LeanOeisProofs/NewProofs/`, with readable proofs under `proofs/new-proofs/`.
+The collection has two categories: **New Proofs** and **Lean Formalizations of
+Known Results**. The root README is the main navigation page.
 
-The formalizations section is ready for future additions and currently contains
-no proof modules. Original mathematical authors and reused formalization sources
-will be credited with each addition.
+Each published problem has one canonical Lean file in `LeanOeisProofs/NewProofs/`
+and one readable proof/source pair in `proofs/new-proofs/`. A220119-C1, A280246,
+and A098275-C1 are the three completed proofs currently included. The
+formalizations folders are reserved for future additions.
 
-Prior-work notes are kept on each source page, separately from the proof's
-verification status.
+The October 9 cleanup removes compatibility modules and redirect documents.
+Canonical proof files, readable proofs, theorem names, authorship, licensing,
+and pinned dependencies are unchanged. The `v1.0.0` release is preserved, so
+OEIS links pinned to that release remain valid.
 
-The original module names and the earlier `NewResults` module names remain
-compatibility imports. Existing proof-note links and the `v1.0.0` release are
-preserved. The reorganization changes only import paths and documentation;
-mathematical definitions, statements and proof bodies are unchanged.
-
-See the [verification records](verification/README.md) for the checks of each
-published layout. The earlier compiler record is preserved as historical evidence.
+See the [current verification report](verification/README.md). Earlier reports
+and repository layouts remain available through Git history.

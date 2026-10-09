@@ -53,7 +53,9 @@ Add the categorized module to `LeanOeisProofs.lean`, for example:
 import LeanOeisProofs.NewProofs.AXXXXXX
 ```
 
-Update the root README and the relevant category index with the exact target, contribution status, proof note and Lean source. When moving a published module, leave its old path as a compatibility import; preserve theorem names and old documentation links. Never move an existing release tag.
+Update the root README with the exact target, contribution status, readable proof, and Lean source. Keep **one canonical location per file; no compatibility copies or redirect files**. When moving a module, update imports and current documentation links and remove the old path. Preserve theorem names and existing release tags; release-pinned links remain available through those tags. Do not add duplicate category indexes.
+
+Keep one current verification report under `verification/`; replace it when the checked state changes. Earlier reports remain available through Git history.
 
 ## 5. Verify and publish
 

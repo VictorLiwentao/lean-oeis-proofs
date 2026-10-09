@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-09",
+  "toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "method": "Direct pinned Lean compiler, dependency-ordered rebuild with at most two compiler processes; only fresh project outputs and pinned dependency libraries in LEAN_PATH. lake build exited 133 (SIGTRAP) on this machine; the fallback check used the pinned Lean binary.",
+  "compiler_options": [
+    "-DrelaxedAutoImplicit=false",
+    "-Dpp.unicode.fun=true",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DmaxSynthPendingDepth=3"
+  ],
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "commit": "85e3a25e006c35636f0e53b0e9296caca2685bc0"
+    },
+    {
+      "name": "plausible",
+      "commit": "d9598f07b1bc701f1e3aae163d2681c1fd978793"
+    },
+    {
+      "name": "LeanSearchClient",
+      "commit": "ba67e212be1197b84c1f1f6299488a10a3002713"
+    },
+    {
+      "name": "importGraph",
+      "commit": "d8823026ac7ef130c253089d95685f9877b95323"
+    },
+    {
+      "name": "proofwidgets",
+      "commit": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f"
+    },
+    {
+      "name": "aesop",
+      "commit": "18889deb9e83ea7420ef51c160d6f88552e744e3"
+    },
+    {
+      "name": "Qq",
+      "commit": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3"
+    },
+    {
+      "name": "batteries",
+      "commit": "d54dddc581e08be364c278052863524bff7a99a9"
+    },
+    {
+      "name": "Cli",
+      "commit": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+    }
+  ],
+  "modules": [
+    {
+      "module": "LeanOeisProofs/NewProofs/A098275.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 87.5,
+      "sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
+      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewProofs/A280246.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 87.5,
+      "sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
+      "output": "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewProofs/A220119.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 54.9,
+      "sha256": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42",
+      "output": "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 46.4,
+      "sha256": "2901dd27c583c1851bed085f4539757b39e518e2873eccf97c39089cdbc7132e",
+      "output": ""
+    }
+  ],
+  "all_modules_passed": true,
+  "module_dependencies": {
+    "LeanOeisProofs/NewProofs/A098275.lean": [],
+    "LeanOeisProofs/NewProofs/A280246.lean": [],
+    "LeanOeisProofs/NewProofs/A220119.lean": [
+      "LeanOeisProofs/NewProofs/A098275.lean"
+    ],
+    "LeanOeisProofs.lean": [
+      "LeanOeisProofs/NewProofs/A098275.lean",
+      "LeanOeisProofs/NewProofs/A280246.lean",
+      "LeanOeisProofs/NewProofs/A220119.lean"
+    ]
+  },
+  "source_comparison": {
+    "base_commit": "429020e12e4cae76d91fc78ac906ce947bd6338a",
+    "canonical_files_byte_for_byte_unchanged": true,
+    "canonical_file_sha256": {
+      "LeanOeisProofs/NewProofs/A098275.lean": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
+      "proofs/new-proofs/A098275/PROOF.md": "2df650b7117422b519bd04531f3d3bc37e2481b60ce5c7890c77cc72db39e5d9",
+      "proofs/new-proofs/A098275/SOURCE.md": "a9399687394385dc973ff786bf6ab6e163a0633c527e877795a8f265971f41f1",
+      "LeanOeisProofs/NewProofs/A220119.lean": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42",
+      "proofs/new-proofs/A220119/PROOF.md": "8113c23a63515dbe4484c18ac82424c8dea34cd37e4799f363e85bfde387b1d2",
+      "proofs/new-proofs/A220119/SOURCE.md": "ea5e1c8c19cc0de0859037698e899eddc7fcd64c5482ebd8e37015d3047b774e",
+      "LeanOeisProofs/NewProofs/A280246.lean": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
+      "proofs/new-proofs/A280246/PROOF.md": "1150cb2457e9469af42da76784e0f6a54247d8e92e8466b1412d7488214d86dc",
+      "proofs/new-proofs/A280246/SOURCE.md": "afcdb71dbb03868a05f8ad531a52a52d55b0c14117fabc64e8a99665f5e57a58"
+    }
+  },
+  "layout_checks": {
+    "problem_lean_files": 3,
+    "readable_proofs": 3,
+    "source_notes": 3,
+    "compatibility_modules": 0,
+    "redirect_documents": 0,
+    "root_imports_canonical_modules_directly": true,
+    "local_markdown_links_checked": 32
+  },
+  "lake_build": {
+    "exit_code": 133,
+    "signal": "SIGTRAP",
+    "output": ""
+  },
+  "release_tag_object_preserved": "e0c19a7f803a7376a702094e40e2f005013a7a02",
+  "command_template": "LEAN_PATH=<fresh output>:<pinned dependency libraries> <pinned lean> <compiler_options> -o <fresh module .olean> <module .lean>"
+}

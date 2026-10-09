@@ -13,11 +13,11 @@ Mathematical proofs about OEIS sequences, with readable explanations and Lean 4 
 
 All three proofs below are complete, Lean-verified, and published in this repository.
 
-| OEIS / target | Result | Readable proof | Lean proof |
-| --- | --- | --- | --- |
-| [A220119, Conjecture 1](https://oeis.org/A220119) | `a(n)` is divisible by `(n+1)(n+2)` for every `n > 0` | [Proof](proofs/new-proofs/A220119/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A220119.lean) |
-| [A280246](https://oeis.org/A280246) | `a(n)` is odd iff the sum of totatives of `n` is odd, for `n > 0` | [Proof](proofs/new-proofs/A280246/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A280246.lean) |
-| [A098275, Conjecture 1](https://oeis.org/A098275) | `a(n)` is divisible by `n+1` for every `n >= 0` | [Proof](proofs/new-proofs/A098275/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A098275.lean) |
+| OEIS / target | Result | Statement | Readable proof | Lean proof |
+| --- | --- | --- | --- | --- |
+| [A220119, Conjecture 1](https://oeis.org/A220119) | `a(n)` is divisible by `(n+1)(n+2)` for every `n > 0` | [Source](proofs/new-proofs/A220119/SOURCE.md) | [Proof](proofs/new-proofs/A220119/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A220119.lean) |
+| [A280246](https://oeis.org/A280246) | `a(n)` is odd iff the sum of totatives of `n` is odd, for `n > 0` | [Source](proofs/new-proofs/A280246/SOURCE.md) | [Proof](proofs/new-proofs/A280246/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A280246.lean) |
+| [A098275, Conjecture 1](https://oeis.org/A098275) | `a(n)` is divisible by `n+1` for every `n >= 0` | [Source](proofs/new-proofs/A098275/SOURCE.md) | [Proof](proofs/new-proofs/A098275/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A098275.lean) |
 
 Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original attribution, publication links, and prior-work notes. The A220119 and A098275 proofs cover their divisibility conjectures. A280246's OEIS entry credits Li (2026).
 
@@ -37,7 +37,7 @@ proofs/
 verification/        Compiler and axiom-check records
 ```
 
-Older module paths and proof-note paths remain compatibility links. The existing `v1.0.0` release and OEIS links are preserved.
+Each problem has one Lean source and one readable proof/source pair. The root README is the main index. The existing `v1.0.0` release and release-pinned OEIS links are preserved.
 
 ## Verify the proofs
 
@@ -54,7 +54,7 @@ After the build, an individual proof can also be checked with:
 lake env lean LeanOeisProofs/NewProofs/A220119.lean
 ```
 
-The main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Their proofs contain no `sorry`, `admit`, custom mathematical axioms, or `native_decide`. See the [verification records](verification/README.md).
+The main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Their proofs contain no `sorry`, `admit`, custom mathematical axioms, or `native_decide`. See the [current verification report](verification/README.md).
 
 ## Attribution and contributions
 
