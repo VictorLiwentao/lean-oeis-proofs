@@ -1,7 +1,7 @@
 {
   "date": "2026-10-09",
   "toolchain": "leanprover/lean4:v4.34.0-rc2",
-  "method": "Direct pinned Lean compiler. Five modules rebuilt after attribution-only header changes; nine unchanged modules, including the root, retain source-hash-matched successful October 9 checks. Not a fresh whole-project or Lake build.",
+  "method": "Direct pinned Lean compiler. Two renamed proof modules and the updated root freshly compiled after category correction. Eleven unchanged proof modules retain exact-source-hash-matched successful October 9 checks; their checked outputs were reused for the root build. Not a new Lake build.",
   "compiler_options": [
     "-DrelaxedAutoImplicit=false",
     "-Dpp.unicode.fun=true",
@@ -102,18 +102,20 @@
       "output": "'B02R2A382590.kthPrimeFactor_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'B02R2A382590.kthPrimeFactor_period_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
     },
     {
-      "module": "LeanOeisProofs/NewFormalization/A237271.lean",
+      "module": "LeanOeisProofs/IndependentFormalization/A237271.lean",
       "sha256": "82814456ea743fda39dac480ebdb652937fdf0f39c604608a6d16ef953e4d3ca",
       "exit_code": 0,
-      "elapsed_seconds": 85.6,
-      "output": "LeanOeisProofs/NewFormalization/A237271.lean:46:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                        ↓\n  ⏎  let divs_list : List ℕ := (n.divisors.sort (· ≤ ·))⏎⏎  -- Get the list of consecutive pairs of divisors: [(d₁, d₂), (d₂, d₃), ...]⏎\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\nLeanOeisProofs/NewFormalization/A237271.lean:49:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                                              ↓\n  ⏎  let consecutive_pairs : List (ℕ × ℕ) := List.zip divs_list divs_list.tail⏎⏎  -- Count the pairs satisfying the condition⏎\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\nLeanOeisProofs/NewFormalization/A237271.lean:56:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                        ↓\n  ⏎    Odd d_k_succ ∧ d_k_succ ≥ 2 * d_k⏎⏎  -- The sequence value is 1 + the count⏎\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\n'OeisA237271.Cursor01.observation_carmichael' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA237271.Cursor01.a_ge_three_of_odd_composite' depends on axioms: [propext, Classical.choice, Quot.sound]\nobservation_carmichael : ∀ (k : ℕ), IsCarmichael k → 3 ≤ a k\n"
+      "elapsed_seconds": 118.23,
+      "output": "LeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Composite-number predicate from Formal Conjectures (2025). -/\nabbrev Nat.Composite (n : ℕ) : Prop :=\n  1 < n ∧ ¬n.Prime`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Carmichael predicate from Formal Conjectures (2026), retained unchanged. -/\ndef IsCarmichael (n : ℕ) : Prop :=\n  ∀ b ≥ 1, n.Coprime b → n.FermatPsp b`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace OeisA237271`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Nat Finset List`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def a (n : ℕ) : ℕ :=\n  -- Get the list of divisors of n, sorted ascendingly.\n  \n  let divs_list : List ℕ :=\n    (n.divisors.sort (· ≤ ·))\n      -- Get the list of consecutive pairs of divisors: [(d₁, d₂), (d₂, d₃), ...]\n      \n  let consecutive_pairs : List (ℕ × ℕ) := List.zip divs_list divs_list.tail\n  let count : ℕ :=\n    consecutive_pairs.countP fun pair =>\n      let d_k := pair.fst\n      let d_k_succ := pair.snd\n      Odd d_k_succ ∧ d_k_succ ≥ 2 * d_k\n  1 + count`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end OeisA237271`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:0: warning: * 'Copyright 2025 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright 2026 Wentao Li.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean development and write-up: Wentao Li.\nAI assistance: Cursor Grok 4.6 Extra High, as a research worker in batch b01.\n\nPrior informal mathematical proof:\nhttps://github.com/google-deepmind/formal-conjectures/pull/5447\nGitHub author: j2d9w5xtjn-png (2026-09-10).\nThis file is known mathematics with a newly developed Lean proof.\nIt is not a new mathematical discovery.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:0: warning: * 'Copyright':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:10:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:19:19: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:4:24: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:3:0: warning: * 'Copyright 2026 The Formal Conjectures Authors.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A237271.lean:32:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-!# Proof of `OeisA237271.observation_carmichael`\n\nFrozen source: `FormalConjectures/OEIS/237271.lean` at\n`a2f4a1bb12a28e04a969da78feefac7d1ce49565`.\nThis file restates and proves that declaration from the definitions.\nIt does not use `OeisA237271.observation_carmichael`, `conjecture_2`, or any\n`sorry`-dependent helper.\n-/\n`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\n'OeisA237271.Cursor01.observation_carmichael' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA237271.Cursor01.a_ge_three_of_odd_composite' depends on axioms: [propext, Classical.choice, Quot.sound]\nobservation_carmichael : ∀ (k : ℕ), IsCarmichael k → 3 ≤ a k\n",
+      "verification_note": "Fresh direct-compiler build after moving overlapping formalizations into their own category; proof source bytes unchanged."
     },
     {
-      "module": "LeanOeisProofs/NewFormalization/A051903.lean",
+      "module": "LeanOeisProofs/IndependentFormalization/A051903.lean",
       "sha256": "688529cb0603544dc8dddfe9571ddf01c61621a035079ecdcedc93f0ac5f5e03",
       "exit_code": 0,
-      "elapsed_seconds": 81.4,
-      "output": "A051903C2.conjecture2 : False ↔ ∃ n, Odd n ∧ 1 < a n ∧ ∀ (b : ℕ), b ^ n ≡ b ^ a n [MOD n]\n'A051903C2.no_odd_universal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A051903C2.conjecture2' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "elapsed_seconds": 118.27,
+      "output": "LeanOeisProofs/IndependentFormalization/A051903.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean proof development and write-up: Wentao Li.\nMathematical question: Thomas Ordowski, OEIS A051903, 2 December 2019.\nRelated prior mathematics: the elementary odd-prime order / lifting-the-exponent\nobstruction for a universal power congruence; Dutta–Dutta, viXra:2602.0018,classify universal exponents via the maximum prime exponent and Carmichael\nlambda, without an explicit odd-exclusion corollary or Lean proof.\nThis file formalizes the negative answer to question 2 only. It does not\ntreat Lehmer's totient problem (question 1) or the fixed-base-2 problem\n(question 3). It does not claim new informal mathematics.\nAI assistance: Cursor Grok 4.6 Extra High, 2026-09-13.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:18:25: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:35:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace OeisA51903`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean proof development and write-up: Wentao Li.\nMathematical question: Thomas Ordowski, OEIS A051903, 2 December 2019.\nRelated prior mathematics: the elementary odd-prime order / lifting-the-exponent\nobstruction for a universal power congruence; Dutta–Dutta, viXra:2602.0018,classify universal exponents via the maximum prime exponent and Carmichael\nlambda, without an explicit odd-exclusion corollary or Lean proof.\nThis file formalizes the negative answer to question 2 only. It does not\ntreat Lehmer's totient problem (question 1) or the fixed-base-2 problem\n(question 3). It does not claim new informal mathematics.\nAI assistance: Cursor Grok 4.6 Extra High, 2026-09-13.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:18:25: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:35:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def a (n : ℕ) : ℕ :=\n  (n.primeFactorsList.map (n.primeFactorsList.count ·)).foldr max 0`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean proof development and write-up: Wentao Li.\nMathematical question: Thomas Ordowski, OEIS A051903, 2 December 2019.\nRelated prior mathematics: the elementary odd-prime order / lifting-the-exponent\nobstruction for a universal power congruence; Dutta–Dutta, viXra:2602.0018,classify universal exponents via the maximum prime exponent and Carmichael\nlambda, without an explicit odd-exclusion corollary or Lean proof.\nThis file formalizes the negative answer to question 2 only. It does not\ntreat Lehmer's totient problem (question 1) or the fixed-base-2 problem\n(question 3). It does not claim new informal mathematics.\nAI assistance: Cursor Grok 4.6 Extra High, 2026-09-13.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:18:25: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:35:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end OeisA51903`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew Lean proof development and write-up: Wentao Li.\nMathematical question: Thomas Ordowski, OEIS A051903, 2 December 2019.\nRelated prior mathematics: the elementary odd-prime order / lifting-the-exponent\nobstruction for a universal power congruence; Dutta–Dutta, viXra:2602.0018,classify universal exponents via the maximum prime exponent and Carmichael\nlambda, without an explicit odd-exclusion corollary or Lean proof.\nThis file formalizes the negative answer to question 2 only. It does not\ntreat Lehmer's totient problem (question 1) or the fixed-base-2 problem\n(question 3). It does not claim new informal mathematics.\nAI assistance: Cursor Grok 4.6 Extra High, 2026-09-13.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:18:25: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/IndependentFormalization/A051903.lean:35:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-!Exact target: `OeisA51903.conjecture2` from the frozen source\n`FormalConjectures/OEIS/51903.lean`.\n\nThe source asks whether there exists odd `n` with `1 < a n` such that\n`b ^ n ≡ b ^ (a n) [MOD n]` for every natural `b`, where `a` is the\nexisting maximum prime-factor exponent. The answer is negative.\n-/\n`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nA051903C2.conjecture2 : False ↔ ∃ n, Odd n ∧ 1 < a n ∧ ∀ (b : ℕ), b ^ n ≡ b ^ a n [MOD n]\n'A051903C2.no_odd_universal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A051903C2.conjecture2' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Fresh direct-compiler build after moving overlapping formalizations into their own category; proof source bytes unchanged."
     },
     {
       "module": "LeanOeisProofs/NewFormalization/A361033.lean",
@@ -148,10 +150,11 @@
     },
     {
       "module": "LeanOeisProofs.lean",
-      "sha256": "58cfa5b1d0aaa90e51848c0f75186f103a03ea4634704410003a450cdb5d0fbf",
+      "sha256": "9cb1388844c40cd25655372ee0310830f76cc27b2ba0feacf5616c18b55a4ab1",
       "exit_code": 0,
-      "elapsed_seconds": 52.5,
-      "output": ""
+      "elapsed_seconds": 64.8,
+      "output": "",
+      "verification_note": "Fresh direct-compiler build after moving overlapping formalizations into their own category; proof source bytes unchanged."
     }
   ],
   "all_modules_passed": true,
@@ -165,8 +168,8 @@
     "LeanOeisProofs/NewProofs/A381355.lean": [],
     "LeanOeisProofs/NewFormalization/A001818.lean": [],
     "LeanOeisProofs/NewFormalization/A382590.lean": [],
-    "LeanOeisProofs/NewFormalization/A237271.lean": [],
-    "LeanOeisProofs/NewFormalization/A051903.lean": [],
+    "LeanOeisProofs/IndependentFormalization/A237271.lean": [],
+    "LeanOeisProofs/IndependentFormalization/A051903.lean": [],
     "LeanOeisProofs/NewFormalization/A361033.lean": [],
     "LeanOeisProofs/NewFormalization/A368633.lean": [],
     "LeanOeisProofs/NewFormalization/A397588.lean": [],
@@ -179,15 +182,15 @@
       "LeanOeisProofs/NewProofs/A381355.lean",
       "LeanOeisProofs/NewProofs/A060957.lean",
       "LeanOeisProofs/NewFormalization/A001818.lean",
-      "LeanOeisProofs/NewFormalization/A237271.lean",
-      "LeanOeisProofs/NewFormalization/A051903.lean",
+      "LeanOeisProofs/IndependentFormalization/A237271.lean",
+      "LeanOeisProofs/IndependentFormalization/A051903.lean",
       "LeanOeisProofs/NewFormalization/A382590.lean",
       "LeanOeisProofs/NewFormalization/A361033.lean",
       "LeanOeisProofs/NewFormalization/A368633.lean",
       "LeanOeisProofs/NewFormalization/A397588.lean"
     ]
   },
-  "verification_note": "All 13 canonical proof modules and the root have successful October 9 compiler records matching the current sources. Five standalone copyright headers now name Wentao Li. All mathematical code is unchanged from 3be119e75ba5b31f034dc0c0b249975d17def711.",
+  "verification_note": "All 13 canonical proof modules and the root have compiler records matching the current sources. A051903 and A237271 moved from NewFormalization to IndependentFormalization without changing Lean source bytes. Their exact assigned claims have overlapping public Lean proofs.",
   "source_comparison": {
     "base_commit": "38d0cd13621ddbb3e80aabddbd9448c9d427f60f",
     "original_three_proof_and_source_pairs_unchanged": true,
@@ -304,12 +307,13 @@
   "layout_checks": {
     "problem_lean_files": 13,
     "new_proofs": 6,
-    "new_formalizations": 7,
+    "new_formalizations": 5,
     "readable_proofs": 13,
     "source_notes": 13,
     "compatibility_modules": 0,
     "redirect_documents": 0,
-    "root_imports_canonical_modules_directly": true
+    "root_imports_canonical_modules_directly": true,
+    "independent_formalizations": 2
   },
   "lake_build": {
     "checked_on": "2026-10-09",
@@ -1525,7 +1529,7 @@
         "Quot.sound"
       ]
     },
-    "LeanOeisProofs/NewFormalization/A237271.lean": {
+    "LeanOeisProofs/IndependentFormalization/A237271.lean": {
       "OeisA237271.Cursor01.observation_carmichael": [
         "propext",
         "Classical.choice",
@@ -1537,7 +1541,7 @@
         "Quot.sound"
       ]
     },
-    "LeanOeisProofs/NewFormalization/A051903.lean": {
+    "LeanOeisProofs/IndependentFormalization/A051903.lean": {
       "A051903C2.no_odd_universal": [
         "propext",
         "Classical.choice",
@@ -1635,10 +1639,10 @@
     "LeanOeisProofs.lean": {}
   },
   "documentation_links": {
-    "checked": 126,
+    "checked": 128,
     "all_local_targets_exist": true
   },
-  "publication_base_commit": "3be119e75ba5b31f034dc0c0b249975d17def711",
+  "publication_base_commit": "9f46fb63287badc1269d9b2e720bc3e5d0193933",
   "previous_five_modules_and_proof_notes_unchanged": false,
   "excluded_completed_results": {
     "A003161": "Reused Epoch results helper has no confirmed redistribution license.",
@@ -1668,6 +1672,142 @@
       "broken_links": [],
       "outcome_labels": "11 proved, 1 disproved, 1 negative answer; all 13 rows have six columns",
       "v1.0.0": "preserved"
+    }
+  },
+  "category_reorganization": {
+    "checked_at": "2026-10-09T21:26:51.381703+00:00",
+    "previous_commit": "9f46fb63287badc1269d9b2e720bc3e5d0193933",
+    "renames": {
+      "LeanOeisProofs/NewFormalization/A051903.lean": "LeanOeisProofs/IndependentFormalization/A051903.lean",
+      "LeanOeisProofs/NewFormalization/A237271.lean": "LeanOeisProofs/IndependentFormalization/A237271.lean"
+    },
+    "source_bytes_preserved": true,
+    "reused_outputs": [
+      {
+        "module": "LeanOeisProofs/NewProofs/A280246.lean",
+        "source_sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
+        "artifacts": [
+          {
+            "name": "A280246.olean",
+            "sha256": "d949a792806ffd18a1b5bd268a009970664e318f996d98e7c116bae9869c4083"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewProofs/A098275.lean",
+        "source_sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
+        "artifacts": [
+          {
+            "name": "A098275.olean",
+            "sha256": "d1c14c2fd8ff9d3d5d3c4a05acc8547050cec2a825df9e1366e2d115b71e4825"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewProofs/A220119.lean",
+        "source_sha256": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42",
+        "artifacts": [
+          {
+            "name": "A220119.olean",
+            "sha256": "679ce2cf39ae80795814c5bfb653c925910c0380c00ffe0ec73ca89397119127"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewProofs/A375439.lean",
+        "source_sha256": "c4398394e57113f9b823bb4929fcc6a07b4e2b0a4ea6763f0ba4ec5784f5ad8c",
+        "artifacts": [
+          {
+            "name": "A375439.olean",
+            "sha256": "31cd9759f72fd08c6c78fdda226b5953daff42e82e8fbefbeb4ca7410156422a"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewProofs/A381355.lean",
+        "source_sha256": "d8a5c9667f46437500b803a2b94af86b7209e34e5cc2ffaf4f1620ea64a7df21",
+        "artifacts": [
+          {
+            "name": "A381355.olean",
+            "sha256": "39678084e7d75d579161acacb8cf5ad4b62ac62e5a378b8cfb5ef361bce4fa12"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewFormalization/A001818.lean",
+        "source_sha256": "e5e648d51cbb1f14543a30a47316676cc48a767c6d5e72f96b79114f6f203e40",
+        "artifacts": [
+          {
+            "name": "A001818.olean",
+            "sha256": "aedbb16fb6f20fc531913a75a5d8f02b02e21944068045c0dd02bc01063f47e2"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewFormalization/A382590.lean",
+        "source_sha256": "4407b1d9dbe2ce64c7c486b28150c9c6069671c44f94456fcc9f2a815e264fe8",
+        "artifacts": [
+          {
+            "name": "A382590.olean",
+            "sha256": "fd1174c1f2558a121ee0f7b0aef71560640cd81fa21a2ac689e537772b01ed01"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewFormalization/A361033.lean",
+        "source_sha256": "14c17f0d474de328fcb9de6d8dac264fdb20fa07ef5e291d2b470be2d4d0ede8",
+        "artifacts": [
+          {
+            "name": "A361033.olean",
+            "sha256": "4d3a33ddbc276286ca4c081f6cccb4122e32ab7a2858e6ac4ce04d414605907b"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewFormalization/A368633.lean",
+        "source_sha256": "61b939c16a31adfccdaf8c60a5ef1139f4726d116043f33cee7992a85ad77361",
+        "artifacts": [
+          {
+            "name": "A368633.olean",
+            "sha256": "1ebd1aa2dee92825872335ab7bcd5783102772787936b14b168055e52858f993"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewFormalization/A397588.lean",
+        "source_sha256": "0d81ab991bfa6e6d28750ac26358d7c3e29953fb4065363543e17ba133831a49",
+        "artifacts": [
+          {
+            "name": "A397588.olean",
+            "sha256": "c2429e63b6063968a901c5c42e5bff1c4d6db55426e63d393e1a40f91b5ff3cb"
+          }
+        ]
+      },
+      {
+        "module": "LeanOeisProofs/NewProofs/A060957.lean",
+        "source_sha256": "3f19755d1ab54718f107ecb4049b3dafd5263b41e5c4f2168213c91e3269266d",
+        "artifacts": [
+          {
+            "name": "A060957.olean",
+            "sha256": "79f2ce2c1b2ef1e60e3dd3686d69bd49a7b276c12cb2c218803c3124721c7302"
+          }
+        ]
+      }
+    ],
+    "layout_check": {
+      "categories": {
+        "IndependentFormalization": 2,
+        "NewProofs": 6,
+        "NewFormalization": 5
+      },
+      "canonical_files": 13,
+      "proof_source_pairs": 13,
+      "unique_filenames": 13,
+      "renamed_source_bytes_unchanged": true,
+      "imports_resolve": true,
+      "documentation_links": 128,
+      "broken_links": [],
+      "v1.0.0": "unchanged"
     }
   }
 }

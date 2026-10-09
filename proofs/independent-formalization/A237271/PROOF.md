@@ -30,7 +30,7 @@ An overlapping external Lean proof is credited in [SOURCE.md](SOURCE.md).
 
 ## Lean verification
 
-Source: [the canonical A237271.lean](../../../LeanOeisProofs/NewFormalization/A237271.lean).
+Source: [the canonical A237271.lean](../../../LeanOeisProofs/IndependentFormalization/A237271.lean).
 Main declarations: `OeisA237271.Cursor01.observation_carmichael`, `OeisA237271.Cursor01.a_ge_three_of_odd_composite`.
 
 Checked October 9, 2026, using Lean `4.34.0-rc2` and Mathlib

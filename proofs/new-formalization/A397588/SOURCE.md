@@ -13,8 +13,10 @@ The original series is due to **Paul D. Hanna**; the recurrence and related
 comments are attributed on OEIS. Both properties are treated as known mathematics.
 Prior public recurrence-parity Lean work exists in
 [The Omega Institute's trureturing repository](https://github.com/the-omega-institute/trureturing/blob/dev/D5/S1/Recurrence/ConvolutionRecurrenceOddPowersOfTwo.lean).
-Our contribution includes the explicit defining-series bridge and divisibility
-by 3. The parity theorem alone is not described as a first Lean formalization.
+The New Formalizations classification applies to the explicit defining-series
+bridge and divisibility-by-3 result, for which the October 9 search located no
+earlier exact public Lean proof. The existing recurrence-parity proof is
+supporting material and is not counted as new Lean work. The parity theorem alone is not described as a first Lean formalization.
 No code from that external implementation was copied into this module.
 
 ## Attribution and frozen source

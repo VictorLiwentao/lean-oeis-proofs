@@ -2,12 +2,13 @@
 
 **Wentao Li**
 
-Results for **13 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs and seven formalizations of known mathematics. The collection has two categories:
+Results for **13 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, five new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
 | **New Proofs** | New mathematical proofs and disproofs developed by Wentao Li, with Lean verification. | [New Proofs](proofs/new-proofs/) | [NewProofs](LeanOeisProofs/NewProofs/) |
-| **New Formalizations** | Formalizations of existing mathematical proofs, with attribution to the original authors. | [New Formalizations](proofs/new-formalization/) | [NewFormalization](LeanOeisProofs/NewFormalization/) |
+| **New Formalizations** | Known mathematics; no earlier public Lean proof located for the stated new contribution in the dated search. | [New Formalizations](proofs/new-formalization/) | [NewFormalization](LeanOeisProofs/NewFormalization/) |
+| **Independent Formalizations** | Our independently developed proofs of statements with existing public Lean proofs. | [Independent Formalizations](proofs/independent-formalization/) | [IndependentFormalization](LeanOeisProofs/IndependentFormalization/) |
 
 ## New Proofs
 
@@ -26,19 +27,31 @@ Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original
 
 ## New Formalizations
 
-Seven completed formalizations are included. **New Formalizations** means
-formalization work contributed here; it does not assert that every target lacks
-other public Lean proofs. Known overlap is identified below and in each source page.
+These five packages formalize known mathematics. This category is reserved for
+contributions whose exact Lean coverage was not located elsewhere in the dated
+search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
+has mixed coverage: the new contribution is the defining-series bridge and
+divisibility-by-3 formalization, not its already-formalized recurrence-parity lemma.
 
 | OEIS / target | Outcome | Formalized result and scope | Statement / prior work | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
 | [A001818](https://oeis.org/A001818) | **Proved** | C1: She–Sun–Xia permanent identity | [Source](proofs/new-formalization/A001818/SOURCE.md) | [Proof](proofs/new-formalization/A001818/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A001818.lean) |
-| [A051903](https://oeis.org/A051903) | **Negative answer (C2)** | C2: no odd universal example; independent formalization, public Lean overlap | [Source](proofs/new-formalization/A051903/SOURCE.md) | [Proof](proofs/new-formalization/A051903/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A051903.lean) |
-| [A237271](https://oeis.org/A237271) | **Proved** | Carmichael bound, plus all odd composites; independent formalization, public Lean overlap | [Source](proofs/new-formalization/A237271/SOURCE.md) | [Proof](proofs/new-formalization/A237271/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A237271.lean) |
 | [A361033](https://oeis.org/A361033) | **Proved** | Factorial-ratio parity via classical valuations; integrality included | [Source](proofs/new-formalization/A361033/SOURCE.md) | [Proof](proofs/new-formalization/A361033/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A361033.lean) |
 | [A368633](https://oeis.org/A368633) | **Proved** | C1: Catalan parity; defining generating-function identity included | [Source](proofs/new-formalization/A368633/SOURCE.md) | [Proof](proofs/new-formalization/A368633/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368633.lean) |
 | [A382590](https://oeis.org/A382590) | **Proved** | Tao–Jagy eventual period three for distinct prime factors | [Source](proofs/new-formalization/A382590/SOURCE.md) | [Proof](proofs/new-formalization/A382590/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A382590.lean) |
-| [A397588](https://oeis.org/A397588) | **Proved** | Parity and divisibility by 3; defining-series bridge; prior recurrence-parity Lean credited | [Source](proofs/new-formalization/A397588/SOURCE.md) | [Proof](proofs/new-formalization/A397588/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A397588.lean) |
+| [A397588](https://oeis.org/A397588) | **Proved** | Defining-series bridge and divisibility by 3; supporting parity lemma has prior Lean | [Source](proofs/new-formalization/A397588/SOURCE.md) | [Proof](proofs/new-formalization/A397588/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A397588.lean) |
+
+## Independent Formalizations — existing Lean proofs
+
+These two packages overlap public Lean proofs of the same assigned claims.
+They remain available as independently developed work, but are excluded from
+**New Formalizations** and from first-public-Lean claims. This classification
+records overlap; it does not establish who completed the work first.
+
+| OEIS / target | Outcome | Formalized result and scope | Statement / prior work | Readable proof | Lean proof |
+| --- | --- | --- | --- | --- | --- |
+| [A051903](https://oeis.org/A051903) | **Negative answer (C2)** | C2: no odd universal example; independent formalization, public Lean overlap | [Source](proofs/independent-formalization/A051903/SOURCE.md) | [Proof](proofs/independent-formalization/A051903/PROOF.md) | [Lean](LeanOeisProofs/IndependentFormalization/A051903.lean) |
+| [A237271](https://oeis.org/A237271) | **Proved** | Carmichael bound, plus all odd composites; independent formalization, public Lean overlap | [Source](proofs/independent-formalization/A237271/SOURCE.md) | [Proof](proofs/independent-formalization/A237271/PROOF.md) | [Lean](LeanOeisProofs/IndependentFormalization/A237271.lean) |
 
 ## Reading a proof or disproof
 
@@ -58,8 +71,9 @@ asserted as an admitted theorem. A statement may also be named with a `def ... :
 without asserting that it is true.
 
 Outcome and contribution category are separate: a new disproof belongs in
-**New Proofs**, while formalizing a previously known negative answer belongs in
-**New Formalizations**. Each sequence still has one canonical Lean file and one
+**New Proofs**. A known negative answer belongs in **New Formalizations** only
+when no earlier matching public Lean proof was located; otherwise it belongs in
+**Independent Formalizations**. Each sequence still has one canonical Lean file and one
 proof/source pair.
 
 ## Completed research not included in this release
@@ -76,11 +90,13 @@ a verified connection to the OEIS definition are also excluded.
 
 ```text
 LeanOeisProofs/
-  NewProofs/          Lean proofs of the new contributions
-  NewFormalization/  Lean formalizations of known results
+  NewProofs/                 New mathematical proofs and disproofs
+  NewFormalization/          Known mathematics with new Lean coverage
+  IndependentFormalization/ Known overlapping Lean proofs
 proofs/
-  new-proofs/        Readable proofs and exact statements
-  new-formalization/ Explanations and original references
+  new-proofs/                Readable proofs and exact statements
+  new-formalization/         Explanations and original references
+  independent-formalization/ Explanations and overlapping Lean sources
 verification/        Compiler and axiom-check records
 ```
 

@@ -8,10 +8,15 @@
   mathematical citations.
 - Keep exactly one canonical Lean file and one proof/source pair per sequence.
   Do not add compatibility copies, redirects, or separate copies for disproofs.
-- Distinguish contribution category (New Proofs / New Formalizations) from
-  outcome (Proved / Disproved / Negative answer). Preserve exact claim scope.
+- Distinguish contribution category (New Proofs, New Formalizations, or
+  Independent Formalizations) from outcome (Proved, Disproved, or Negative answer).
+  Preserve exact claim scope.
 - A disproof proves the negation of the original statement. Document that
   original statement without importing or asserting it as an admitted theorem;
   give a verified counterexample certificate when available.
 - Preserve existing release tags and pinned links. Keep verification dates,
   source hashes, compiler results, and attribution accurate.
+- Reserve NewFormalization for known mathematics with no earlier matching public
+  Lean proof located in a dated search. Use IndependentFormalization when a public
+  Lean proof already covers the assigned claim. For mixed coverage, identify the
+  exact new clauses or bridges; existing supporting Lean results are not new work.

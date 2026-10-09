@@ -6,16 +6,17 @@ Author: Wentao Li
 
 Record the exact verified commit, the original OEIS definition, the conjecture clause and domain, the Lean compiler result, and the main theorem's axiom footprint. An unfinished proof or a proof of a surrogate sequence is not a completed OEIS result.
 
-## 2. Choose one of the two categories
+## 2. Choose the contribution category
 
 | Category | Lean folder | Proof-note folder | Contribution |
 | --- | --- | --- | --- |
 | **New Proofs** | `NewProofs` | `new-proofs` | A new mathematical proof or disproof, with Lean verification. Record the original conjecture and prior-work search. |
-| **New Formalizations** | `NewFormalization` | `new-formalization` | A Lean formalization of an existing mathematical proof. Cite the original proof and credit its authors. |
+| **New Formalizations** | `NewFormalization` | `new-formalization` | Known mathematics with no earlier matching public Lean proof located in a dated search. Cite the original mathematical proof. |
+| **Independent Formalizations** | `IndependentFormalization` | `independent-formalization` | Our independent formalization of a claim with an existing public Lean proof. Credit and link the overlapping proof. |
 
 Record the exact contribution and any earlier Lean coverage in `SOURCE.md`. Keep literature-search notes and unresolved publication questions on the individual source page, rather than labeling a completed proof as unverified. An unresolved mathematical argument stays in the research workspace until it is proved. Numerical evidence is not a proof.
 
-Explain the contribution of each conjecture clause when a sequence has multiple targets, but keep one canonical Lean file and proof/source pair per sequence. Clearly mark independent formalizations that overlap other public Lean proofs; inclusion is not a first-public-Lean claim. Do not treat OEIS publication or a successful Lean check alone as evidence of first-ever mathematical priority.
+Explain the contribution of each conjecture clause when a sequence has multiple targets, but keep one canonical Lean file and proof/source pair per sequence. Put completed claims with existing matching public Lean proofs in Independent Formalizations, not New Formalizations. For mixed-coverage files, identify exactly which clauses or bridges are new Lean work; do not count already-formalized supporting lemmas as new contributions. Do not treat OEIS publication or a successful Lean check alone as evidence of first-ever mathematical priority.
 
 ## 3. Add the formal source and proof notes
 

@@ -104,7 +104,11 @@ is a source-license hold, not a failed mathematical verification.
 
 ## Repository organization
 
-The two categories are **New Proofs** and **New Formalizations**. Each sequence
+The categories are **New Proofs**, **New Formalizations**, and **Independent
+Formalizations**. The last category contains A051903 and A237271, whose assigned
+claims have overlapping public Lean proofs. New Formalizations is reserved for
+exact contributions with no earlier public Lean proof located in a dated search.
+Each sequence
 has exactly one canonical Lean file and one readable proof/source pair, even
 when several clauses are proved. The root README is the sole navigation index.
 No compatibility copies or redirect documents are retained. The existing

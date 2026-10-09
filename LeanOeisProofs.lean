@@ -10,8 +10,8 @@ import LeanOeisProofs.NewProofs.A375439
 import LeanOeisProofs.NewProofs.A381355
 import LeanOeisProofs.NewProofs.A060957
 import LeanOeisProofs.NewFormalization.A001818
-import LeanOeisProofs.NewFormalization.A237271
-import LeanOeisProofs.NewFormalization.A051903
+import LeanOeisProofs.IndependentFormalization.A237271
+import LeanOeisProofs.IndependentFormalization.A051903
 import LeanOeisProofs.NewFormalization.A382590
 import LeanOeisProofs.NewFormalization.A361033
 import LeanOeisProofs.NewFormalization.A368633

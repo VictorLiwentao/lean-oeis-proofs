@@ -47,7 +47,7 @@ proof and the mathematical references are recorded in [SOURCE.md](SOURCE.md).
 
 ## Lean verification
 
-Source: [the canonical A051903.lean](../../../LeanOeisProofs/NewFormalization/A051903.lean).
+Source: [the canonical A051903.lean](../../../LeanOeisProofs/IndependentFormalization/A051903.lean).
 Main declarations: `A051903C2.no_odd_universal`, `A051903C2.conjecture2`.
 
 Checked October 9, 2026, using Lean `4.34.0-rc2` and Mathlib

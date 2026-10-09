@@ -1,6 +1,6 @@
 # A237271: Carmichael observation; stronger odd-composite bound
 
-Category: **New Formalizations**. Source/status check: **October 9, 2026**.
+Category: **Independent Formalizations — existing public Lean proof**. Source/status check: **October 9, 2026**.
 Original entry: [OEIS A237271](https://oeis.org/A237271).
 
 For all Carmichael n, a(n)>=3, with the sorted-divisor jump count defined
@@ -27,7 +27,7 @@ whose Apache 2.0 copyright notices are retained. Proof development and write-up:
 verbatim and omits the admitted upstream theorem terms.
 
 Research commit: `7a2f94d822d3bdef3aceaa1fafc54ed99e828b8c`. Original path: `research/batches/b01/workers/cursor-01/targets/A237271/A237271.lean`.
-The current public source is [the canonical Lean module](../../../LeanOeisProofs/NewFormalization/A237271.lean).
+The current public source is [the canonical Lean module](../../../LeanOeisProofs/IndependentFormalization/A237271.lean).
 
 Publication adjustments:
 

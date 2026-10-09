@@ -8,8 +8,8 @@ and `Quot.sound`, or subsets of these. No proof code contains `sorry`, `admit`,
 
 ## Scope
 
-There are six modules in `NewProofs` and seven in `NewFormalization`, with one
-readable proof/source pair per sequence. A397588's two clauses share one file.
+There are six modules in `NewProofs`, five in `NewFormalization`, and two in
+`IndependentFormalization`, with one readable proof/source pair per sequence. A397588's two clauses share one file.
 The root imports all 13 canonical modules. There are no compatibility modules,
 redirect documents, or duplicate category indexes.
 
@@ -30,18 +30,20 @@ The earlier October 9 `lake build` attempt exited with status 133 (SIGTRAP).
 This report uses the pinned Lean `4.34.0-rc2` binary directly; it is not a
 successful Lake build.
 
-The initial publication compiled eight added modules and the combined root,
-retaining hash-matched same-day checks for five existing modules. The report
-records the check applicable to each current source; the attribution update
-replaces the results for the five changed modules with fresh compiler checks.
+The initial publication checked all 13 proof modules and the root. The attribution
+update then rebuilt five standalone modules after copyright-header corrections.
+The category correction moves A051903 and A237271 into `IndependentFormalization`
+without changing their Lean source bytes; both moved modules and the updated root
+are rebuilt at their current paths.
 
-Each dependency checkout matched its manifest commit. `LEAN_PATH` for the
-attribution rebuild contains a fresh output directory and only pinned dependency
-libraries. All five changed modules import Mathlib directly; no older project
-module is used to check them. At most two compiler processes run concurrently.
-The nine unchanged modules, including the root, retain their earlier same-day
-checks with exact source-hash matches. This is not a new whole-project build.
-Full compiler and axiom output is retained in the machine-readable report.
+Each dependency checkout matches its manifest commit. The rebuild uses a fresh
+output directory and pinned dependency libraries. The eleven unchanged modules
+retain their successful same-day checks with exact source-hash matches; their
+previously checked compiled outputs are copied into the fresh directory for the
+root check. The five corrected-header modules use the attribution build's outputs;
+the other six use the earlier publication build's outputs. At most two compiler
+processes run concurrently. This is not a fresh compilation of all thirteen proof
+modules. Full compiler and axiom output is retained in the machine-readable report.
 
 ```text
 LEAN_PATH=<publication-output>:<pinned-dependency-libraries> <pinned-lean> \
