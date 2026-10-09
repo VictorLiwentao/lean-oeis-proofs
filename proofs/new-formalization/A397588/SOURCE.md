@@ -20,7 +20,7 @@ No code from that external implementation was copied into this module.
 ## Attribution and frozen source
 
 Lean development and write-up: **Wentao Li**, with AI assistance.
-The original AI4Math Lab copyright and Apache 2.0 license are retained. These
+The copyright and author headers name Wentao Li; the Apache 2.0 license is retained. These
 standalone Mathlib modules were recovered from the author's private research
 history; no admitted DeepMind theorem or external proof implementation is imported.
 
@@ -29,7 +29,7 @@ The current public source is [the canonical Lean module](../../../LeanOeisProofs
 
 Publication adjustments:
 
-- Name the human author while retaining the original AI4Math Lab copyright; no mathematical code is changed.
+- Name Wentao Li in the copyright and author headers; retain Apache 2.0 licensing; no mathematical code is changed.
 
 The mathematical proof bodies are preserved. Lean checking establishes the
 stated formal result, not novelty, editorial acceptance, or upstream integration.

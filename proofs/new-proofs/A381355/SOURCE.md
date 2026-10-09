@@ -12,9 +12,9 @@ The [Lean source](../../../LeanOeisProofs/NewProofs/A381355.lean) constructs the
 
 ## Research provenance and publication changes
 
-The source is `Ai4mathLab/Research/A381355.lean` at commit `82f7a104fb3f46c6e76f433e9682ad7f65b9402c` of the author's private `ai4math-lab` research history. The original file identifies its workspace as AI4Math Lab and declares Apache 2.0 licensing. Its copyright notice is retained; Wentao Li is credited as the human author.
+The source is `Ai4mathLab/Research/A381355.lean` at commit `82f7a104fb3f46c6e76f433e9682ad7f65b9402c` of the author's private `ai4math-lab` research history. The public file names Wentao Li in its copyright and author headers and retains Apache 2.0 licensing.
 
-The September 12 research record includes an independent skeptic check. A direct compiler recheck passed on October 2. For publication on October 9, the workspace author label was replaced by the human author's name, and `F_unique` was added to make the uniqueness argument explicit in Lean. The original sequence definitions and divisibility proof are unchanged. Axiom-print commands also cover the generating-function bridge and uniqueness theorem.
+The September 12 research record includes an independent skeptic check. A direct compiler recheck passed on October 2. For publication on October 9, Wentao Li was credited as author, and `F_unique` was added to make the uniqueness argument explicit in Lean. The original sequence definitions and divisibility proof are unchanged. Axiom-print commands also cover the generating-function bridge and uniqueness theorem.
 
 See the [current verification report](../../../verification/README.md) for the publication copy's compiler and axiom checks.
 

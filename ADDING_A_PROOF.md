@@ -33,6 +33,19 @@ proofs/new-proofs/AXXXXXX/PROOF.md
 
 Preserve existing copyright notices, author names, and licenses. For reused Google DeepMind material, retain `Copyright 2026 The Formal Conjectures Authors.` as it appears in the source; credit Wentao Li for the new contribution without replacing the original attribution. Attribute known mathematics to its original authors and document AI assistance in `PROVENANCE.md`.
 
+Use **Wentao Li** for standalone files. Where Formal Conjectures definitions are
+reused, retain **The Formal Conjectures Authors** and optionally add **Wentao Li**
+for the new contribution. Do not use a research-workspace or AI-tool name as the
+author or copyright holder. Preserve required notices for actual third-party code
+and cite the original mathematical authors separately.
+
+For a disproof, document the original conjecture without assuming it. It may be
+named with a `def ... : Prop`; do not add an admitted theorem asserting the false
+statement. Prove a counterexample certificate when available, then derive the
+negation of the exact original statement. Keep the original quantifiers, bounds,
+and hypotheses. Identify the outcome as **Disproved** (or **Negative answer** for
+a question) in the root index. Outcome does not create another folder or file.
+
 For an entirely new file, use:
 
 ```lean

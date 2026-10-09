@@ -55,7 +55,7 @@ The Lean files in this repository were restored from the following independently
 
 The build infrastructure (`lean-toolchain`, `lakefile.toml`, `lake-manifest.json`) was restored from `eed144b`. The A098275 and A280246 Lean sources at `eed144b` agree with their earlier verified commits. A220119 imports the A098275 file for a previously proved Catalan-factor identity.
 
-Publication cleanup consisted of authorship and license headers, public documentation, and the removal of internal research scaffolding. Existing mathematical definitions, lemma statements, theorem statements, and proof bodies were not rewritten for style. A375439 and A381355 come from the author's private `ai4math-lab` research history. Their original AI4Math Lab copyright notices and Apache 2.0 licensing are retained; the workspace author label is replaced by the human author, Wentao Li. No DeepMind formalization source was copied into these two standalone Mathlib modules.
+Publication cleanup consisted of authorship and license headers, public documentation, and the removal of internal research scaffolding. Existing mathematical definitions, lemma statements, theorem statements, and proof bodies were not rewritten for style. A375439 and A381355 come from Wentao Li's private research history. Their copyright and author headers name Wentao Li; Apache 2.0 licensing is retained. The same attribution correction applies to A361033, A368633 and A397588. No DeepMind formalization source was copied into these two standalone Mathlib modules.
 
 For A375439, eight optional `native_decide` examples were removed; the general proof never depended on them. For A381355, the new `F_unique` theorem formalizes uniqueness of the integral generating function. Its existing definitions and divisibility proof are unchanged.
 
@@ -94,8 +94,8 @@ A060957 drops a repository-specific linter option. A051903 replaces the identity
 marker `answer(False)` with `False`. A001818 drops a diagnostic `#check` of the
 admitted upstream declaration. A368633 drops four unused numerical
 `native_decide` examples. These changes do not alter the mathematical proofs.
-The standalone AI4Math Lab files retain their Apache notices and name Wentao Li
-as the human author. No code from another person's overlapping Lean proof was
+The standalone files name Wentao Li in their copyright and author headers
+and retain Apache 2.0 licensing. No code from another person's overlapping Lean proof was
 copied into this publication.
 
 The three completed results A003161, A003162, and A069004 are excluded because

@@ -13,14 +13,16 @@ readable proof/source pair per sequence. A397588's two clauses share one file.
 The root imports all 13 canonical modules. There are no compatibility modules,
 redirect documents, or duplicate category indexes.
 
-The previous five proof modules and their proof/source notes are unchanged from
-commit `6f54afc`. Eight added modules were compared with their frozen research
-sources. Proof bodies are preserved, with the documented identity-marker
-replacement in A051903; required upstream definitions were compared verbatim
+The original three proof modules and their proof/source notes are unchanged from
+the earlier release. Eight added modules were compared with their frozen research
+sources. The later attribution cleanup changes five standalone copyright headers
+to Wentao Li and updates their source notes. Proof bodies are preserved, with
+the documented identity-marker replacement in A051903; required upstream definitions were compared verbatim
 ignoring comments and whitespace. Unused numerical examples and diagnostic
 references to admitted statements were removed where documented. The source
 comparison details and all final hashes are in the machine-readable report.
-Copyright notices, dependency pins, and the `v1.0.0` release tag are preserved.
+Formal Conjectures copyright notices, Apache licensing, dependency pins, and the
+`v1.0.0` release tag are preserved.
 
 ## Compiler method
 
@@ -28,14 +30,18 @@ The earlier October 9 `lake build` attempt exited with status 133 (SIGTRAP).
 This report uses the pinned Lean `4.34.0-rc2` binary directly; it is not a
 successful Lake build.
 
-Each dependency checkout matched its manifest commit. `LEAN_PATH` contained
-the publication output directory and those pinned dependency libraries. Eight
-new modules were compiled there. The unchanged five modules retained their
-successful same-day checks; their hash-matched compiled outputs were copied
-into the publication output directory. The combined root was then compiled.
-No unrelated or stale project outputs were on the search path. At most two
-compiler processes ran concurrently. Copyright-format and tactic-style warnings do
-not affect the successful compiler and axiom results; full output is retained.
+The initial publication compiled eight added modules and the combined root,
+retaining hash-matched same-day checks for five existing modules. The report
+records the check applicable to each current source; the attribution update
+replaces the results for the five changed modules with fresh compiler checks.
+
+Each dependency checkout matched its manifest commit. `LEAN_PATH` for the
+attribution rebuild contains a fresh output directory and only pinned dependency
+libraries. All five changed modules import Mathlib directly; no older project
+module is used to check them. At most two compiler processes run concurrently.
+The nine unchanged modules, including the root, retain their earlier same-day
+checks with exact source-hash matches. This is not a new whole-project build.
+Full compiler and axiom output is retained in the machine-readable report.
 
 ```text
 LEAN_PATH=<publication-output>:<pinned-dependency-libraries> <pinned-lean> \

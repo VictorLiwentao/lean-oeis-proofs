@@ -16,9 +16,9 @@ The [Lean source](../../../LeanOeisProofs/NewProofs/A375439.lean) constructs the
 
 ## Research provenance and publication changes
 
-The source is the author's research file `Ai4mathLab/Research/A375439.lean` at commit `d57c795e5e00bf6e5888d507b0bb8c33ce22af0b` of the private `ai4math-lab` research history. The original file identifies its workspace as AI4Math Lab and declares Apache 2.0 licensing. Its copyright notice is retained; Wentao Li is credited as the human author.
+The source is the author's research file `Ai4mathLab/Research/A375439.lean` at commit `d57c795e5e00bf6e5888d507b0bb8c33ce22af0b` of the private `ai4math-lab` research history. The public file names Wentao Li in its copyright and author headers and retains Apache 2.0 licensing.
 
-Publication changes replace the workspace author label with the human author's name and remove eight optional `native_decide` numerical examples. The mathematical definitions, lemmas and general proof are unchanged. Those examples were not dependencies of the main theorem. The published file contains no `native_decide`.
+Publication changes use Wentao Li in the copyright and author headers and remove eight optional `native_decide` numerical examples. The mathematical definitions, lemmas and general proof are unchanged. Those examples were not dependencies of the main theorem. The published file contains no `native_decide`.
 
 The source has a saved independent statement-fidelity audit and passed a direct compiler recheck on October 2. The publication copy was rebuilt with the pinned compiler on October 9, 2026; see the [current report](../../../verification/README.md).
 
