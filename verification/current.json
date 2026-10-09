@@ -1,7 +1,7 @@
 {
   "date": "2026-10-09",
   "toolchain": "leanprover/lean4:v4.34.0-rc2",
-  "method": "Direct pinned Lean compiler, dependency-ordered rebuild with at most two compiler processes; only fresh project outputs and pinned dependency libraries in LEAN_PATH. lake build exited 133 (SIGTRAP) on this machine; the fallback check used the pinned Lean binary.",
+  "method": "Direct pinned Lean compiler. Eight new modules and the combined root compiled in the publication build; five unchanged modules retain hash-matched successful October 9 checks. Only these outputs and pinned dependencies were on LEAN_PATH. Lake previously crashed with SIGTRAP (exit 133).",
   "compiler_options": [
     "-DrelaxedAutoImplicit=false",
     "-Dpp.unicode.fun=true",
@@ -52,41 +52,102 @@
       "exit_code": 0,
       "elapsed_seconds": 80.9,
       "sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
-      "output": "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "output": "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Unchanged source; successful direct-compiler check from earlier October 9 build retained."
     },
     {
       "module": "LeanOeisProofs/NewProofs/A098275.lean",
       "exit_code": 0,
       "elapsed_seconds": 81.0,
       "sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
-      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Unchanged source; successful direct-compiler check from earlier October 9 build retained."
     },
     {
       "module": "LeanOeisProofs/NewProofs/A220119.lean",
       "exit_code": 0,
       "elapsed_seconds": 89.6,
       "sha256": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42",
-      "output": "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "output": "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Unchanged source; successful direct-compiler check from earlier October 9 build retained."
     },
     {
       "module": "LeanOeisProofs/NewProofs/A375439.lean",
       "exit_code": 0,
       "elapsed_seconds": 103.6,
       "sha256": "46113281f3427cff65ee7bb04d06ef99f12fa2396b53a97793dc8f085c04d9da",
-      "output": "'A375439.a_odd_iff_A038754' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_mul_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_dvd_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "output": "'A375439.a_odd_iff_A038754' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_mul_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_dvd_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Unchanged source; successful direct-compiler check from earlier October 9 build retained."
     },
     {
       "module": "LeanOeisProofs/NewProofs/A381355.lean",
       "exit_code": 0,
       "elapsed_seconds": 103.5,
       "sha256": "20ed2a1616f661098c6bc2dfe48b014842e16bf733527ac0c531231a5e459d25",
-      "output": "LeanOeisProofs/NewProofs/A381355.lean:66:4: warning: `simp [Nat.choose_zero_right]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [choose_zero_right, cast_one, tsub_zero, one_mul]\n`rw [coeff_pow_X_mul_of_lt (H := PowerSeries.mk fun k => coeff (k + 1) G) hn]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 66!\nLeanOeisProofs/NewProofs/A381355.lean:115:2: warning: `simp [hne0, hne1]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [dite_eq_ite]\n`rw [hinter]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 115!\nLeanOeisProofs/NewProofs/A381355.lean:355:2: warning: `simp [a, coeff_mul]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact Finset.Nat.sum_antidiagonal_eq_sum_range_succ (fun i j => coeff i A * coeff j (F ^ p)) n`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 355!\n'A381355.primeN_dvd_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.coeff_F_pow_prime' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.F_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+      "output": "LeanOeisProofs/NewProofs/A381355.lean:66:4: warning: `simp [Nat.choose_zero_right]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [choose_zero_right, cast_one, tsub_zero, one_mul]\n`rw [coeff_pow_X_mul_of_lt (H := PowerSeries.mk fun k => coeff (k + 1) G) hn]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 66!\nLeanOeisProofs/NewProofs/A381355.lean:115:2: warning: `simp [hne0, hne1]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [dite_eq_ite]\n`rw [hinter]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 115!\nLeanOeisProofs/NewProofs/A381355.lean:355:2: warning: `simp [a, coeff_mul]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact Finset.Nat.sum_antidiagonal_eq_sum_range_succ (fun i j => coeff i A * coeff j (F ^ p)) n`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 355!\n'A381355.primeN_dvd_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.coeff_F_pow_prime' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.F_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "verification_note": "Unchanged source; successful direct-compiler check from earlier October 9 build retained."
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A001818.lean",
+      "sha256": "e5e648d51cbb1f14543a30a47316676cc48a767c6d5e72f96b79114f6f203e40",
+      "exit_code": 0,
+      "elapsed_seconds": 99.1,
+      "output": "LeanOeisProofs/NewFormalization/A001818.lean:381:4: warning: `simp [sum_const]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [one_pow, sum_const, Nat.card_Icc, add_tsub_cancel_right, nsmul_eq_mul, mul_one]\n`rw [Nat.cast_sub (le_of_lt hN), Nat.cast_one]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 381!\nLeanOeisProofs/NewFormalization/A001818.lean:496:22: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:510:4: warning: `simp [neg_zero, zero_mul, \u2190 mul_sum]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Fin.coe_ofNat_eq_mod, Nat.zero_mod, CharP.cast_eq_zero, neg_zero, zero_mul, zpow_ofNat, pow_zero,\n    mul_one, mul_zero, sub_zero]\n`rw [sum_inv_one_sub_eq_half h\u03b6 hN]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 510!\nLeanOeisProofs/NewFormalization/A001818.lean:634:70: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:683:33: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:766:0: warning: `prod_zpow_eq_zpow_sum` does not use the following hypothesis in its type:\n  \u2022 [DecidableEq \u03b9] (#2)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:810:2: warning: `simp [allOnes, Matrix.sub_apply, hM]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Matrix.sub_apply]\n`exact one_add_div_sub_one hden`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 810!\nLeanOeisProofs/NewFormalization/A001818.lean:827:4: warning: `simp [h]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [ne_eq, left_eq_ite_iff, not_forall, Decidable.not_not, forall_exists_index]\n`exact prod_eq_zero_of_fixed M hdiag (by simpa using h)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 827!\nLeanOeisProofs/NewFormalization/A001818.lean:1179:2: warning: The `show` tactic should only be used to indicate intermediate goal states for readability.\nHowever, this tactic invocation changed the goal. Please use `change` instead for these purposes.\n\nNote: This linter can be disabled with `set_option linter.style.show false`\nLeanOeisProofs/NewFormalization/A001818.lean:1218:25: warning: `simp [List.length_ofFn] at hi` is a flexible tactic modifying `hi`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact hi`\nuses `hi`, which was modified by the flexible tactic `simp` on line 1218!\nLeanOeisProofs/NewFormalization/A001818.lean:1593:0: warning: `ofSubtype_isCycle` does not use the following hypothesis in its type:\n  \u2022 [DecidableEq \u03b1] (#2)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:1743:0: warning: `two_le_card_subtype_ne_of_card_three` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:1749:0: warning: `listingPerm_apply_ne` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:1955:22: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2010:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2066:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2133:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2222:0: warning: `ofSubtype_listing_mul_injective` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:2320:18: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2497:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2497:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2498:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2503:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2503:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2503:55: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2505:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2505:23: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2505:50: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2543:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2543:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2544:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2549:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2549:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2549:55: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2551:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2551:23: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2551:50: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2808:2: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2813:2: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2821:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2824:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2892:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2892:50: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2894:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:2894:50: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3009:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3009:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3079:0: warning: `ofSubtype_zpow` does not use the following hypothesis in its type:\n  \u2022 [DecidableEq \u03b1] (#2)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:3163:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3163:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3360:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3378:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:3781:6: warning: `simp [hmod, List.getElem_cons_zero]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Nat.mod_self, List.getElem_cons_zero]\n`cases L with\n| nil => simp at h1\n| cons _ _ => simp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 3781!\nLeanOeisProofs/NewFormalization/A001818.lean:3936:0: warning: `cayleyPathWeight_rotate_eq_of_eqOn_compl` does not use the following hypothesis in its type:\n  \u2022 [DecidableEq \u03b1] (#2)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:4109:0: warning: `exists_injective_off` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:4178:6: warning: `simp [ha, hb] at hab'` is a flexible tactic modifying `hab'`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact hu hab'`\nuses `hab'`, which was modified by the flexible tactic `simp` on line 4178!\nLeanOeisProofs/NewFormalization/A001818.lean:4180:6: warning: `simp [ha, hb] at hab'` is a flexible tactic modifying `hab'`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact (hdis a b hab').elim`\nuses `hab'`, which was modified by the flexible tactic `simp` on line 4180!\nLeanOeisProofs/NewFormalization/A001818.lean:4185:6: warning: `simp [ha, hb] at hab'` is a flexible tactic modifying `hab'`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact hx hab'`\nuses `hab'`, which was modified by the flexible tactic `simp` on line 4185!\nLeanOeisProofs/NewFormalization/A001818.lean:4295:4: warning: `simp [Equiv.permCongr_apply] at hfix` is a flexible tactic modifying `hfix`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact hx hfix`\nuses `hfix`, which was modified by the flexible tactic `simp` on line 4295!\nLeanOeisProofs/NewFormalization/A001818.lean:4354:0: warning: `sum_cayleyWeight_hamiltonian_subtype_eq_fin` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:4428:0: warning: `subtypePerm_ofSubtype` does not use the following hypothesis in its type outside of proofs:\n  \u2022 [Fintype \u03b1] (#2) (used in type, but only in a proof)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:4514:0: warning: `hamiltonianCayleySum_subtype_eq_cayleyHamConst` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:4540:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4593:28: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4594:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4610:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4610:22: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4646:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4646:17: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4644:4: warning: `simp` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Nat.reduceAdd, Fin.isValue, mem_insert, mem_singleton, mem_univ, iff_true]\n`fin_cases i`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 4644!\nLeanOeisProofs/NewFormalization/A001818.lean:4736:35: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4736:53: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4743:33: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:4743:51: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5078:0: warning: `cycleOf_permCongr` does not use the following hypotheses in its type:\n  \u2022 [DecidableEq \u03b1] (#3)\n  \u2022 [DecidableEq \u03b2] (#4)\n\nConsider removing these hypotheses and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:5166:6: warning: `simp [h]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Fin.isValue, ite_eq_left_iff, one_ne_zero, imp_false, Decidable.not_not]\n`exact Subtype.ext h.symm`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 5166!\nLeanOeisProofs/NewFormalization/A001818.lean:5169:6: warning: `simp [h, hq]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [Fin.isValue, ite_eq_left_iff, one_ne_zero, imp_false, Decidable.not_not]\n`exact Subtype.ext h.symm`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 5169!\nLeanOeisProofs/NewFormalization/A001818.lean:5222:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5238:16: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5238:27: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5239:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5327:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5327:22: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5327:34: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5334:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5334:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5334:34: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5341:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5341:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5341:32: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5504:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5508:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5517:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5517:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5785:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5785:22: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5785:34: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5912:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5912:21: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5964:43: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5965:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5969:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5972:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5993:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5995:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5995:21: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5996:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5996:21: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5997:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:5999:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6261:30: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6270:30: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6448:14: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6451:16: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6454:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6512:14: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6636:0: warning: `sum_long_even_subtype` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:6781:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6796:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6796:27: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6799:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6799:27: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6804:35: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6847:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6847:21: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6853:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6853:27: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6867:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6867:26: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6872:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6872:21: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6872:33: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6876:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6876:19: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6996:43: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:6997:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7001:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7004:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7021:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7174:6: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7194:6: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7194:31: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7458:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7458:24: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7458:36: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7461:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7462:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7465:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7466:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7474:13: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7495:12: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7495:23: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7499:12: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7499:23: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7573:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7573:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7577:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7577:20: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7618:0: warning: `prod_restrict_permCongr` does not use the following hypothesis in its type:\n  \u2022 [DecidableEq \u03b1] (#3)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:7618:0: warning: `prod_restrict_permCongr` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b1] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewFormalization/A001818.lean:7670:16: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/NewFormalization/A001818.lean:7670:27: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\n'A001818C1.conjecture1_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.zpow_sub_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.denom_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.calogero_kernel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_calogero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_zeta_perm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sunMatrix_sub_ones_off' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_of_zero_diag' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_of_zero_diag' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_calogero_eq_signed_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_sub_ones' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.signed_derangement_inv_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.two_three_cycles_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_insert_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_formPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_mul_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_formPerm_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_cons_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofFn_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_ncycles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.zeta_pow_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_zeta' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_support_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_zeta_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListingFun_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListingFun_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListing_listingPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listingPerm_ncycleToListing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycle_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_replace_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.coe_units_neg_one_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sign_of_cycleType_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleType_eq_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.derangement_long_cycle_or_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_prod_of_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.involution_unsigned_eq_neg_signed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_subtypePerm_of_support_subset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_ofSubtype_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_mul_listing_\u03c4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_replace_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longPoints_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_support_eq_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_mul_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longPoints_mul_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_eq_sum_longKey' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longKey_of_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_subtypePerm_of_support' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.eq_listing_of_longKey' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_fiber_inv_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_cycle_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_fiber_signed_inv_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_cycle_signed_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.unsigned_derangement_inv_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_sub_ones_eq_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_inv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_sunMatrix_eq_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_eq_sum_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_reverse_odd_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.reverseOddCycle_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_eq_sum_no_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_eq_sum_no_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.one_add_cayleyWeight_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fin_two_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_mul_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_ofSubtype_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_term_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleySum_term_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_swap_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_eq_swap_mul_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayley_triple_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_split' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_sigma1_add_sigma2_add' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_eq_prod_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_eq_path_mul_wrap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_cons_eq_path' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.path_mul_add_eq_weight_mul_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cons_rotate_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.path_mul_add_eq_weight_mul_sub_of_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cons_rotate_eq_neg_path' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_cons_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_eq_of_eqOn' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_rotate_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_listings_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_listings' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_natCast_notMem' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_injective_off' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.injective_update' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_update' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_updateOn' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_subtype_eq_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_ofSubtype_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleSupportEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_cycles_support' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.hamiltonianCayleySum_eq_cayleyHamConst' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.hamiltonianCayleySum_subtype_eq_cayleyHamConst' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.card_powersetCard_mem' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_even_cycles_through' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyHamConst_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_term_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_long_even_cycles_through' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.signMatrix_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_succ_column_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrixOf_minor_rev' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_swap_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyHamConst_binom_sum_rewrite' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fin_two_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySumOn_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_transpositions_through_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_eq_binom' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cycleOf_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_cycleOf_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_remainder_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_one_add_even_cycles_add_complementary' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'A001818C1.remainderThrough_eq_one_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_one_add_even_cycles_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_mul_of_fixes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_mul_of_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.disjoint_ofSubtype_support_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_mul_of_support_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.mem_support_compl_of_fixes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_cycleOf_subset_remainder_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_of_support_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_cycleOf' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_ofSubtype_eq_of_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_of_ofSubtype_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_ofSubtype_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_ofSubtype_mul_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_subtypePerm_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainderFibre_support_cycleOf' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainderFibreEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_mul_oddLong' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_ite_cycleOf_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fibre_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fibre_remainder_of_moves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_complementary_eq_sum_fibres' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_complementary_eq_inner' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_apply_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_cayleyMatrix_eq_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_cayleyMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_cayleyMatrix_eq_cayleySum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sunMatrix_eq_cayleyMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPowZero_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_col_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_row_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.injective_cayleyPowZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_of_val_lt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_of_val_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_coe_pow_nhdsWithin_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_one_add_div_one_sub_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_pow_add_one_div_pow_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_cayleyMatrix_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_permanent_cayleyMatrix_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrixOf_even' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_cayleySum_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_permCongr_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.even_card_support_of_oddLongPoints_empty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.equivFinZero_apply' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_comp_equivFinZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_comp_equivFinZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_zero_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.identity_three_nine' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_zero_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.identity_three_nine_tail' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_long_even_cycles_through_eq_card_sub_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'A001818C1.sum_long_even_subtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.card_support_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_ofSubtype_mul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_subset_compl_of_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySumOn_eq_sum_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.filter_fixed_erase' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_boole_fixed_erase' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleySumOn_omit_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma1_eq_omit_sub_extra' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_inner_term' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_fibre_of_moves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.even_card_compl_of_oddLongPoints_empty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_swap_inv_sq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.one_add_cayleyWeight_eq_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_mul_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_of_isEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_of_isEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_fin_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching_fin_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_eq_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.fpfinv_iff_cycleType' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_zeta_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_zeta' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.conjecture1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.conjecture1_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A382590.lean",
+      "sha256": "4407b1d9dbe2ce64c7c486b28150c9c6069671c44f94456fcc9f2a815e264fe8",
+      "exit_code": 0,
+      "elapsed_seconds": 95.2,
+      "output": "'B02R2A382590.kthPrimeFactor_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'B02R2A382590.kthPrimeFactor_period_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A237271.lean",
+      "sha256": "82814456ea743fda39dac480ebdb652937fdf0f39c604608a6d16ef953e4d3ca",
+      "exit_code": 0,
+      "elapsed_seconds": 85.6,
+      "output": "LeanOeisProofs/NewFormalization/A237271.lean:46:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                        \u2193\n  \u23ce  let divs_list : List \u2115 := (n.divisors.sort (\u00b7 \u2264 \u00b7))\u23ce\u23ce  -- Get the list of consecutive pairs of divisors: [(d\u2081, d\u2082), (d\u2082, d\u2083), ...]\u23ce\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\nLeanOeisProofs/NewFormalization/A237271.lean:49:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                                              \u2193\n  \u23ce  let consecutive_pairs : List (\u2115 \u00d7 \u2115) := List.zip divs_list divs_list.tail\u23ce\u23ce  -- Count the pairs satisfying the condition\u23ce\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\nLeanOeisProofs/NewFormalization/A237271.lean:56:0: warning: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                        \u2193\n  \u23ce    Odd d_k_succ \u2227 d_k_succ \u2265 2 * d_k\u23ce\u23ce  -- The sequence value is 1 + the count\u23ce\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`\n'OeisA237271.Cursor01.observation_carmichael' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA237271.Cursor01.a_ge_three_of_odd_composite' depends on axioms: [propext, Classical.choice, Quot.sound]\nobservation_carmichael : \u2200 (k : \u2115), IsCarmichael k \u2192 3 \u2264 a k\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A051903.lean",
+      "sha256": "688529cb0603544dc8dddfe9571ddf01c61621a035079ecdcedc93f0ac5f5e03",
+      "exit_code": 0,
+      "elapsed_seconds": 81.4,
+      "output": "A051903C2.conjecture2 : False \u2194 \u2203 n, Odd n \u2227 1 < a n \u2227 \u2200 (b : \u2115), b ^ n \u2261 b ^ a n [MOD n]\n'A051903C2.no_odd_universal' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A051903C2.conjecture2' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A361033.lean",
+      "sha256": "2a2867c4ec20804aeaf872fdfb0ddc91c45271227b5e7332da41a53be3f29ead",
+      "exit_code": 0,
+      "elapsed_seconds": 81.4,
+      "output": "'A361033.a_odd_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A361033.denom_dvd_num' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A361033.v2_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A368633.lean",
+      "sha256": "45245e682f612653ab5c6286f4f1a296cb89082c6ee39a06349527a8c85c4264",
+      "exit_code": 0,
+      "elapsed_seconds": 71.7,
+      "output": "LeanOeisProofs/NewFormalization/A368633.lean:249:27: warning: This simp argument is unused:\n  coeff_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coeff_A, a_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'A368633.a_odd_iff_mersenne' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A368633.mk_a_satisfiesHanna' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewFormalization/A397588.lean",
+      "sha256": "c9964e1ec9c517a9f230ff01a093fdcbc4d019d56d6453485fe63c319fc642ad",
+      "exit_code": 0,
+      "elapsed_seconds": 71.7,
+      "output": "'A397588.a_odd_iff_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.hanna_odd_iff_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.mk_a_satisfiesHanna' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.hanna_coeff_eq_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.a_three_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.hanna_three_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.weighted_eq_manyama' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A397588.hanna_iff_product_rule' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewProofs/A060957.lean",
+      "sha256": "3f19755d1ab54718f107ecb4049b3dafd5263b41e5c4f2168213c91e3269266d",
+      "exit_code": 0,
+      "elapsed_seconds": 83.1,
+      "output": "LeanOeisProofs/NewProofs/A060957.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew proof development and write-up: Wentao Li.\nOriginal conjecture: Yan Sheng Ang.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:18:20: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:27:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace OeisA60957`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew proof development and write-up: Wentao Li.\nOriginal conjecture: Yan Sheng Ang.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:18:20: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:27:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def productsOfSubsets (n : \u2115) : Set \u2115 :=\n  {m : \u2115 | \u2203 s \u2286 Finset.Icc 1 n, m = s.prod id}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew proof development and write-up: Wentao Li.\nOriginal conjecture: Yan Sheng Ang.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:18:20: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:27:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end OeisA60957`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:0: warning: * 'Copyright 2026 T':\nCopyright line should start with 'Copyright (c) YYYY'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:2:24: warning: * 'l Conjectures Authors.':\nCopyright line should end with '. All rights reserved.'\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\nOriginal Lean formalization: The Formal Conjectures Authors.\nNew proof development and write-up: Wentao Li.\nOriginal conjecture: Yan Sheng Ang.':\nIf an authors line spans multiple lines, each line but the last must end with a trailing comma\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:4:0: warning: * '\nLicensed':\nThe authors line should begin with 'Authors: '\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:9:0: warning: * '  ':\nDouble spaces are not allowed.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:18:20: warning: * ' and ':\nPlease, do not use 'and'; use ',' instead.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:5:44: warning: * '.':\nPlease, do not end the authors' line with a period.\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:3:0: warning: * 'Copyright 2026 Wentao Li.':\nSecond copyright line should be \"Released under Apache 2.0 license as described in the file LICENSE.\"\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:27:0: warning: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-!# An explicit counterexample to the A060957 interpolation conjecture\n\nSource: https://oeis.org/A060957\n\nConjecture: Yan Sheng Ang.\nOriginal Lean statement: the Formal Conjectures Authors,\nGoogle DeepMind's formal-conjectures repository.\nNew proof research and write-up: Wentao Li, with AI tool assistance.\n\nThe final declarations `counterexample` and `not_conjecture` give explicit endpoint\nsubsets and prove that the intermediate product is absent in the original domain.\nEarlier local exchange and same-profile interpolation lemmas are preserved.\nThe exact-statement audit and axiom checks are documented in the accompanying\nPROOF.md and SOURCE.md. The original statement's admitted proof is not imported.\n-/\n`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`\nLeanOeisProofs/NewProofs/A060957.lean:478:0: warning: `circuit_normal_form` does not use the following hypothesis in its type:\n  \u2022 [Fintype J] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\nLeanOeisProofs/NewProofs/A060957.lean:551:100: warning: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\nLeanOeisProofs/NewProofs/A060957.lean:564:100: warning: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\nLeanOeisProofs/NewProofs/A060957.lean:1243:62: warning: missing space in the source\n\nThis part of the code\n  '(i,j)))'\nshould be written as\n  '(i, j)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`\nLeanOeisProofs/NewProofs/A060957.lean:1355:0: warning: `nonmembership_of_weight_face` does not use the following hypothesis in its type:\n  \u2022 [Fintype \u03b9] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`\n'PilotA060957.not_conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PilotA060957.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
     },
     {
       "module": "LeanOeisProofs.lean",
+      "sha256": "58cfa5b1d0aaa90e51848c0f75186f103a03ea4634704410003a450cdb5d0fbf",
       "exit_code": 0,
-      "elapsed_seconds": 99.5,
-      "sha256": "fb383156f7e3a9b9c55e2ba4a26cdc18b4bf00db9bfc7ab6a2ca6bb0d3e43bc0",
+      "elapsed_seconds": 52.5,
       "output": ""
     }
   ],
@@ -143,12 +204,87 @@
         "Add F_unique and axiom checks for the generating-function bridge and uniqueness. Original proof body unchanged."
       ],
       "original_definitions_and_proofs_preserved": true
+    },
+    "A060957": {
+      "research_commit": "e00665575f476811ef241b43e9b45738774165b6",
+      "extracted_source_sha256": "525f2da080543069817865d8775c1d7c9f33e2c1cf9040afce31a3e9dfd965f6",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": true,
+      "publication_changes": [
+        "Replace upstream statement import by exact required definitions and Mathlib; omit admitted statements and unused tests.",
+        "Remove an unavailable Formal Conjectures copyright-linter option; update stale verification comments."
+      ]
+    },
+    "A001818": {
+      "research_commit": "33fa7621bfa38a41abebd3aedf545dfdce9f94a0",
+      "extracted_source_sha256": "135df3a991d52c177b771d3d146e2a5ca014194eb8a006352a8470960f0a7a47",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": true,
+      "publication_changes": [
+        "Replace upstream statement import by exact required definitions and Mathlib; omit admitted statements and unused tests."
+      ]
+    },
+    "A237271": {
+      "research_commit": "7a2f94d822d3bdef3aceaa1fafc54ed99e828b8c",
+      "extracted_source_sha256": "4315ca7c9c058fd9beeb35bbf7bc66c6f1f8b4bc81b12d4aa3222baea296591e",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": true,
+      "publication_changes": [
+        "Replace upstream statement import by exact required definitions and Mathlib; omit admitted statements and unused tests."
+      ]
+    },
+    "A382590": {
+      "research_commit": "c748661f1f83630921af1d317a2d535c882212f3",
+      "extracted_source_sha256": "1956f86f1c9766e89a4f0afbd3d8cb41c9beaa5a36353a9b53c127f80af09b68",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": true,
+      "publication_changes": [
+        "Replace upstream statement import by exact required definitions and Mathlib; omit admitted statements and unused tests."
+      ]
+    },
+    "A051903": {
+      "research_commit": "e4254e79d1fa492dfae5816e20abd46c469b3f4c",
+      "extracted_source_sha256": "88417287b950e6e0fdde7387ffb624dc5185efea62e7075c917137018d10593c",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": true,
+      "publication_changes": [
+        "Replace upstream statement import by exact required definitions and Mathlib; omit admitted statements and unused tests."
+      ]
+    },
+    "A361033": {
+      "research_commit": "3888af2abd61ac930e0a60d2af8ddad169b68dd7",
+      "extracted_source_sha256": "56cfe1d940f7b89515cd07523d1d785649ca7eebdc8e6eb10866b08bf4aab0f8",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": false,
+      "publication_changes": [
+        "Human author attribution; remove unused native numerical examples if present."
+      ]
+    },
+    "A368633": {
+      "research_commit": "d57c795e5e00bf6e5888d507b0bb8c33ce22af0b",
+      "extracted_source_sha256": "f37dc0ddbdc6cd179953acdeb38cac696e68b29a5005fda627444fd40db80f5a",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": false,
+      "publication_changes": [
+        "Human author attribution; remove unused native numerical examples if present."
+      ]
+    },
+    "A397588": {
+      "research_commit": "02fb684ba04306c26d7db882e870485a34fab820",
+      "extracted_source_sha256": "b10b35043f502e1ccd2004c127fb5c40e35a0f3452d227de0665013cd88b611c",
+      "proof_body_preserved_ignoring_comments_diagnostics_and_documented_identity_marker": true,
+      "exact_upstream_definitions_embedded": false,
+      "publication_changes": [
+        "Human author attribution; remove unused native numerical examples if present."
+      ]
     }
   },
   "layout_checks": {
-    "problem_lean_files": 5,
-    "readable_proofs": 5,
-    "source_notes": 5,
+    "problem_lean_files": 13,
+    "new_proofs": 6,
+    "new_formalizations": 7,
+    "readable_proofs": 13,
+    "source_notes": 13,
     "compatibility_modules": 0,
     "redirect_documents": 0,
     "root_imports_canonical_modules_directly": true
@@ -163,29 +299,1328 @@
   "release_tag_object_preserved": "e0c19a7f803a7376a702094e40e2f005013a7a02",
   "command_template": "LEAN_PATH=<fresh output>:<pinned dependency libraries> <pinned lean> <compiler_options> -o <fresh module .olean> <module .lean>",
   "axiom_checks": {
-    "LeanOeisProofs/NewProofs/A280246.lean": [
-      "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]"
-    ],
-    "LeanOeisProofs/NewProofs/A098275.lean": [
-      "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]"
-    ],
-    "LeanOeisProofs/NewProofs/A220119.lean": [
-      "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]"
-    ],
-    "LeanOeisProofs/NewProofs/A375439.lean": [
-      "'A375439.a_odd_iff_A038754' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'A375439.three_mul_a' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'A375439.three_dvd_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]"
-    ],
-    "LeanOeisProofs/NewProofs/A381355.lean": [
-      "'A381355.primeN_dvd_a' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'A381355.coeff_F_pow_prime' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'A381355.F_unique' depends on axioms: [propext, Classical.choice, Quot.sound]"
-    ],
-    "LeanOeisProofs.lean": []
+    "LeanOeisProofs/NewProofs/A280246.lean": {
+      "odd_a_iff_odd_psi": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewProofs/A098275.lean": {
+      "a098275_divisible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewProofs/A220119.lean": {
+      "a220119_divisible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewProofs/A375439.lean": {
+      "A375439.a_odd_iff_A038754": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A375439.three_mul_a": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A375439.three_dvd_rhs": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewProofs/A381355.lean": {
+      "A381355.primeN_dvd_a": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A381355.coeff_F_pow_prime": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A381355.F_unique": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A001818.lean": {
+      "A001818C1.conjecture1_of_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.zpow_sub_ne_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.inv_one_sub_eq_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.denom_ne_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.calogero_kernel_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.det_calogero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.prod_zeta_perm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sunMatrix_sub_ones_off": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_of_zero_diag": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.det_of_zero_diag": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.det_calogero_eq_signed_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_sunMatrix_sub_ones": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.signed_derangement_inv_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.two_three_cycles_cancel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_insert_kernel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_formPerm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_mul_disjoint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_formPerm_cons": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cycleEdgeWeight_cons_rotate": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ofFn_rotate": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cycleEdgeWeight_ncycles": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.zeta_pow_sub": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_zeta": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.listing_isCycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.listing_support_univ": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.listing_inv_one_sub_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_zeta_univ": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ncycleToListingFun_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ncycleToListingFun_surjective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ncycleToListing_listingPerm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.listingPerm_ncycleToListing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ncycle_inv_one_sub_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleEdgeWeight_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ofSubtype_isCycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cycleEdgeWeight_replace_cycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.coe_units_neg_one_pow": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sign_of_cycleType_replicate_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleType_eq_replicate_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.derangement_long_cycle_or_replicate_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.inv_one_sub_prod_of_univ": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.involution_unsigned_eq_neg_signed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ofSubtype_subtypePerm_of_support_subset": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.support_ofSubtype_listing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.support_mul_listing_\u03c4": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.inv_one_sub_replace_cycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.longPoints_nonempty_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainder_support_eq_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.ofSubtype_mul_remainder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_mul_listing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.longPoints_mul_listing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_eq_sum_longKey": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.longKey_of_listing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.isCycle_subtypePerm_of_support": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.eq_listing_of_longKey": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.long_fiber_inv_one_sub": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.long_cycle_inv_one_sub_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.long_fiber_signed_inv_one_sub": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.long_cycle_signed_inv_one_sub_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.unsigned_derangement_inv_sum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_sunMatrix_sub_ones_eq_a": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_inv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.prod_sunMatrix_eq_cayleyWeight": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_sunMatrix_eq_sum_cayleyWeight": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_reverse_odd_cycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.reverseOddCycle_involutive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_eq_sum_no_odd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_sunMatrix_eq_sum_no_odd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.one_add_cayleyWeight_swap": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_fin_two_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.oddLongPoints_mul_swap": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.oddLongPoints_ofSubtype_nonempty_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_term_swap_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleySum_term_swap_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_eq_swap_of_card_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.exists_eq_swap_mul_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_fiber_swap_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayley_triple_identity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_formPerm": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_formPerm_cons": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_fiber_fixed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma1": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_split": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_sigma1_add_sigma2_add": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyPathWeight_eq_prod_range": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_formPerm_eq_path_mul_wrap": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_formPerm_cons_eq_path": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.path_mul_add_eq_weight_mul_sub": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_cons_rotate_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.path_mul_add_eq_weight_mul_sub_of_length": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_cons_rotate_eq_neg_path": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_cons_rotate": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyPathWeight_eq_of_eqOn": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyPathWeight_rotate_eq_of_eqOn_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_listings_eq_of_eqOn_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_listings": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_of_eqOn_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.exists_natCast_notMem": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.exists_injective_off": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.injective_update": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_update": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_updateOn": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_of_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.isCycle_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_eq_of_card_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_hamiltonian_subtype_eq_fin": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.support_ofSubtype_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_ofSubtype_finset": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleSupportEquiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_cycles_support": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.hamiltonianCayleySum_eq_cayleyHamConst": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.hamiltonianCayleySum_subtype_eq_cayleyHamConst": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.card_powersetCard_mem": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_even_cycles_through": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyHamConst_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.oddLongPoints_isCycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_term_isCycle": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_long_even_cycles_through": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.signMatrix_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_succ_column_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_signMatrixOf_minor_rev": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_signMatrix": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_swap_of_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyHamConst_binom_sum_rewrite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_fin_two_of_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySumOn_pair": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_transpositions_through_of_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.evenCycleSumThrough_eq_binom": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_cycleOf_mul_remainder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.oddLongPoints_cycleOf_mul_remainder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_remainder_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_one_add_even_cycles_add_complementary": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainderThrough_eq_one_of_card_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_one_add_even_cycles_of_card_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_mul_of_fixes": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainder_mul_of_cycleOf_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.disjoint_ofSubtype_support_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_ofSubtype_mul_of_support_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.mem_support_compl_of_fixes": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.support_cycleOf_subset_remainder_compl": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_eq_self_of_support_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_eq_self_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_cycleOf": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_ofSubtype_eq_of_cycleOf_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_eq_self_of_ofSubtype_cycleOf_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainder_ofSubtype_mul": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainder_ofSubtype_mul_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_subtypePerm_eq_self": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainderFibre_support_cycleOf": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.remainderFibreEquiv": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyWeight_ofSubtype_mul_oddLong": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_ite_cycleOf_eq_self": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_fibre_remainder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_fibre_remainder_of_moves": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_complementary_eq_sum_fibres": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_complementary_eq_inner": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyMatrix_apply_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.prod_cayleyMatrix_eq_cayleyWeight": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_cayleyMatrix": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_cayleyMatrix_eq_cayleySum": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sunMatrix_eq_cayleyMatrix": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyPowZero_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyMatrix_powZero_col_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyMatrix_powZero_row_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.injective_cayleyPowZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyMatrix_powZero_of_val_lt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleyMatrix_powZero_of_val_gt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_coe_pow_nhdsWithin_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_one_add_div_one_sub_pow": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_pow_add_one_div_pow_sub_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_cayleyMatrix_powZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_permanent": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_permanent_cayleyMatrix_powZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.permanent_signMatrixOf_even": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.tendsto_cayleySum_powZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.isCycle_permCongr_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.evenCycleSumThrough_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.even_card_support_of_oddLongPoints_empty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.equivFinZero_apply": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_comp_equivFinZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.evenCycleSumThrough_comp_equivFinZero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_zero_fin": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.identity_three_nine": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_zero_of_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.identity_three_nine_tail": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleyWeight_long_even_cycles_through_eq_card_sub_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_long_even_subtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.card_support_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cycleOf_ofSubtype_mul_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.support_subset_compl_of_fixed_pair": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_fiber_fixed_pair": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySumOn_eq_sum_fixed_pair": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.filter_fixed_erase": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_boole_fixed_erase": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.sum_cayleySumOn_omit_pair": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma1_eq_omit_sub_extra": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma3_inner_term": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma3_fibre": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma3_fibre_of_moves": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.even_card_compl_of_oddLongPoints_empty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_sigma3": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_recurrence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_one": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_swap": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_swap_inv_sq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.one_add_cayleyWeight_eq_matching": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_mul_disjoint": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_ofSubtype": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_of_isEmpty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingSum_of_isEmpty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingSum_fin_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_matching_fin_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingSum_permCongr": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingSum_eq_recurrence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.fpfinv_iff_cycleType": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingWeight_zeta_mul": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.matchingSum_zeta": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_matching_fin": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.cayleySum_eq_matching": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.conjecture1": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A001818C1.conjecture1_frozen": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A382590.lean": {
+      "B02R2A382590.kthPrimeFactor_periodic": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "B02R2A382590.kthPrimeFactor_period_three": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A237271.lean": {
+      "OeisA237271.Cursor01.observation_carmichael": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "OeisA237271.Cursor01.a_ge_three_of_odd_composite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A051903.lean": {
+      "A051903C2.no_odd_universal": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A051903C2.conjecture2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A361033.lean": {
+      "A361033.a_odd_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A361033.denom_dvd_num": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A361033.v2_a": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A368633.lean": {
+      "A368633.a_odd_iff_mersenne": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A368633.mk_a_satisfiesHanna": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewFormalization/A397588.lean": {
+      "A397588.a_odd_iff_pow_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.hanna_odd_iff_pow_two": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.mk_a_satisfiesHanna": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.hanna_coeff_eq_a": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.a_three_dvd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.hanna_three_dvd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.weighted_eq_manyama": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "A397588.hanna_iff_product_rule": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/NewProofs/A060957.lean": {
+      "PilotA060957.not_conjecture": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "PilotA060957.counterexample": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs.lean": {}
   },
   "documentation_links": {
-    "checked": 57,
+    "checked": 125,
     "all_local_targets_exist": true
+  },
+  "publication_base_commit": "6f54afceef592bfaccbd370ceec71f0a44b93e1c",
+  "previous_five_modules_and_proof_notes_unchanged": true,
+  "excluded_completed_results": {
+    "A003161": "Reused Epoch results helper has no confirmed redistribution license.",
+    "A003162": "Depends on the same unlicensed Epoch helper.",
+    "A069004": "Reused Epoch results certificate/checker code has no confirmed redistribution license."
   }
 }

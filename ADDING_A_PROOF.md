@@ -11,15 +11,15 @@ Record the exact verified commit, the original OEIS definition, the conjecture c
 | Category | Lean folder | Proof-note folder | Contribution |
 | --- | --- | --- | --- |
 | **New Proofs** | `NewProofs` | `new-proofs` | A new mathematical proof or disproof, with Lean verification. Record the original conjecture and prior-work search. |
-| **Lean Formalizations of Known Results** | `Formalizations` | `formalizations` | A Lean formalization of an existing mathematical proof. Cite the original proof and credit its authors. |
+| **New Formalizations** | `NewFormalization` | `new-formalization` | A Lean formalization of an existing mathematical proof. Cite the original proof and credit its authors. |
 
 Record the exact contribution and any earlier Lean coverage in `SOURCE.md`. Keep literature-search notes and unresolved publication questions on the individual source page, rather than labeling a completed proof as unverified. An unresolved mathematical argument stays in the research workspace until it is proved. Numerical evidence is not a proof.
 
-Classify each conjecture clause separately when a sequence has multiple targets. Do not treat OEIS publication or a successful Lean check alone as evidence of first-ever mathematical priority.
+Explain the contribution of each conjecture clause when a sequence has multiple targets, but keep one canonical Lean file and proof/source pair per sequence. Clearly mark independent formalizations that overlap other public Lean proofs; inclusion is not a first-public-Lean claim. Do not treat OEIS publication or a successful Lean check alone as evidence of first-ever mathematical priority.
 
 ## 3. Add the formal source and proof notes
 
-Use the following layout, substituting the chosen category and an exact-target suffix when needed:
+Use the following layout, substituting the chosen category; keep multiple clauses of a sequence together:
 
 ```text
 LeanOeisProofs/NewProofs/AXXXXXX.lean

@@ -2,7 +2,7 @@
 
 Author: Wentao Li
 
-This repository contains Lean-verified proofs of five OEIS conjectures. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
+This repository contains Lean-verified results for thirteen OEIS sequences, including proofs, a disproof, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
 
 ## Role of AI tools
 
@@ -44,10 +44,18 @@ The Lean files in this repository were restored from the following independently
 | A220119 | `eed144b` | `a220119_divisible` |
 | A375439 | `d57c795e5e00bf6e5888d507b0bb8c33ce22af0b` | `A375439.a_odd_iff_A038754` |
 | A381355 | `82f7a104fb3f46c6e76f433e9682ad7f65b9402c` | `A381355.primeN_dvd_a` |
+| A060957 | `e00665575f476811ef241b43e9b45738774165b6` | `PilotA060957.not_conjecture` |
+| A001818 | `33fa7621bfa38a41abebd3aedf545dfdce9f94a0` | `A001818C1.conjecture1_frozen` |
+| A237271 | `7a2f94d822d3bdef3aceaa1fafc54ed99e828b8c` | `OeisA237271.Cursor01.observation_carmichael` |
+| A051903 | `e4254e79d1fa492dfae5816e20abd46c469b3f4c` | `A051903C2.no_odd_universal` |
+| A382590 | `c748661f1f83630921af1d317a2d535c882212f3` | `B02R2A382590.kthPrimeFactor_periodic` |
+| A361033 | `3888af2abd61ac930e0a60d2af8ddad169b68dd7` | `A361033.a_odd_iff` |
+| A368633 | `d57c795e5e00bf6e5888d507b0bb8c33ce22af0b` | `A368633.a_odd_iff_mersenne` |
+| A397588 | `02fb684ba04306c26d7db882e870485a34fab820` | `A397588.hanna_odd_iff_pow_two` |
 
 The build infrastructure (`lean-toolchain`, `lakefile.toml`, `lake-manifest.json`) was restored from `eed144b`. The A098275 and A280246 Lean sources at `eed144b` agree with their earlier verified commits. A220119 imports the A098275 file for a previously proved Catalan-factor identity.
 
-Publication cleanup consisted of authorship and license headers, public documentation, and the removal of internal research scaffolding. Existing mathematical definitions, lemma statements, theorem statements, and proof bodies were not rewritten for style. The two October 9 additions come from the author's private `ai4math-lab` research history. Their original AI4Math Lab copyright notices and Apache 2.0 licensing are retained; the workspace author label is replaced by the human author, Wentao Li. No DeepMind formalization source was copied into these two standalone Mathlib modules.
+Publication cleanup consisted of authorship and license headers, public documentation, and the removal of internal research scaffolding. Existing mathematical definitions, lemma statements, theorem statements, and proof bodies were not rewritten for style. A375439 and A381355 come from the author's private `ai4math-lab` research history. Their original AI4Math Lab copyright notices and Apache 2.0 licensing are retained; the workspace author label is replaced by the human author, Wentao Li. No DeepMind formalization source was copied into these two standalone Mathlib modules.
 
 For A375439, eight optional `native_decide` examples were removed; the general proof never depended on them. For A381355, the new `F_unique` theorem formalizes uniqueness of the integral generating function. Its existing definitions and divisibility proof are unchanged.
 
@@ -67,21 +75,40 @@ For A375439, eight optional `native_decide` examples were removed; the general p
 
 For each main theorem, Lean reports the axiom footprint `[propext, Classical.choice, Quot.sound]`. These are the standard Lean axioms, not additional mathematical hypotheses of the theorems. No custom axiom is introduced in the formalizations.
 
-## Repository organization — October 9, 2026
+## Additional publication notes — October 9, 2026
 
-The collection has two categories: **New Proofs** and **Lean Formalizations of
-Known Results**. The root README is the main navigation page.
+A060957 is the exact prime-interpolation disproof from the independently audited
+research branch. A001818 formalizes the published She–Sun–Xia identity and its
+supporting cycle/determinant arguments. A382590 formalizes Tao–Jagy mathematics
+using distinct prime factors. A237271 and A051903 are independent formalizations
+with overlapping public Lean proofs, explicitly credited on their source pages.
+A361033 uses classical valuation methods without a mathematical priority claim.
+A368633 formalizes the reduction to Catalan parity. A397588 includes two known
+properties and the connection to the defining generating function; the existing
+public recurrence-parity formalization is credited.
 
-Each published problem has one canonical Lean file in `LeanOeisProofs/NewProofs/`
-and one readable proof/source pair in `proofs/new-proofs/`. A220119-C1, A280246,
-A098275-C1, A375439 and A381355 are the five completed proofs currently included. The
-formalizations folders are reserved for future additions.
+For modules originating in Formal Conjectures, required definitions are included
+verbatim with the original copyright notices, instead of importing admitted
+statements. The 2025 notice for the composite-number helper is also retained.
+A060957 drops a repository-specific linter option. A051903 replaces the identity
+marker `answer(False)` with `False`. A001818 drops a diagnostic `#check` of the
+admitted upstream declaration. A368633 drops four unused numerical
+`native_decide` examples. These changes do not alter the mathematical proofs.
+The standalone AI4Math Lab files retain their Apache notices and name Wentao Li
+as the human author. No code from another person's overlapping Lean proof was
+copied into this publication.
 
-The October 9 cleanup removed compatibility modules and redirect documents;
-the two subsequent additions follow the same canonical layout. Original published
-proof files and their proof/source notes, theorem names, licensing, and pinned
-dependencies are unchanged. The `v1.0.0` release is preserved, so
-OEIS links pinned to that release remain valid.
+The three completed results A003161, A003162, and A069004 are excluded because
+their reused Epoch results code has no confirmed redistribution license. This
+is a source-license hold, not a failed mathematical verification.
+
+## Repository organization
+
+The two categories are **New Proofs** and **New Formalizations**. Each sequence
+has exactly one canonical Lean file and one readable proof/source pair, even
+when several clauses are proved. The root README is the sole navigation index.
+No compatibility copies or redirect documents are retained. The existing
+`v1.0.0` tag is unchanged, preserving release-pinned OEIS links.
 
 See the [current verification report](verification/README.md). Earlier reports
-and repository layouts remain available through Git history.
+and layouts remain available through Git history.
