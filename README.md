@@ -11,13 +11,15 @@ Mathematical proofs about OEIS sequences, with readable explanations and Lean 4 
 
 ## New Proofs
 
-All three proofs below are complete, Lean-verified, and published in this repository.
+All five proofs below are complete, Lean-verified, and published in this repository.
 
 | OEIS / target | Result | Statement | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- |
 | [A220119, Conjecture 1](https://oeis.org/A220119) | `a(n)` is divisible by `(n+1)(n+2)` for every `n > 0` | [Source](proofs/new-proofs/A220119/SOURCE.md) | [Proof](proofs/new-proofs/A220119/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A220119.lean) |
 | [A280246](https://oeis.org/A280246) | `a(n)` is odd iff the sum of totatives of `n` is odd, for `n > 0` | [Source](proofs/new-proofs/A280246/SOURCE.md) | [Proof](proofs/new-proofs/A280246/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A280246.lean) |
 | [A098275, Conjecture 1](https://oeis.org/A098275) | `a(n)` is divisible by `n+1` for every `n >= 0` | [Source](proofs/new-proofs/A098275/SOURCE.md) | [Proof](proofs/new-proofs/A098275/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A098275.lean) |
+| [A375439](https://oeis.org/A375439) | `a(n)` is odd exactly at `3^k` and `2*3^k` | [Source](proofs/new-proofs/A375439/SOURCE.md) | [Proof](proofs/new-proofs/A375439/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A375439.lean) |
+| [A381355](https://oeis.org/A381355) | The nth prime divides `a(n)` for every `n > 1` | [Source](proofs/new-proofs/A381355/SOURCE.md) | [Proof](proofs/new-proofs/A381355/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A381355.lean) |
 
 Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original attribution, publication links, and prior-work notes. The A220119 and A098275 proofs cover their divisibility conjectures. A280246's OEIS entry credits Li (2026).
 

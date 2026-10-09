@@ -48,31 +48,45 @@
   ],
   "modules": [
     {
-      "module": "LeanOeisProofs/NewProofs/A098275.lean",
-      "exit_code": 0,
-      "elapsed_seconds": 87.5,
-      "sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
-      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
-    },
-    {
       "module": "LeanOeisProofs/NewProofs/A280246.lean",
       "exit_code": 0,
-      "elapsed_seconds": 87.5,
+      "elapsed_seconds": 80.9,
       "sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7",
       "output": "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
     },
     {
+      "module": "LeanOeisProofs/NewProofs/A098275.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 81.0,
+      "sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
+      "output": "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
       "module": "LeanOeisProofs/NewProofs/A220119.lean",
       "exit_code": 0,
-      "elapsed_seconds": 54.9,
+      "elapsed_seconds": 89.6,
       "sha256": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42",
       "output": "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
     },
     {
+      "module": "LeanOeisProofs/NewProofs/A375439.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 103.6,
+      "sha256": "46113281f3427cff65ee7bb04d06ef99f12fa2396b53a97793dc8f085c04d9da",
+      "output": "'A375439.a_odd_iff_A038754' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_mul_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A375439.three_dvd_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "module": "LeanOeisProofs/NewProofs/A381355.lean",
+      "exit_code": 0,
+      "elapsed_seconds": 103.5,
+      "sha256": "20ed2a1616f661098c6bc2dfe48b014842e16bf733527ac0c531231a5e459d25",
+      "output": "LeanOeisProofs/NewProofs/A381355.lean:66:4: warning: `simp [Nat.choose_zero_right]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [choose_zero_right, cast_one, tsub_zero, one_mul]\n`rw [coeff_pow_X_mul_of_lt (H := PowerSeries.mk fun k => coeff (k + 1) G) hn]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 66!\nLeanOeisProofs/NewProofs/A381355.lean:115:2: warning: `simp [hne0, hne1]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\nTry this:\n  [apply] simp only [dite_eq_ite]\n`rw [hinter]`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 115!\nLeanOeisProofs/NewProofs/A381355.lean:355:2: warning: `simp [a, coeff_mul]` is a flexible tactic modifying `\u22a2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`\n`exact Finset.Nat.sum_antidiagonal_eq_sum_range_succ (fun i j => coeff i A * coeff j (F ^ p)) n`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 355!\n'A381355.primeN_dvd_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.coeff_F_pow_prime' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A381355.F_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
       "module": "LeanOeisProofs.lean",
       "exit_code": 0,
-      "elapsed_seconds": 46.4,
-      "sha256": "2901dd27c583c1851bed085f4539757b39e518e2873eccf97c39089cdbc7132e",
+      "elapsed_seconds": 99.5,
+      "sha256": "fb383156f7e3a9b9c55e2ba4a26cdc18b4bf00db9bfc7ab6a2ca6bb0d3e43bc0",
       "output": ""
     }
   ],
@@ -83,16 +97,21 @@
     "LeanOeisProofs/NewProofs/A220119.lean": [
       "LeanOeisProofs/NewProofs/A098275.lean"
     ],
+    "LeanOeisProofs/NewProofs/A375439.lean": [],
+    "LeanOeisProofs/NewProofs/A381355.lean": [],
     "LeanOeisProofs.lean": [
       "LeanOeisProofs/NewProofs/A098275.lean",
       "LeanOeisProofs/NewProofs/A280246.lean",
-      "LeanOeisProofs/NewProofs/A220119.lean"
+      "LeanOeisProofs/NewProofs/A220119.lean",
+      "LeanOeisProofs/NewProofs/A375439.lean",
+      "LeanOeisProofs/NewProofs/A381355.lean"
     ]
   },
+  "verification_note": "All six final module sources compiled on October 9. The two new modules and root were rebuilt after the additive uniqueness lemma and header cleanup; unchanged original modules retain their earlier successful checks from the same fresh-output build.",
   "source_comparison": {
-    "base_commit": "429020e12e4cae76d91fc78ac906ce947bd6338a",
-    "canonical_files_byte_for_byte_unchanged": true,
-    "canonical_file_sha256": {
+    "base_commit": "38d0cd13621ddbb3e80aabddbd9448c9d427f60f",
+    "original_three_proof_and_source_pairs_unchanged": true,
+    "unchanged_sha256": {
       "LeanOeisProofs/NewProofs/A098275.lean": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504",
       "proofs/new-proofs/A098275/PROOF.md": "2df650b7117422b519bd04531f3d3bc37e2481b60ce5c7890c77cc72db39e5d9",
       "proofs/new-proofs/A098275/SOURCE.md": "a9399687394385dc973ff786bf6ab6e163a0633c527e877795a8f265971f41f1",
@@ -104,20 +123,69 @@
       "proofs/new-proofs/A280246/SOURCE.md": "afcdb71dbb03868a05f8ad531a52a52d55b0c14117fabc64e8a99665f5e57a58"
     }
   },
+  "new_sources": {
+    "A375439": {
+      "research_commit": "d57c795e5e00bf6e5888d507b0bb8c33ce22af0b",
+      "original_path": "Ai4mathLab/Research/A375439.lean",
+      "original_sha256": "9b40b38dd4722b81f43767dd8dff03a77f9d9fcf9bf9008873722269bab42c55",
+      "publication_changes": [
+        "Replace workspace author label with human author; preserve original copyright and Apache license.",
+        "Remove eight optional native_decide numerical examples, unused by the general proof."
+      ],
+      "original_definitions_and_proofs_preserved": true
+    },
+    "A381355": {
+      "research_commit": "82f7a104fb3f46c6e76f433e9682ad7f65b9402c",
+      "original_path": "Ai4mathLab/Research/A381355.lean",
+      "original_sha256": "586a76908012d11a3790db1001b8b1edbcdb69322f5f2565703e3b236ea1ef71",
+      "publication_changes": [
+        "Replace workspace author label with human author; preserve original copyright and Apache license.",
+        "Add F_unique and axiom checks for the generating-function bridge and uniqueness. Original proof body unchanged."
+      ],
+      "original_definitions_and_proofs_preserved": true
+    }
+  },
   "layout_checks": {
-    "problem_lean_files": 3,
-    "readable_proofs": 3,
-    "source_notes": 3,
+    "problem_lean_files": 5,
+    "readable_proofs": 5,
+    "source_notes": 5,
     "compatibility_modules": 0,
     "redirect_documents": 0,
-    "root_imports_canonical_modules_directly": true,
-    "local_markdown_links_checked": 32
+    "root_imports_canonical_modules_directly": true
   },
   "lake_build": {
+    "checked_on": "2026-10-09",
     "exit_code": 133,
     "signal": "SIGTRAP",
-    "output": ""
+    "output": "",
+    "note": "Earlier same-day build attempt during layout cleanup; direct pinned compiler used for this addition."
   },
   "release_tag_object_preserved": "e0c19a7f803a7376a702094e40e2f005013a7a02",
-  "command_template": "LEAN_PATH=<fresh output>:<pinned dependency libraries> <pinned lean> <compiler_options> -o <fresh module .olean> <module .lean>"
+  "command_template": "LEAN_PATH=<fresh output>:<pinned dependency libraries> <pinned lean> <compiler_options> -o <fresh module .olean> <module .lean>",
+  "axiom_checks": {
+    "LeanOeisProofs/NewProofs/A280246.lean": [
+      "'odd_a_iff_odd_psi' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ],
+    "LeanOeisProofs/NewProofs/A098275.lean": [
+      "'a098275_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ],
+    "LeanOeisProofs/NewProofs/A220119.lean": [
+      "'a220119_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ],
+    "LeanOeisProofs/NewProofs/A375439.lean": [
+      "'A375439.a_odd_iff_A038754' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'A375439.three_mul_a' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'A375439.three_dvd_rhs' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ],
+    "LeanOeisProofs/NewProofs/A381355.lean": [
+      "'A381355.primeN_dvd_a' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'A381355.coeff_F_pow_prime' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'A381355.F_unique' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ],
+    "LeanOeisProofs.lean": []
+  },
+  "documentation_links": {
+    "checked": 57,
+    "all_local_targets_exist": true
+  }
 }

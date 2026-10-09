@@ -6,3 +6,5 @@ Authors: Wentao Li
 import LeanOeisProofs.NewProofs.A280246
 import LeanOeisProofs.NewProofs.A098275
 import LeanOeisProofs.NewProofs.A220119
+import LeanOeisProofs.NewProofs.A375439
+import LeanOeisProofs.NewProofs.A381355
