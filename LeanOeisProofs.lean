@@ -16,3 +16,5 @@ import LeanOeisProofs.NewFormalization.A382590
 import LeanOeisProofs.NewFormalization.A361033
 import LeanOeisProofs.NewFormalization.A368633
 import LeanOeisProofs.NewFormalization.A397588
+import LeanOeisProofs.NewFormalization.A003161
+import LeanOeisProofs.NewFormalization.A003162

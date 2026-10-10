@@ -2,7 +2,7 @@
 
 **Wentao Li**
 
-Results for **13 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, five new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
+Results for **15 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, seven new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original
 
 ## New Formalizations
 
-These five packages formalize known mathematics. This category is reserved for
+These seven packages formalize known mathematics. This category is reserved for
 contributions whose exact Lean coverage was not located elsewhere in the dated
 search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
 has mixed coverage: the new contribution is the defining-series bridge and
@@ -40,6 +40,8 @@ divisibility-by-3 formalization, not its already-formalized recurrence-parity le
 | [A368633](https://oeis.org/A368633) | **Proved** | C1: Catalan parity; defining generating-function identity included | [Source](proofs/new-formalization/A368633/SOURCE.md) | [Proof](proofs/new-formalization/A368633/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368633.lean) |
 | [A382590](https://oeis.org/A382590) | **Proved** | Tao–Jagy eventual period three for distinct prime factors | [Source](proofs/new-formalization/A382590/SOURCE.md) | [Proof](proofs/new-formalization/A382590/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A382590.lean) |
 | [A397588](https://oeis.org/A397588) | **Proved** | Defining-series bridge and divisibility by 3; supporting parity lemma has prior Lean | [Source](proofs/new-formalization/A397588/SOURCE.md) | [Proof](proofs/new-formalization/A397588/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A397588.lean) |
+| [A003161](https://oeis.org/A003161) | **Proved** | Cubic ballot-sum supercongruence modulo p^(3k) | [Source](proofs/new-formalization/A003161/SOURCE.md) | [Proof](proofs/new-formalization/A003161/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003161.lean) |
+| [A003162](https://oeis.org/A003162) | **Proved** | Normalized ballot-sum supercongruence and all-index integrality | [Source](proofs/new-formalization/A003162/SOURCE.md) | [Proof](proofs/new-formalization/A003162/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003162.lean) |
 
 ## Independent Formalizations — existing Lean proofs
 
@@ -78,13 +80,10 @@ proof/source pair.
 
 ## Completed research not included in this release
 
-A003161, A003162, and A069004 have completed research proofs, but reuse helpers
-or certificates from `epoch-research/LeanOpenProblems-results`. The October 9
-check found no redistribution license in that separate results repository.
-They are held back until that permission is established or the reused code is
-replaced. The MIT license of Epoch's benchmark repository does not automatically
-license its separate results repository. Incomplete attempts and results lacking
-a verified connection to the OEIS definition are also excluded.
+A069004 remains a completed research result outside this release. Incomplete
+attempts and results lacking a verified connection to the OEIS definition are
+also excluded. A003161 and A003162 are included above with their shared Epoch
+helper credited in the source notes.
 
 ## Repository layout
 
@@ -123,4 +122,7 @@ The main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Thei
 
 AI systems materially assisted mathematical exploration, proof search, critique, and Lean formalization. See [PROVENANCE.md](PROVENANCE.md) for attribution and the research record, and [ADDING_A_PROOF.md](ADDING_A_PROOF.md) for the publication workflow.
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
+Original Formal Conjectures material and Wentao Li's contributions are licensed
+under the [Apache License, Version 2.0](LICENSE). The Epoch-derived helper and
+refinement in A003161 retain their source licensing status; see
+[the provenance and scope](proofs/new-formalization/A003161/SOURCE.md).

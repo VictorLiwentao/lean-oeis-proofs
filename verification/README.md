@@ -1,64 +1,52 @@
 # Current verification report
 
-Checked October 9, 2026. The [machine-readable report](current.json) covers
-**13 canonical problem modules and the root library: all 14 pass**.
-The checked theorem dependencies contain only `propext`, `Classical.choice`,
-and `Quot.sound`, or subsets of these. No proof code contains `sorry`, `admit`,
-`native_decide`, or a custom axiom.
+Checked October 10, 2026. The [machine-readable report](current.json) covers
+**15 canonical problem modules and the root library**. Every recorded compiler
+check passed. The new A003161 and A003162 proofs and the updated root were freshly
+compiled; the thirteen unchanged proofs retain their exact-source-hash-matched
+October 9 compilation records.
 
-## Scope
+## A003161 and A003162: Comparator
 
-There are six modules in `NewProofs`, five in `NewFormalization`, and two in
-`IndependentFormalization`, with one readable proof/source pair per sequence. A397588's two clauses share one file.
-The root imports all 13 canonical modules. There are no compatibility modules,
-redirect documents, or duplicate category indexes.
+Both supercongruences pass Comparator against the original DeepMind statements
+at commit `1646ca16afd6cc7a693d3bdc9f066c4d3cc01a89`.
+A003162's all-index integrality statement also passes.
 
-The original three proof modules and their proof/source notes are unchanged from
-the earlier release. Eight added modules were compared with their frozen research
-sources. The later attribution cleanup changes five standalone copyright headers
-to Wentao Li and updates their source notes. Proof bodies are preserved, with
-the documented identity-marker replacement in A051903; required upstream definitions were compared verbatim
-ignoring comments and whitespace. Unused numerical examples and diagnostic
-references to admitted statements were removed where documented. The source
-comparison details and all final hashes are in the machine-readable report.
-Formal Conjectures copyright notices, Apache licensing, dependency pins, and the
-`v1.0.0` release tag are preserved.
+- The challenge preserves the original definitions and theorem types. Imports and
+  repository-only module/category metadata are adapted for the pinned Mathlib environment.
+- The solution imports the freshly built published files and supplies the exact original
+  theorem names through explicit wrappers.
+- Comparator checks transitive statement definitions and allowed axioms, then replays the
+  solution in a fresh Lean kernel environment.
+- Only `propext`, `Classical.choice`, and `Quot.sound` are permitted.
+- Controls confirm acceptance of a valid proof and rejection of a changed theorem,
+  an extra axiom, and a changed definition.
 
-## Compiler method
+The report includes configurations, challenge text, solution wrappers, source and
+export hashes, and complete Comparator logs for reproducible inspection.
 
-The earlier October 9 `lake build` attempt exited with status 133 (SIGTRAP).
-This report uses the pinned Lean `4.34.0-rc2` binary directly; it is not a
-successful Lake build.
+## Environment
 
-The initial publication checked all 13 proof modules and the root. The attribution
-update then rebuilt five standalone modules after copyright-header corrections.
-The category correction moves A051903 and A237271 into `IndependentFormalization`
-without changing their Lean source bytes; both moved modules and the updated root
-are rebuilt at their current paths.
+Lean is `4.34.0-rc2`; dependency commits are pinned by `lake-manifest.json` and
+verified against clean dependency checkouts. Existing Mathlib caches are trusted.
+Comparator source is `ca04cfc72b550331658ec314bf47685281bfd4bf`; the compatible
+lean4export version is `cacf989bd75f608700820f6afc595f32e7a99a4d`.
 
-Each dependency checkout matches its manifest commit. The rebuild uses a fresh
-output directory and pinned dependency libraries. The eleven unchanged modules
-retain their successful same-day checks with exact source-hash matches; their
-previously checked compiled outputs are copied into the fresh directory for the
-root check. The five corrected-header modules use the attribution build's outputs;
-the other six use the earlier publication build's outputs. At most two compiler
-processes run concurrently. This is not a fresh compilation of all thirteen proof
-modules. Full compiler and axiom output is retained in the machine-readable report.
+The macOS runner uses Python and direct Lean compilation to invoke Comparator's
+unchanged comparison, axiom-checking, and kernel-replay functions. macOS sandbox-exec
+restricts network access and filesystem writes. This is an adapted macOS runner;
+the standard Linux Landrun deployment was not used. No external kernel was run.
+The local Lake runtime has a previously documented SIGTRAP issue, so the proof
+library uses direct compiler checks. In a normal installation, run `lake exe cache get`
+and `lake build`.
 
-```text
-LEAN_PATH=<publication-output>:<pinned-dependency-libraries> <pinned-lean> \
-  -DrelaxedAutoImplicit=false -Dpp.unicode.fun=true \
-  -Dweak.linter.mathlibStandardSet=true -DmaxSynthPendingDepth=3 \
-  -o <publication-output>/<module>.olean <module>.lean
-```
+## Layout and attribution
 
-In a normal environment use `lake exe cache get` followed by `lake build`.
-Local documentation links, imports, file counts, and release-pinned source
-paths were checked. Mathematical attribution and known public Lean overlap
-are recorded in each sequence's `SOURCE.md`; compiler success does not prove
-novelty or upstream acceptance.
+There are six New Proofs, seven New Formalizations, and two Independent Formalizations.
+Each sequence has one canonical Lean file and one proof/source pair. A003162 imports
+A003161's shared arithmetic development. The original theorem statements and mathematical arguments were preserved during
+consolidation; three deprecated tactic lemma names were updated for Lean 4.34. The Epoch binomial helper and its
+refinement are credited in the source notes. The existing `v1.0.0` tag is unchanged.
 
-A003161, A003162, and A069004 are not in this build: their reused Epoch results
-code has no confirmed redistribution license. Incomplete research attempts are
-also excluded. Only this current report is kept in the working tree; earlier
-reports remain in [Git history](https://github.com/VictorLiwentao/lean-oeis-proofs/commits/main/verification).
+The earlier reports remain accessible through Git history. A069004 remains outside
+this publication batch.

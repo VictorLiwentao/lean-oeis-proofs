@@ -2,7 +2,7 @@
 
 Author: Wentao Li
 
-This repository contains Lean-verified results for thirteen OEIS sequences, including proofs, a disproof, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
+This repository contains Lean-verified results for fifteen OEIS sequences, including proofs, a disproof, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
 
 ## Role of AI tools
 
@@ -96,11 +96,9 @@ admitted upstream declaration. A368633 drops four unused numerical
 `native_decide` examples. These changes do not alter the mathematical proofs.
 The standalone files name Wentao Li in their copyright and author headers
 and retain Apache 2.0 licensing. No code from another person's overlapping Lean proof was
-copied into this publication.
+copied into the October 9 publication.
 
-The three completed results A003161, A003162, and A069004 are excluded because
-their reused Epoch results code has no confirmed redistribution license. This
-is a source-license hold, not a failed mathematical verification.
+A069004 remains outside this publication batch.
 
 ## Repository organization
 
@@ -116,3 +114,24 @@ No compatibility copies or redirect documents are retained. The existing
 
 See the [current verification report](verification/README.md). Earlier reports
 and layouts remain available through Git history.
+
+## A003161 and A003162: October 10 publication
+
+The two complete target proofs and A003162 all-index integrality come from research
+commit `f866d0158ceb5780e3c214eb09937d722b35fcc4`. Their proof bodies and theorem
+statements are preserved while the shared development is consolidated into
+A003161. Three deprecated tactic lemma names are updated for Lean 4.34. The original
+sequence definitions are credited to The Formal Conjectures Authors. Wentao Li
+developed the normalization, strengthened valuation estimates,
+shifted-square congruence, exact target proofs, and integration with AI assistance.
+
+The `B02R2EpochKazan` section copies and adapts a general binomial-scaling helper
+from Epoch Research's accepted A141057 solution; `B02R2RefinedKazan` refines that
+argument. The exact source and edits are recorded in the two SOURCE.md files.
+The source identifies its run as Claude Opus 4.8. The source helper and its
+adaptation are credited separately from the new target development. No new
+license is asserted for the Epoch-derived portions.
+
+Both target proofs were freshly compiled and checked with Comparator against the
+original DeepMind statements on October 10. The checks include transitive
+statement definitions, permitted axioms, and replay in Lean's kernel.
