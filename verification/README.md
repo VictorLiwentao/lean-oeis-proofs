@@ -1,9 +1,36 @@
 # Current verification report
 
 Updated October 11, 2026. The [machine-readable report](current.json) covers
-**16 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
+**17 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
 modules, and the combined root library were freshly compiled on October 11.
-The fifteen unchanged proofs retain their source-hash-matched October 9–10 records.
+A368628 and the combined root library were additionally compiled after this addition.
+The other proofs retain their source-hash-matched earlier records.
+
+## A368628: original generating-function bridge
+
+The published A368628 module and combined library were freshly compiled with
+warnings as errors on October 11. Comparator passed for `OeisA368628.conjecture`,
+the exact new statement proposed to Formal Conjectures, checking `a`, `conv2`
+and `conv4`. A second, independently written obligation checks the original
+rational generating-function equation: unique existence, natural coefficients,
+and the complete parity characterization. All checked closures use only the
+three standard axioms; fresh built-in Lean kernel replay accepts both results.
+
+The proposed Google statement was new at baseline
+`cd6912171c5a1de06905795e5533ec7120f34ddc`. Its metadata and aggregate import
+are adapted for the comparison; mathematical definitions and the theorem type
+are preserved. The official b-file verifies the first six values.
+
+This run uses the existing Comparator/lean4export kernel driver with the direct
+pinned compiler. It does not use the macOS sandbox used for earlier targets or
+an external kernel. The machine-readable report retains commands, wrappers,
+hashes, axiom output and results. An initial exporter configuration selected the
+wrong system Lean path; explicitly pinning `LEAN_SYSROOT` resolved it before the
+successful comparison. No mathematical change was needed for that error.
+
+Earlier public recurrence-parity Lean coverage is credited in
+[A368628's source record](../proofs/new-formalization/A368628/SOURCE.md).
+The added contribution is the original generating-function bridge.
 
 ## A069004: fresh certificate and Comparator
 
@@ -66,7 +93,7 @@ and `lake build`.
 
 ## Layout and attribution
 
-There are six New Proofs, eight New Formalizations, and two Independent Formalizations.
+There are six New Proofs, nine New Formalizations, and two Independent Formalizations.
 Each sequence has one canonical Lean entry point and one proof/source pair.
 A069004 also has distinct checker and certificate support files, each stored once. A003162 imports
 A003161's shared arithmetic development. The original theorem statements and mathematical arguments were preserved during

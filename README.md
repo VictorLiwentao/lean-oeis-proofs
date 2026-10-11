@@ -2,7 +2,7 @@
 
 **Wentao Li**
 
-Results for **16 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, eight new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
+Results for **17 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, nine new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
@@ -27,14 +27,15 @@ Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original
 
 ## New Formalizations
 
-These eight packages formalize known mathematics. This category is reserved for
+These nine packages formalize known mathematics. This category is reserved for
 contributions whose exact Lean coverage was not located elsewhere in the dated
 search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
 has mixed coverage: the new contribution is the defining-series bridge and
 divisibility-by-3 formalization, not its already-formalized recurrence-parity lemma.
 A069004 completes an Epoch certificate attempt using only the three standard
 axioms; its source notes distinguish earlier compilation from successful
-Comparator verification.
+Comparator verification. A368628 adds the original generating-function bridge;
+its supporting recurrence-parity theorem has earlier public Lean coverage.
 
 | OEIS / target | Outcome | Formalized result and scope | Statement / prior work | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
@@ -46,6 +47,7 @@ Comparator verification.
 | [A003161](https://oeis.org/A003161) | **Proved** | Cubic ballot-sum supercongruence modulo p^(3k) | [Source](proofs/new-formalization/A003161/SOURCE.md) | [Proof](proofs/new-formalization/A003161/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003161.lean) |
 | [A003162](https://oeis.org/A003162) | **Proved** | Normalized ballot-sum supercongruence and all-index integrality | [Source](proofs/new-formalization/A003162/SOURCE.md) | [Proof](proofs/new-formalization/A003162/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003162.lean) |
 | [A069004, Conjecture 2](https://oeis.org/A069004) | **Disproved** | Known counterexample certified: a(512720) >= 42494 > pi(512720) = 42493 | [Source](proofs/new-formalization/A069004/SOURCE.md) | [Proof](proofs/new-formalization/A069004/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A069004.lean) |
+| [A368628](https://oeis.org/A368628) | **Proved** | Original generating-function bridge, uniqueness and parity; supporting recurrence parity has prior Lean | [Source](proofs/new-formalization/A368628/SOURCE.md) | [Proof](proofs/new-formalization/A368628/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368628.lean) |
 
 ## Independent Formalizations — existing Lean proofs
 

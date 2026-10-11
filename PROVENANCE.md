@@ -2,7 +2,7 @@
 
 Author: Wentao Li
 
-This repository contains Lean-verified results for sixteen OEIS sequences, including proofs, disproofs, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
+This repository contains Lean-verified results for seventeen OEIS sequences, including proofs, disproofs, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
 
 ## Role of AI tools
 
@@ -149,3 +149,24 @@ for the exact source, licensing provenance, scope and contribution.
 Fresh compilation, Comparator comparison of both statements and dependent definitions,
 axiom checks, and fresh kernel replay are recorded in the current verification report.
 There is one canonical A069004 entry point, with 314 distinct supporting modules.
+
+## A368628: October 11 publication
+
+Wentao Li's earlier recurrence development was extended to prove the original
+rational generating-function equation, existence, uniqueness and integrality.
+The exact OEIS parity statement follows from this bridge. OpenAI Codex GPT-6.1 Sol
+assisted development; GPT-6 Astra assisted the independent source and proof review.
+Publication verification recompiles the proof under the repository's pinned Lean
+4.34.0-rc2 and checks the submitted statement and original generating function
+with Comparator and fresh kernel replay.
+
+The public recurrence-parity proof in
+[trureturing PR #6718](https://github.com/the-omega-institute/trureturing/pull/6718)
+is credited as earlier Lean coverage. The additional contribution here is the
+original generating-function bridge; no trureturing source is copied or imported.
+Paul D. Hanna retains the OEIS sequence and conjecture attribution.
+
+The reviewed development is preserved with a namespace rename, three deprecated
+tactic lemma aliases updated, diagnostic prints removed, and a small exact
+interface for the submitted recurrence and theorem. There is one canonical proof
+file and one readable proof/source pair.
