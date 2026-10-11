@@ -2,12 +2,12 @@
 
 **Wentao Li**
 
-Results for **15 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, seven new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
+Results for **16 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, eight new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
 | **New Proofs** | New mathematical proofs and disproofs developed by Wentao Li, with Lean verification. | [New Proofs](proofs/new-proofs/) | [NewProofs](LeanOeisProofs/NewProofs/) |
-| **New Formalizations** | Known mathematics; no earlier public Lean proof located for the stated new contribution in the dated search. | [New Formalizations](proofs/new-formalization/) | [NewFormalization](LeanOeisProofs/NewFormalization/) |
+| **New Formalizations** | Known mathematics; no earlier matching Lean proof meeting the recorded verification criteria located in the dated search. | [New Formalizations](proofs/new-formalization/) | [NewFormalization](LeanOeisProofs/NewFormalization/) |
 | **Independent Formalizations** | Our independently developed proofs of statements with existing public Lean proofs. | [Independent Formalizations](proofs/independent-formalization/) | [IndependentFormalization](LeanOeisProofs/IndependentFormalization/) |
 
 ## New Proofs
@@ -27,11 +27,14 @@ Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original
 
 ## New Formalizations
 
-These seven packages formalize known mathematics. This category is reserved for
+These eight packages formalize known mathematics. This category is reserved for
 contributions whose exact Lean coverage was not located elsewhere in the dated
 search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
 has mixed coverage: the new contribution is the defining-series bridge and
 divisibility-by-3 formalization, not its already-formalized recurrence-parity lemma.
+A069004 completes an Epoch certificate attempt using only the three standard
+axioms; its source notes distinguish earlier compilation from successful
+Comparator verification.
 
 | OEIS / target | Outcome | Formalized result and scope | Statement / prior work | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
@@ -42,6 +45,7 @@ divisibility-by-3 formalization, not its already-formalized recurrence-parity le
 | [A397588](https://oeis.org/A397588) | **Proved** | Defining-series bridge and divisibility by 3; supporting parity lemma has prior Lean | [Source](proofs/new-formalization/A397588/SOURCE.md) | [Proof](proofs/new-formalization/A397588/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A397588.lean) |
 | [A003161](https://oeis.org/A003161) | **Proved** | Cubic ballot-sum supercongruence modulo p^(3k) | [Source](proofs/new-formalization/A003161/SOURCE.md) | [Proof](proofs/new-formalization/A003161/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003161.lean) |
 | [A003162](https://oeis.org/A003162) | **Proved** | Normalized ballot-sum supercongruence and all-index integrality | [Source](proofs/new-formalization/A003162/SOURCE.md) | [Proof](proofs/new-formalization/A003162/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003162.lean) |
+| [A069004, Conjecture 2](https://oeis.org/A069004) | **Disproved** | Known counterexample certified: a(512720) >= 42494 > pi(512720) = 42493 | [Source](proofs/new-formalization/A069004/SOURCE.md) | [Proof](proofs/new-formalization/A069004/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A069004.lean) |
 
 ## Independent Formalizations — existing Lean proofs
 
@@ -74,16 +78,12 @@ without asserting that it is true.
 
 Outcome and contribution category are separate: a new disproof belongs in
 **New Proofs**. A known negative answer belongs in **New Formalizations** only
-when no earlier matching public Lean proof was located; otherwise it belongs in
+when no earlier matching public Lean proof meeting this repository's axiom requirements was located; otherwise it belongs in
 **Independent Formalizations**. Each sequence still has one canonical Lean file and one
 proof/source pair.
 
-## Completed research not included in this release
-
-A069004 remains a completed research result outside this release. Incomplete
-attempts and results lacking a verified connection to the OEIS definition are
-also excluded. A003161 and A003162 are included above with their shared Epoch
-helper credited in the source notes.
+Incomplete attempts and results without a verified connection to the OEIS definition
+remain in the research workspace.
 
 ## Repository layout
 
@@ -99,7 +99,9 @@ proofs/
 verification/        Compiler and axiom-check records
 ```
 
-Each problem has one Lean source and one readable proof/source pair. The root README is the main index. The existing `v1.0.0` release and release-pinned OEIS links are preserved.
+Each problem has one canonical Lean entry point and one readable proof/source pair.
+A069004 has a neighboring support directory containing distinct certificate chunks
+and checker lemmas; each file occurs once. The root README is the main index. The existing `v1.0.0` release and release-pinned OEIS links are preserved.
 
 ## Verify the proofs
 
@@ -109,6 +111,10 @@ Lean is pinned by `lean-toolchain`; Mathlib and its dependencies are pinned by `
 lake exe cache get
 lake build
 ```
+
+A069004 is a large computational certificate. For a memory-bounded, serial check
+using already installed dependencies, run `python3 scripts/check_a069004.py`.
+This may take several hours on a laptop.
 
 After the build, an individual proof can also be checked with:
 
@@ -123,6 +129,6 @@ The main theorems use only `propext`, `Classical.choice`, and `Quot.sound`. Thei
 AI systems materially assisted mathematical exploration, proof search, critique, and Lean formalization. See [PROVENANCE.md](PROVENANCE.md) for attribution and the research record, and [ADDING_A_PROOF.md](ADDING_A_PROOF.md) for the publication workflow.
 
 Original Formal Conjectures material and Wentao Li's contributions are licensed
-under the [Apache License, Version 2.0](LICENSE). The Epoch-derived helper and
-refinement in A003161 retain their source licensing status; see
-[the provenance and scope](proofs/new-formalization/A003161/SOURCE.md).
+under the [Apache License, Version 2.0](LICENSE). Epoch-derived portions retain their source licensing status; see
+[A003161 provenance](proofs/new-formalization/A003161/SOURCE.md) and
+[A069004 provenance](proofs/new-formalization/A069004/SOURCE.md).

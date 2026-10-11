@@ -2,7 +2,7 @@
 
 Author: Wentao Li
 
-This repository contains Lean-verified results for fifteen OEIS sequences, including proofs, a disproof, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
+This repository contains Lean-verified results for sixteen OEIS sequences, including proofs, disproofs, and formalizations of known mathematics. AI tools were used throughout the research workflow. They are not authors or coauthors of the results.
 
 ## Role of AI tools
 
@@ -98,7 +98,7 @@ The standalone files name Wentao Li in their copyright and author headers
 and retain Apache 2.0 licensing. No code from another person's overlapping Lean proof was
 copied into the October 9 publication.
 
-A069004 remains outside this publication batch.
+A069004 was added on October 11, 2026; see its contribution record below.
 
 ## Repository organization
 
@@ -135,3 +135,17 @@ license is asserted for the Epoch-derived portions.
 Both target proofs were freshly compiled and checked with Comparator against the
 original DeepMind statements on October 10. The checks include transitive
 statement definitions, permitted axioms, and replay in Lean's kernel.
+
+## A069004: October 11 publication
+
+The counterexample `n = 512720` is credited to j2d9w5xtjn-png's DeepMind PR #5453.
+The certificate data, modular-arithmetic routines, Pratt/Lucas checker and prime
+count data come from Epoch Research's published A069004 attempt. Wentao Li's
+adaptation bounds the exponentiation fuel, chunks the kernel computations and
+establishes both exact DeepMind disproof statements. The target is known mathematics
+with a completed Lean certificate. See [SOURCE.md](proofs/new-formalization/A069004/SOURCE.md)
+for the exact source, licensing provenance, scope and contribution.
+
+Fresh compilation, Comparator comparison of both statements and dependent definitions,
+axiom checks, and fresh kernel replay are recorded in the current verification report.
+There is one canonical A069004 entry point, with 314 distinct supporting modules.

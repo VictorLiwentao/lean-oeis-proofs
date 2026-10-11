@@ -1,10 +1,34 @@
 # Current verification report
 
-Checked October 10, 2026. The [machine-readable report](current.json) covers
-**15 canonical problem modules and the root library**. Every recorded compiler
-check passed. The new A003161 and A003162 proofs and the updated root were freshly
-compiled; the thirteen unchanged proofs retain their exact-source-hash-matched
-October 9 compilation records.
+Updated October 11, 2026. The [machine-readable report](current.json) covers
+**16 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
+modules, and the combined root library were freshly compiled on October 11.
+The fifteen unchanged proofs retain their source-hash-matched October 9–10 records.
+
+## A069004: fresh certificate and Comparator
+
+Both original DeepMind disproof statements pass: `OeisA69004.conjecture2` and
+`OeisA69004.conjecture2.variants.upper_bound_false`. The challenge is pinned to
+commit `4c40439d9be65b242e9196fb7848be02a9a4481d`.
+The exact sequence definition and theorem types are preserved; repository-only
+module metadata and imports are adapted to Lean 4.34.0-rc2.
+
+The certificate proves `42494 <= a(512720)` and
+`Nat.primeCounting 512720 = 42493`. It contains 284 prime-certificate chunks and
+26 prime-count modules covering 513 counting blocks, all freshly compiled with
+warnings treated as errors.
+Comparator verifies transitive definitions, permits only the three standard
+axioms, and replays the full dependency closure into a fresh Lean kernel.
+Controls accepted a correct proof and rejected changed statements, changed
+underlying definitions and an extra axiom.
+
+The certificate chunks are prebuilt with the local direct compiler; Comparator
+exports and verification run under the macOS sandbox described below.
+
+The machine-readable report includes the complete log, export hashes,
+configuration, challenge, solution wrapper, per-file build hashes, source
+preservation checks and dependency pins. Compiler and Comparator results are
+reported separately from mathematical originality and license provenance.
 
 ## A003161 and A003162: Comparator
 
@@ -42,11 +66,11 @@ and `lake build`.
 
 ## Layout and attribution
 
-There are six New Proofs, seven New Formalizations, and two Independent Formalizations.
-Each sequence has one canonical Lean file and one proof/source pair. A003162 imports
+There are six New Proofs, eight New Formalizations, and two Independent Formalizations.
+Each sequence has one canonical Lean entry point and one proof/source pair.
+A069004 also has distinct checker and certificate support files, each stored once. A003162 imports
 A003161's shared arithmetic development. The original theorem statements and mathematical arguments were preserved during
 consolidation; three deprecated tactic lemma names were updated for Lean 4.34. The Epoch binomial helper and its
 refinement are credited in the source notes. The existing `v1.0.0` tag is unchanged.
 
-The earlier reports remain accessible through Git history. A069004 remains outside
-this publication batch.
+The earlier reports remain accessible through Git history. A069004 is included with original counterexample and Epoch attribution.
