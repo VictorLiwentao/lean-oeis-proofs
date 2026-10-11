@@ -20,3 +20,7 @@ import LeanOeisProofs.NewFormalization.A003161
 import LeanOeisProofs.NewFormalization.A003162
 import LeanOeisProofs.NewFormalization.A069004
 import LeanOeisProofs.NewFormalization.A368628
+import LeanOeisProofs.NewProofs.A368626
+import LeanOeisProofs.NewProofs.A368629
+import LeanOeisProofs.NewProofs.A368634
+import LeanOeisProofs.NewFormalization.A368635

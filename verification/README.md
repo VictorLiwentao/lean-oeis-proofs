@@ -1,10 +1,39 @@
 # Current verification report
 
 Updated October 11, 2026. The [machine-readable report](current.json) covers
-**17 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
+**21 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
 modules, and the combined root library were freshly compiled on October 11.
-A368628 and the combined root library were additionally compiled after this addition.
+A368628 was additionally compiled earlier today. A368626, A368629, A368634,
+A368635 and the combined root library were freshly compiled for this publication.
 The other proofs retain their source-hash-matched earlier records.
+
+## A368626, A368629, A368634 and A368635
+
+All four complete canonical proofs were freshly compiled with the pinned compiler
+and warnings as errors on October 11. Comparator accepted each exact proposed
+DeepMind parity statement, including the sequence and convolution definitions.
+A second independent obligation for each sequence verifies the original rational
+generating-function equation: unique existence, natural coefficients and exact
+parity at every natural index. All eight compared theorem closures were replayed
+in a fresh Lean kernel and use only `propext`, `Classical.choice`, and `Quot.sound`.
+
+These are new DeepMind statements at base
+`ca0c9468e77f20afee673d88d3d60ac642655e52`. Comparator tests the declarations
+proposed by these submissions; the original OEIS translation was also reviewed
+mathematically. The six initial values of each sequence match the official
+b-files. All four changed DeepMind modules build with `--wfail`.
+
+The complete original mathematical proof bodies are preserved, with deprecated
+`if_*` tactic aliases updated and diagnostic prints removed. A368635 uses an
+internal namespace rename to provide the computable submitted interface. Its
+first publication compile detected one deprecated `if_true` alias; replacing it
+with `ite_true` preceded the successful fresh compile and comparison.
+
+The root library was rebuilt after importing all four. Older proof sources and
+the `v1.0.0` release tag are unchanged. The direct macOS Comparator runner is the
+same one used for A368628; it does not use an external kernel or Linux sandbox.
+The machine-readable report retains full configurations, wrappers, commands,
+source/export hashes, axiom output, dependency pins and success logs.
 
 ## A368628: original generating-function bridge
 

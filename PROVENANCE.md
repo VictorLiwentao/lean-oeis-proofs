@@ -170,3 +170,15 @@ The reviewed development is preserved with a namespace rename, three deprecated
 tactic lemma aliases updated, diagnostic prints removed, and a small exact
 interface for the submitted recurrence and theorem. There is one canonical proof
 file and one readable proof/source pair.
+
+## A368626, A368629, A368634 and A368635 generating-function bridges
+
+Wentao Li completed the original rational generating-function bridges and parity
+proofs with AI assistance, reusing his earlier local recurrence arguments. Each
+bridge was separately reviewed before publication. The source conjectures are by
+Paul D. Hanna. A368626, A368629 and A368634 are filed as New Proofs, with the dated
+no-earlier-exact-proof search recorded per sequence. A368635 formalizes the known
+Catalan parity consequence and is filed as New Formalizations. These additions
+do not copy or import external proof repositories. The October 11 publication
+checks rebuild each complete proof and compare the proposed DeepMind theorem and
+an independent original-equation obligation using Comparator and kernel replay.

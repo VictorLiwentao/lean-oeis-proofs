@@ -2,7 +2,7 @@
 
 **Wentao Li**
 
-Results for **17 OEIS sequences**, with readable explanations and Lean 4 verification: six new proofs/disproofs, nine new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
+Results for **21 OEIS sequences**, with readable explanations and Lean 4 verification: nine new proofs/disproofs, ten new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
@@ -12,7 +12,7 @@ Results for **17 OEIS sequences**, with readable explanations and Lean 4 verific
 
 ## New Proofs
 
-All six results below are complete, Lean-verified, and published in this repository. The outcome records whether the original conjecture was proved or disproved.
+All nine results below are complete, Lean-verified, and published in this repository. The outcome records whether the original conjecture was proved or disproved.
 
 | OEIS / target | Outcome | Result | Statement | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
@@ -22,12 +22,15 @@ All six results below are complete, Lean-verified, and published in this reposit
 | [A375439](https://oeis.org/A375439) | **Proved** | `a(n)` is odd exactly at `3^k` and `2*3^k` | [Source](proofs/new-proofs/A375439/SOURCE.md) | [Proof](proofs/new-proofs/A375439/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A375439.lean) |
 | [A381355](https://oeis.org/A381355) | **Proved** | The nth prime divides `a(n)` for every `n > 1` | [Source](proofs/new-proofs/A381355/SOURCE.md) | [Proof](proofs/new-proofs/A381355/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A381355.lean) |
 | [A060957](https://oeis.org/A060957) | **Disproved** | Disproof of prime-exponent interpolation: endpoints with exponents 0 and 6, missing exponent 5 | [Source](proofs/new-proofs/A060957/SOURCE.md) | [Proof](proofs/new-proofs/A060957/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A060957.lean) |
+| [A368626](https://oeis.org/A368626) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368626/SOURCE.md) | [Proof](proofs/new-proofs/A368626/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368626.lean) |
+| [A368629](https://oeis.org/A368629) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368629/SOURCE.md) | [Proof](proofs/new-proofs/A368629/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368629.lean) |
+| [A368634](https://oeis.org/A368634) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368634/SOURCE.md) | [Proof](proofs/new-proofs/A368634/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368634.lean) |
 
 Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original attribution, publication links, and prior-work notes. The A220119 and A098275 proofs cover their divisibility conjectures. A280246's OEIS entry credits Li (2026).
 
 ## New Formalizations
 
-These nine packages formalize known mathematics. This category is reserved for
+These ten packages formalize known mathematics. This category is reserved for
 contributions whose exact Lean coverage was not located elsewhere in the dated
 search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
 has mixed coverage: the new contribution is the defining-series bridge and
@@ -48,6 +51,7 @@ its supporting recurrence-parity theorem has earlier public Lean coverage.
 | [A003162](https://oeis.org/A003162) | **Proved** | Normalized ballot-sum supercongruence and all-index integrality | [Source](proofs/new-formalization/A003162/SOURCE.md) | [Proof](proofs/new-formalization/A003162/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A003162.lean) |
 | [A069004, Conjecture 2](https://oeis.org/A069004) | **Disproved** | Known counterexample certified: a(512720) >= 42494 > pi(512720) = 42493 | [Source](proofs/new-formalization/A069004/SOURCE.md) | [Proof](proofs/new-formalization/A069004/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A069004.lean) |
 | [A368628](https://oeis.org/A368628) | **Proved** | Original generating-function bridge, uniqueness and parity; supporting recurrence parity has prior Lean | [Source](proofs/new-formalization/A368628/SOURCE.md) | [Proof](proofs/new-formalization/A368628/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368628.lean) |
+| [A368635](https://oeis.org/A368635) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-formalization/A368635/SOURCE.md) | [Proof](proofs/new-formalization/A368635/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368635.lean) |
 
 ## Independent Formalizations — existing Lean proofs
 
