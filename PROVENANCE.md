@@ -182,3 +182,33 @@ Catalan parity consequence and is filed as New Formalizations. These additions
 do not copy or import external proof repositories. The October 11 publication
 checks rebuild each complete proof and compare the proposed DeepMind theorem and
 an independent original-equation obligation using Comparator and kernel replay.
+
+## A002454 and A396843: October 28 publication
+
+Wentao Li developed and reviewed these formalizations with OpenAI Codex assistance.
+The reviewed research commits are `a1bfd1c5cc8d2a02447921a29de0e77f729a4e4d`
+(A002454) and `55510e382215f44ec896c5ce9c5e4b852206d6d9` (A396843).
+
+A002454 formalizes Yue-Feng She, Zhi-Wei Sun and Wei Xia's identity, using
+Xuejun Guo, Xin Li, Zhengyu Tao and Tao Wei's determinant argument and the
+Calogero–Perelomov eigenvalue formula. It imports Wentao Li's existing A001818
+infrastructure and adds the reciprocal-difference and odd-order cofactor arguments.
+Epoch Research's earlier partial cofactor development and The Formal Conjectures
+Authors' original statement are credited in its source notes.
+
+A396843 is Paul D. Hanna's sequence and oddness conjecture. ElonSG /
+the-omega-institute/trureturing published an earlier Lean parity proof in PR #6773.
+Wentao Li's package also constructs the integral solution, proves normalized
+uniqueness over commutative rings, and identifies every normalized rational solution
+with that integral construction. The separate modulo-nine counterexample is
+credited to Danial Asaria in the source notes.
+
+Publication consolidates the A002454 bridge and target into one canonical file,
+removes diagnostic prints, and imports the existing A001818 module. A396843's
+internal namespace is renamed to provide the submitted interface. The added
+interface selects the unique solution and proves its equality to the construction.
+The mathematical arguments are preserved. Both files update conditional
+simplification lemma names for Lean 4.34; their Lean 4.33 review copies retain the
+corresponding names from that release. Independent compilation,
+exact-statement and definition comparison, axiom checks, and fresh Lean kernel
+replay are recorded in `verification/current.json`.

@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-11",
+  "date": "2026-10-28",
   "toolchain": "leanprover/lean4:v4.34.0-rc2",
-  "method": "A368626, A368629, A368634, A368635 and the combined root library freshly compiled with pinned Lean 4.34.0-rc2. All seventeen earlier entry points and A069004 support retain source-hash-matched checks and cached outputs.",
+  "method": "A002454, A396843 and the combined root library freshly compiled with pinned Lean 4.34.0-rc2, with warnings as errors. The 335 earlier modules retain source-hash-matched checks and cached outputs. Separately, A001818 and both new proofs were compiled from source under current DeepMind Lean 4.33.1 (conditional lemma names adapted between versions), then compared and replayed in a fresh Lean kernel.",
   "compiler_options": [
     "-DrelaxedAutoImplicit=false",
     "-Dpp.unicode.fun=true",
@@ -2410,21 +2410,67 @@
       "output": "'A368635Audit.exact_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA368635.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
     },
     {
-      "module": "LeanOeisProofs.lean",
-      "exit_code": 0,
-      "elapsed_seconds": 62.95,
-      "sha256": "29a1ee86b0b95ab8a7b0f79e1473ea9dbb00a6f7819e60627f739b2291ff56c5",
-      "verified_at": "2026-10-11T22:05:25.261048+00:00",
+      "name": "A002454",
       "command": [
         "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
         "-DwarningAsError=true",
         "-DrelaxedAutoImplicit=false",
+        "-DautoImplicit=false",
         "-DmaxSynthPendingDepth=3",
         "-o",
-        "/Users/wentaoli/Research/oeis-parity-publication/lib/LeanOeisProofs.olean",
+        "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/NewFormalization/A002454.olean",
+        "LeanOeisProofs/NewFormalization/A002454.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 186.19,
+      "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A002454.log",
+      "output": "",
+      "module": "LeanOeisProofs/NewFormalization/A002454.lean",
+      "sha256": "9a81bf0351cb34f924aaceacd1abb021cc08299c373f8c733bc4939a93ba327e",
+      "verified_on": "2026-10-28",
+      "compiler": "Lean 4.34.0-rc2, warnings as errors"
+    },
+    {
+      "name": "A396843",
+      "command": [
+        "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/IndependentFormalization/A396843.olean",
+        "LeanOeisProofs/IndependentFormalization/A396843.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 17.58,
+      "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A396843.log",
+      "output": "",
+      "module": "LeanOeisProofs/IndependentFormalization/A396843.lean",
+      "sha256": "7bbe23b4d8de48e840761844ea0ed49e83923df200ba50d449dea90f62437943",
+      "verified_on": "2026-10-28",
+      "compiler": "Lean 4.34.0-rc2, warnings as errors"
+    },
+    {
+      "name": "LeanOeisProofs",
+      "command": [
+        "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+        "-DwarningAsError=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DautoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs.olean",
         "LeanOeisProofs.lean"
       ],
-      "output": ""
+      "exit_code": 0,
+      "seconds": 134.76,
+      "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/LeanOeisProofs.log",
+      "output": "",
+      "module": "LeanOeisProofs.lean",
+      "sha256": "ac8e01a311674b37707ad601a34be8af67b9a21184c8e9f004a3e111c553f1f1",
+      "verified_on": "2026-10-28",
+      "compiler": "Lean 4.34.0-rc2, warnings as errors"
     }
   ],
   "all_modules_passed": true,
@@ -2445,22 +2491,29 @@
     "LeanOeisProofs/NewFormalization/A397588.lean": [],
     "LeanOeisProofs/NewProofs/A060957.lean": [],
     "LeanOeisProofs.lean": [
-      "LeanOeisProofs/NewProofs/A280246.lean",
-      "LeanOeisProofs/NewProofs/A098275.lean",
-      "LeanOeisProofs/NewProofs/A220119.lean",
-      "LeanOeisProofs/NewProofs/A375439.lean",
-      "LeanOeisProofs/NewProofs/A381355.lean",
-      "LeanOeisProofs/NewFormalization/A001818.lean",
-      "LeanOeisProofs/NewFormalization/A382590.lean",
-      "LeanOeisProofs/IndependentFormalization/A237271.lean",
-      "LeanOeisProofs/IndependentFormalization/A051903.lean",
-      "LeanOeisProofs/NewFormalization/A361033.lean",
-      "LeanOeisProofs/NewFormalization/A368633.lean",
-      "LeanOeisProofs/NewFormalization/A397588.lean",
-      "LeanOeisProofs/NewProofs/A060957.lean",
-      "LeanOeisProofs/NewFormalization/A003161.lean",
-      "LeanOeisProofs/NewFormalization/A003162.lean",
-      "LeanOeisProofs/NewFormalization/A069004.lean"
+      "LeanOeisProofs.NewProofs.A280246",
+      "LeanOeisProofs.NewProofs.A098275",
+      "LeanOeisProofs.NewProofs.A220119",
+      "LeanOeisProofs.NewProofs.A375439",
+      "LeanOeisProofs.NewProofs.A381355",
+      "LeanOeisProofs.NewProofs.A060957",
+      "LeanOeisProofs.NewFormalization.A001818",
+      "LeanOeisProofs.IndependentFormalization.A237271",
+      "LeanOeisProofs.IndependentFormalization.A051903",
+      "LeanOeisProofs.NewFormalization.A382590",
+      "LeanOeisProofs.NewFormalization.A361033",
+      "LeanOeisProofs.NewFormalization.A368633",
+      "LeanOeisProofs.NewFormalization.A397588",
+      "LeanOeisProofs.NewFormalization.A003161",
+      "LeanOeisProofs.NewFormalization.A003162",
+      "LeanOeisProofs.NewFormalization.A069004",
+      "LeanOeisProofs.NewFormalization.A368628",
+      "LeanOeisProofs.NewProofs.A368626",
+      "LeanOeisProofs.NewProofs.A368629",
+      "LeanOeisProofs.NewProofs.A368634",
+      "LeanOeisProofs.NewFormalization.A368635",
+      "LeanOeisProofs.NewFormalization.A002454",
+      "LeanOeisProofs.IndependentFormalization.A396843"
     ],
     "LeanOeisProofs/NewFormalization/A003161.lean": [],
     "LeanOeisProofs/NewFormalization/A003162.lean": [
@@ -3717,9 +3770,20 @@
       "LeanOeisProofs/NewFormalization/A069004/GlueCert.lean",
       "LeanOeisProofs/NewFormalization/A069004/GlueCount.lean"
     ],
-    "LeanOeisProofs/NewFormalization/A368628.lean": []
+    "LeanOeisProofs/NewFormalization/A368628.lean": [],
+    "LeanOeisProofs/NewFormalization/A002454.lean": [
+      "LeanOeisProofs.NewFormalization.A001818"
+    ],
+    "LeanOeisProofs/IndependentFormalization/A396843.lean": [
+      "Mathlib.RingTheory.PowerSeries.Substitution",
+      "Mathlib.RingTheory.PowerSeries.WellKnown",
+      "Mathlib.Data.ZMod.Basic",
+      "Mathlib.Tactic.LinearCombination",
+      "Mathlib.Tactic.IntervalCases",
+      "Mathlib.Tactic.NormNum"
+    ]
   },
-  "verification_note": "Per-target historical dates and compiler methods are preserved. The four new Comparator checks use the direct macOS kernel driver, without an external kernel or sandbox. Comparisons cover exact proposed DeepMind declarations/definitions and independent generating-function obligations.",
+  "verification_note": "Historical per-target dates and compiler methods are preserved. October 28 comparisons use the direct macOS runner and Lean 4.33.1 built-in kernel replay. No external kernel or Linux sandbox was run. They check exact submitted theorem types and dependent definitions; A396843 also includes existence, the defining equation and six initial values.",
   "source_comparison": {
     "base_commit": "38d0cd13621ddbb3e80aabddbd9448c9d427f60f",
     "original_three_proof_and_source_pairs_unchanged": true,
@@ -5973,19 +6037,31 @@
       "source_sha256": "12915569b659c91e8813a855139df1c61a1f16bf969fc496aa65c5769368cfbf",
       "worker_commit": "9379c1e3c6a61a9189d5a7eb4fa07333ca7d6350",
       "category": "NewFormalization"
+    },
+    "A002454": {
+      "source_sha256": "9a81bf0351cb34f924aaceacd1abb021cc08299c373f8c733bc4939a93ba327e",
+      "worker_commit": "a1bfd1c5cc8d2a02447921a29de0e77f729a4e4d",
+      "category": "NewFormalization",
+      "reviewed_on": "2026-10-28"
+    },
+    "A396843": {
+      "source_sha256": "7bbe23b4d8de48e840761844ea0ed49e83923df200ba50d449dea90f62437943",
+      "worker_commit": "55510e382215f44ec896c5ce9c5e4b852206d6d9",
+      "category": "IndependentFormalization",
+      "reviewed_on": "2026-10-28"
     }
   },
   "layout_checks": {
-    "problem_lean_files": 21,
+    "problem_lean_files": 23,
     "new_proofs": 9,
-    "new_formalizations": 10,
-    "readable_proofs": 21,
-    "source_notes": 21,
+    "new_formalizations": 11,
+    "readable_proofs": 23,
+    "source_notes": 23,
     "compatibility_modules": 0,
     "redirect_documents": 0,
     "root_imports_canonical_modules_directly": true,
-    "independent_formalizations": 2,
-    "canonical_problem_entry_points": 21,
+    "independent_formalizations": 3,
+    "canonical_problem_entry_points": 23,
     "A069004_distinct_support_modules": 314,
     "problem_lean_files_scope": "Canonical problem entry points; A069004 has 314 additional distinct support modules."
   },
@@ -7358,11 +7434,29 @@
       "exit_code": 0,
       "output": "'A368635Audit.exact_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA368635.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
       "verified_at": "2026-10-11T22:00:41.406668+00:00"
+    },
+    "LeanOeisProofs/NewFormalization/A002454.lean": {
+      "checked_on": "2026-10-28",
+      "output": "'A002454.conjecture_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.permanent_rootMatrix_eq_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.det_calogero_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.source_existence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.rational_source_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.a_5' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "LeanOeisProofs/IndependentFormalization/A396843.lean": {
+      "checked_on": "2026-10-28",
+      "output": "'A002454.conjecture_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.permanent_rootMatrix_eq_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.det_calogero_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.source_existence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.rational_source_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.a_5' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
     }
   },
   "documentation_links": {
-    "checked_at": "2026-10-11T22:05:53.291275+00:00",
-    "relative_links_checked": 197,
+    "checked_at": "2026-10-28",
+    "relative_links_checked": 214,
     "broken_links": []
   },
   "publication_base_commit": "b5eabe63ce276d12170d18f91b5b7327130c4cbe",
@@ -12603,7 +12697,7 @@
     ],
     "scope_note": "Each target records its own statement source, date and runner. A368628 compares a new submitted OEIS statement and an independently written original generating-function obligation; its runner uses the built-in Lean kernel directly without the earlier sandbox."
   },
-  "compiler_options_scope": "The three standard strict compiler flags apply to the four new proof files and root build; previous entries retain their recorded options.",
+  "compiler_options_scope": "The recorded strict flags apply to both October 28 proofs and the combined root. Historical modules retain their recorded options and verification dates.",
   "A069004_compiler_options": [
     "-DwarningAsError=true",
     "-DrelaxedAutoImplicit=false",
@@ -12620,13 +12714,2437 @@
   },
   "current_combined_library_cache": {
     "source_hash_verified": true,
-    "reused_count": 331,
+    "reused_count": 335,
     "fresh_modules": [
-      "LeanOeisProofs.NewProofs.A368626",
-      "LeanOeisProofs.NewProofs.A368629",
-      "LeanOeisProofs.NewProofs.A368634",
-      "LeanOeisProofs.NewFormalization.A368635"
+      "LeanOeisProofs.NewFormalization.A002454",
+      "LeanOeisProofs.IndependentFormalization.A396843"
     ],
-    "previous_cache": "/Users/wentaoli/Research/oeis-a368628-publication/lib"
+    "previous_cache": "/Users/wentaoli/Research/oeis-parity-publication/lib",
+    "current_cache": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib"
+  },
+  "A002454_A396843_independent_review": {
+    "date": "2026-10-28",
+    "upstream_statement_commit": "5a2fb85045c86e4a184b15ce7531ba199a3c4580",
+    "toolchain": "leanprover/lean4:v4.33.1",
+    "dependencies": {
+      "version": "1.2.0",
+      "packagesDir": ".lake/packages",
+      "packages": [
+        {
+          "url": "https://github.com/leanprover-community/mathlib4",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+          "name": "mathlib",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "v4.33.1",
+          "inherited": false,
+          "configFile": "lakefile.lean"
+        },
+        {
+          "url": "https://github.com/leanprover-community/plausible",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+          "name": "plausible",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "main",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover-community/LeanSearchClient",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+          "name": "LeanSearchClient",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "main",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover-community/import-graph",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "16f02aa7642864af59f1ff0e384a015994db9118",
+          "name": "importGraph",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "main",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover-community/ProofWidgets4",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+          "name": "proofwidgets",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "main",
+          "inherited": true,
+          "configFile": "lakefile.lean"
+        },
+        {
+          "url": "https://github.com/leanprover-community/aesop",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+          "name": "aesop",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "master",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover-community/quote4",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+          "name": "Qq",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "master",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover-community/batteries",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover-community",
+          "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+          "name": "batteries",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "main",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        },
+        {
+          "url": "https://github.com/leanprover/lean4-cli",
+          "type": "git",
+          "subDir": null,
+          "scope": "leanprover",
+          "rev": "6130a47896ce867c6a4a55373441e59e565bad0f",
+          "name": "Cli",
+          "manifestFile": "lake-manifest.json",
+          "inputRev": "v4.33.0",
+          "inherited": true,
+          "configFile": "lakefile.toml"
+        }
+      ],
+      "name": "formal_conjectures",
+      "lakeDir": ".lake",
+      "fixedToolchain": false
+    },
+    "proof_source_hashes": {
+      "LeanOeisProofs/NewFormalization/A001818.lean": "e5e648d51cbb1f14543a30a47316676cc48a767c6d5e72f96b79114f6f203e40",
+      "LeanOeisProofs/NewFormalization/A002454.lean": "dae7c3a658f890d0a0d897b420239485b5fc407cf4597c69187427be30c925d2",
+      "LeanOeisProofs/IndependentFormalization/A396843.lean": "6d51ae2ad9892c65493db33595036a5912fd21692ad859aa8e626d0d3bbc62ac"
+    },
+    "build": {
+      "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+      "baseline": "5a2fb85045c86e4a184b15ce7531ba199a3c4580",
+      "steps": [
+        {
+          "name": "A001818",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/lib/LeanOeisProofs/NewFormalization/A001818.olean",
+            "LeanOeisProofs/NewFormalization/A001818.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 213.3,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A001818.log",
+          "output": "'A001818C1.conjecture1_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.zpow_sub_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.denom_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.calogero_kernel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_calogero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_zeta_perm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sunMatrix_sub_ones_off' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_of_zero_diag' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_of_zero_diag' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.det_calogero_eq_signed_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_sub_ones' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.signed_derangement_inv_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.two_three_cycles_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_insert_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_formPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_mul_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_formPerm_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_cons_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofFn_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_ncycles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.zeta_pow_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_zeta' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_support_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listing_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_zeta_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListingFun_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListingFun_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycleToListing_listingPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.listingPerm_ncycleToListing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ncycle_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleEdgeWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cycleEdgeWeight_replace_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.coe_units_neg_one_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sign_of_cycleType_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleType_eq_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.derangement_long_cycle_or_replicate_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_prod_of_univ' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.involution_unsigned_eq_neg_signed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_subtypePerm_of_support_subset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_ofSubtype_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_mul_listing_\u03c4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.inv_one_sub_replace_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longPoints_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_support_eq_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.ofSubtype_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_mul_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longPoints_mul_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_eq_sum_longKey' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.longKey_of_listing' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_subtypePerm_of_support' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.eq_listing_of_longKey' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_fiber_inv_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_cycle_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_fiber_signed_inv_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.long_cycle_signed_inv_one_sub_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.unsigned_derangement_inv_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_sub_ones_eq_a' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_inv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_sunMatrix_eq_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_eq_sum_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_reverse_odd_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.reverseOddCycle_involutive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_eq_sum_no_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_sunMatrix_eq_sum_no_odd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.one_add_cayleyWeight_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fin_two_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_mul_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_ofSubtype_nonempty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_term_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleySum_term_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_swap_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_eq_swap_mul_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_swap_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayley_triple_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_cons' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_split' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_sigma1_add_sigma2_add' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_eq_prod_range' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_eq_path_mul_wrap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_formPerm_cons_eq_path' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.path_mul_add_eq_weight_mul_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cons_rotate_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.path_mul_add_eq_weight_mul_sub_of_length' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cons_rotate_eq_neg_path' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_cons_rotate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_eq_of_eqOn' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPathWeight_rotate_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_listings_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_listings' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_eqOn_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_natCast_notMem' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.exists_injective_off' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.injective_update' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_update' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_updateOn' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_eq_of_card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_hamiltonian_subtype_eq_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_ofSubtype_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleSupportEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_cycles_support' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.hamiltonianCayleySum_eq_cayleyHamConst' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.hamiltonianCayleySum_subtype_eq_cayleyHamConst' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.card_powersetCard_mem' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_even_cycles_through' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyHamConst_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_term_isCycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_long_even_cycles_through' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.signMatrix_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_succ_column_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrixOf_minor_rev' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_swap_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyHamConst_binom_sum_rewrite' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fin_two_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySumOn_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_transpositions_through_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_eq_binom' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_cycleOf_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.oddLongPoints_cycleOf_mul_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_remainder_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_one_add_even_cycles_add_complementary' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'A001818C1.remainderThrough_eq_one_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_one_add_even_cycles_of_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_mul_of_fixes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_mul_of_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.disjoint_ofSubtype_support_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_mul_of_support_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.mem_support_compl_of_fixes' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_cycleOf_subset_remainder_compl' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_of_support_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_cycleOf' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_ofSubtype_eq_of_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_eq_self_of_ofSubtype_cycleOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_ofSubtype_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainder_ofSubtype_mul_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_subtypePerm_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainderFibre_support_cycleOf' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.remainderFibreEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyWeight_ofSubtype_mul_oddLong' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_ite_cycleOf_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fibre_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_fibre_remainder_of_moves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_complementary_eq_sum_fibres' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_complementary_eq_inner' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_apply_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.prod_cayleyMatrix_eq_cayleyWeight' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_cayleyMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_cayleyMatrix_eq_cayleySum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sunMatrix_eq_cayleyMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyPowZero_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_col_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_row_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.injective_cayleyPowZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_of_val_lt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleyMatrix_powZero_of_val_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_coe_pow_nhdsWithin_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_one_add_div_one_sub_pow' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_pow_add_one_div_pow_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_cayleyMatrix_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_permanent_cayleyMatrix_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.permanent_signMatrixOf_even' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.tendsto_cayleySum_powZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.isCycle_permCongr_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.even_card_support_of_oddLongPoints_empty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.equivFinZero_apply' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_comp_equivFinZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.evenCycleSumThrough_comp_equivFinZero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_zero_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.identity_three_nine' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_zero_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.identity_three_nine_tail' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleyWeight_long_even_cycles_through_eq_card_sub_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'A001818C1.sum_long_even_subtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.card_support_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cycleOf_ofSubtype_mul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.support_subset_compl_of_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_fiber_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySumOn_eq_sum_fixed_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.filter_fixed_erase' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_boole_fixed_erase' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.sum_cayleySumOn_omit_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma1_eq_omit_sub_extra' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_inner_term' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3_fibre_of_moves' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.even_card_compl_of_oddLongPoints_empty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_sigma3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_swap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_swap_inv_sq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.one_add_cayleyWeight_eq_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_mul_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_ofSubtype' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_of_isEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_of_isEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_fin_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching_fin_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_permCongr' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_eq_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.fpfinv_iff_cycleType' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingWeight_zeta_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.matchingSum_zeta' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching_fin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.cayleySum_eq_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.conjecture1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A001818C1.conjecture1_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        },
+        {
+          "name": "A002454",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-DautoImplicit=false",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/lib/LeanOeisProofs/NewFormalization/A002454.olean",
+            "LeanOeisProofs/NewFormalization/A002454.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 144.98,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454.log",
+          "output": ""
+        },
+        {
+          "name": "A396843",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-DautoImplicit=false",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/lib/LeanOeisProofs/IndependentFormalization/A396843.olean",
+            "LeanOeisProofs/IndependentFormalization/A396843.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 12.83,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843.log",
+          "output": ""
+        },
+        {
+          "name": "axioms",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+            "-DwarningAsError=true",
+            "-DautoImplicit=false",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/axioms.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 185.93,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/axioms.log",
+          "output": "'A002454.conjecture_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.permanent_rootMatrix_eq_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.det_calogero_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.source_existence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.rational_source_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.a_5' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        },
+        {
+          "name": "comparator-tools",
+          "command": [
+            "python3",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/build_tools.py"
+          ],
+          "exit_code": 0,
+          "seconds": 11.43,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/comparator-tools.log",
+          "output": "BUILD Export\nBUILD Export/Parse\nBUILD Comparator/Util\nBUILD Comparator/Axioms\nBUILD Comparator/Compare\nBUILD Comparator\nBUILD CheckerCore\nBUILD ReplayCore\nBUILD ExportCore\n"
+        },
+        {
+          "name": "comparator-controls",
+          "command": [
+            "python3",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/validate_controls.py"
+          ],
+          "exit_code": 0,
+          "seconds": 30.47,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/comparator-controls.log",
+          "output": "{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/pass.json\", \"status\": \"passed\", \"duration_seconds\": 7.61, \"kernel_accepts\": true, \"comparator_accepts\": true}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/mismatch.json\", \"status\": \"failed\", \"duration_seconds\": 6.74, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/axiom.json\", \"status\": \"failed\", \"duration_seconds\": 9.42, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/definition.json\", \"status\": \"failed\", \"duration_seconds\": 6.64, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"status\": \"passed\", \"validated_utc\": \"2026-10-29T01:38:03.573057+00:00\", \"controls\": {\"pass\": {\"expected\": \"passed\", \"observed\": \"passed\", \"expected_reason_observed\": true, \"kernel_accepts\": true, \"comparator_accepts\": true}, \"mismatch\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}, \"axiom\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}, \"definition\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}}}\n"
+        },
+        {
+          "name": "upstream-module",
+          "command": [
+            "lake",
+            "--wfail",
+            "build",
+            "FormalConjectures.OEIS.\u00ab2454\u00bb"
+          ],
+          "exit_code": 0,
+          "seconds": 203.8,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/upstream-module.log",
+          "output": "\u2714 [8969/8972] Built FormalConjecturesForMathlib.Combinatorics.SimpleGraph.Mycielski (4.2s)\n\u2714 [8970/8972] Built FormalConjecturesForMathlib (72s)\n\u2714 [8971/8972] Built FormalConjecturesUtil (38s)\n\u2714 [8972/8972] Built FormalConjectures.OEIS.\u00ab2454\u00bb (76s)\nBuild completed successfully (8972 jobs).\n"
+        }
+      ]
+    },
+    "axiom_output": "'A002454.conjecture_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.permanent_rootMatrix_eq_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.det_calogero_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.source_existence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.rational_source_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.a_5' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "tool_provenance": {
+      "sources": [
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/.lake/packages/lean4export/Export.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Export.lean",
+          "sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998",
+          "observed_copy_sha256": "1c60d571dc24bfb99e7cbb218d8d489919bbc871238f6db9c76248521fbea998"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/.lake/packages/lean4export/Export/Parse.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Export/Parse.lean",
+          "sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286",
+          "observed_copy_sha256": "1f943b5cc776eece6d528937b976509c8bd57d10bc69a39b1c119bfb6d664286"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/Comparator/Util.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Comparator/Util.lean",
+          "sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88",
+          "observed_copy_sha256": "693d845330dd7122565aeb19314a3e3de4b49f9a8a7ac6e1fadbc9ab374b9f88"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/Comparator/Axioms.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Comparator/Axioms.lean",
+          "sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125",
+          "observed_copy_sha256": "863c5e1329811be0427880e08c171de733343491c5a3619b5dbf2e12b34c6125"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/Comparator/Compare.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Comparator/Compare.lean",
+          "sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd",
+          "observed_copy_sha256": "9bc34cb7de5a069a6fef7f3b13b20fea22f1d52603f74320a93d519b735ad3dd"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/tools/comparator/Comparator.lean",
+          "copy": "research/targets/A002454/audit-tools/src/Comparator.lean",
+          "sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23",
+          "observed_copy_sha256": "6c73ecd5bd429cf85e0aaa75b7c6f874ec0598d5afca60dcf5711d44e6bdef23"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/CheckerCore.lean",
+          "copy": "research/targets/A002454/audit-tools/src/CheckerCore.lean",
+          "sha256": "de2020a020a96aa730932c81c849bd94fe142d14e87765366f4229f2f0e3a60d",
+          "observed_copy_sha256": "bf90c40b0f4006476ea41d36456e42d0ad780d235a8463ecc9a1e8b24713aa61"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/ReplayCore.lean",
+          "copy": "research/targets/A002454/audit-tools/src/ReplayCore.lean",
+          "sha256": "a257fac4d1b28a97017a0d52bae4178def34e2417ab19a8f72d7e52bcf1d930c",
+          "observed_copy_sha256": "a257fac4d1b28a97017a0d52bae4178def34e2417ab19a8f72d7e52bcf1d930c"
+        },
+        {
+          "original": "/Users/wentaoli/Research/comparator-audit-2026-10-09/ExportCore.lean",
+          "copy": "research/targets/A002454/audit-tools/src/ExportCore.lean",
+          "sha256": "dbb59cf16d2e0e941e0d65944d24e12515d122275c40779580fc3731c653cdb2",
+          "observed_copy_sha256": "dbb59cf16d2e0e941e0d65944d24e12515d122275c40779580fc3731c653cdb2"
+        }
+      ],
+      "toolchain": "leanprover/lean4:v4.33.1",
+      "comparator_commit": "ca04cfc72b550331658ec314bf47685281bfd4bf",
+      "exporter_commit": "cacf989bd75f608700820f6afc595f32e7a99a4d",
+      "note": "Private source copies freshly compiled for this worker at frozen Lean 4.33.1; no old project oleans injected.",
+      "adaptation": "CheckerCore runBuiltinKernel calls Lean 4.33.1 Environment.replay via ofKernelEnv/toKernelEnv. Comparison/axiom code unchanged.",
+      "adapted_checker_sha256": "bf90c40b0f4006476ea41d36456e42d0ad780d235a8463ecc9a1e8b24713aa61",
+      "runner": "compare.py is the existing Python orchestration adapter with its cache configuration redirected to this worktree only."
+    },
+    "publication_build": {
+      "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+      "environment": {
+        "LEAN_NUM_THREADS": "2",
+        "LEAN_SYSROOT": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2",
+        "LEAN_PATH": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/mathlib/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/plausible/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/importGraph/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/proofwidgets/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/aesop/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/Qq/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/batteries/.lake/build/lib/lean:/Volumes/Apps/lean-offload/Research/lean-oeis-proofs/.lake/packages/Cli/.lake/build/lib/lean"
+      },
+      "reused_source_hash_matched": [
+        {
+          "module": "LeanOeisProofs/NewProofs/A280246.lean",
+          "source_sha256": "352566792a9430c44f85d4dd8a4c16a192464e6ec5dea6b9b8ad2dabd7365cb7"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A098275.lean",
+          "source_sha256": "e580d3e52f29bd9c3618ffe37bb39dbcc12adaee2c7b7b7c8bdcec55c4018504"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A220119.lean",
+          "source_sha256": "05967473f3f11dbd153d84b08a67337dbf3cd23d9312651fda37e0241203eb42"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A375439.lean",
+          "source_sha256": "c4398394e57113f9b823bb4929fcc6a07b4e2b0a4ea6763f0ba4ec5784f5ad8c"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A381355.lean",
+          "source_sha256": "d8a5c9667f46437500b803a2b94af86b7209e34e5cc2ffaf4f1620ea64a7df21"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A001818.lean",
+          "source_sha256": "e5e648d51cbb1f14543a30a47316676cc48a767c6d5e72f96b79114f6f203e40"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A382590.lean",
+          "source_sha256": "4407b1d9dbe2ce64c7c486b28150c9c6069671c44f94456fcc9f2a815e264fe8"
+        },
+        {
+          "module": "LeanOeisProofs/IndependentFormalization/A237271.lean",
+          "source_sha256": "82814456ea743fda39dac480ebdb652937fdf0f39c604608a6d16ef953e4d3ca"
+        },
+        {
+          "module": "LeanOeisProofs/IndependentFormalization/A051903.lean",
+          "source_sha256": "688529cb0603544dc8dddfe9571ddf01c61621a035079ecdcedc93f0ac5f5e03"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A361033.lean",
+          "source_sha256": "14c17f0d474de328fcb9de6d8dac264fdb20fa07ef5e291d2b470be2d4d0ede8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A368633.lean",
+          "source_sha256": "61b939c16a31adfccdaf8c60a5ef1139f4726d116043f33cee7992a85ad77361"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A397588.lean",
+          "source_sha256": "0d81ab991bfa6e6d28750ac26358d7c3e29953fb4065363543e17ba133831a49"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A060957.lean",
+          "source_sha256": "3f19755d1ab54718f107ecb4049b3dafd5263b41e5c4f2168213c91e3269266d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A003161.lean",
+          "source_sha256": "5068bc8fd6cf8b92213695d5964165b3815f94907c68f228a67ef62d4702e529"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A003162.lean",
+          "source_sha256": "34b50b4539a9337293526728347c33c03818faa6bbfc09badc93900bd5de2fdd"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C0.lean",
+          "source_sha256": "01563814876c5f9d5ee6dee630b61ba3f9ca7de8207699b9f05c35daa5e1e991"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C1.lean",
+          "source_sha256": "b5ee9c5f5d993e8ce8584d5cef5a34e6eedde24b7413a51fdea671900b5e121d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C10.lean",
+          "source_sha256": "ef131c4a2ff96dc29027b86f844ec12f5bc73228bb76bf8c8fbf853a8fadb436"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C100.lean",
+          "source_sha256": "5a3e30b148723b90ef6b5e5ff4f2eb0286d23960ed77b49d05e94cc47091b880"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C101.lean",
+          "source_sha256": "6834c7f32e3464b04f0c15159902e0d5b62a82283cbf8e985a05902a3fcdd52b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C102.lean",
+          "source_sha256": "52ac64fb849f14bd003576b8e8c513210b80ec2b43490393b2c2b9c3a3f061b9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C103.lean",
+          "source_sha256": "34b99504d899050392d617005b5bfb8c38b16361d846bb6284df8a7ad19828a2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C104.lean",
+          "source_sha256": "16b7ab71c007543f462c266a1cf5dc7eb4d49cce1206b25fba6e84eea0dfecba"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C105.lean",
+          "source_sha256": "2ab54c2fa3759efd22a57b31ff9e2d72ef74c8a87151fa7fd6f8a3223a30d34e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C106.lean",
+          "source_sha256": "ffd7faf9d529d5958bd2679d46187f657e37f6dbdc4533a6d010015afc2ed17e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C107.lean",
+          "source_sha256": "5471aa1597f055101f54ea8dbe91ccdea5fd7121252e7e48b77dbb2917dc7aff"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C108.lean",
+          "source_sha256": "d898e75764de802b8b955ce383ffa0251046aadb9fea63c895661279cb37a97d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C109.lean",
+          "source_sha256": "b2e42cfa941fb742cd29b91e81499f2e112eb704fc32c6e74e79d1476e695cdf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C11.lean",
+          "source_sha256": "66a8b8962dc84a403b0943e4ac44809d25800d22118b3423fd9ce62096119679"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C110.lean",
+          "source_sha256": "2d6843701f019c84d41a1b9505d64a1df35426bb88f423a71ff8dcc68274b7b0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C111.lean",
+          "source_sha256": "8893a3f542f6399e3e9dbc951466dac3b666517918c9d6ffec7b26fd798f3e92"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C112.lean",
+          "source_sha256": "73d665a80be645f4b4ad494e13662b99af5fb867f2203248f0febdba1610cdbc"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C113.lean",
+          "source_sha256": "75157814659675e60e2019f63755f444a5bdce29b818b6f8c91757bd8f5ab144"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C114.lean",
+          "source_sha256": "177d74a24ff2a2b2526cac1bbc87a76d3148d36b6a194a56e9fcc9222253530d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C115.lean",
+          "source_sha256": "9df5932b8a4791ca3c57b760d996cb2b8cc8760ad5cebff0e1cfcaaa87814131"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C116.lean",
+          "source_sha256": "9e518025fe33bfc3e6d89d2a5a47898cefa30253cb0dcacdbefb7a7a8c203427"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C117.lean",
+          "source_sha256": "7270c9f487ddd23b02b548c7e3633ad24272d8be5e375e686fe6eee22b84d21a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C118.lean",
+          "source_sha256": "be10c88887e1b7b636878c9bb4ac32c652a07b1ae9b1b29129e7f9e85f6efc95"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C119.lean",
+          "source_sha256": "b25d9e2c2b95ae6d0c0961a17a228856fedd6b55d102964e29487f790eafbc14"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C12.lean",
+          "source_sha256": "3bcd818cf9e0b4eeba1a4f170cfcfbdd98220c399b53398e76642f3157c5e055"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C120.lean",
+          "source_sha256": "0b4ce8fae4e51a77889091218827940305d3021d15c9154f997d67b27ca7471e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C121.lean",
+          "source_sha256": "208927ef636a69f3828549e797e5f5142dcedbee7b2223a70075c053d99a53fb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C122.lean",
+          "source_sha256": "f55e05c4f55c7c53933c577dba1196b892141febfdd21c1d65bf71ed5cf2bf28"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C123.lean",
+          "source_sha256": "24956a65a3aca319f5fd872cccd17368eb90623edc6e90b719c0de318451683a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C124.lean",
+          "source_sha256": "a774c770672f22fae043c86f708c83697e42486b3c83d7bf05f4fba25661e8e8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C125.lean",
+          "source_sha256": "90f2f43927f16ed88efbeb03402e9b1a688f1304d4aff9262f6084d5c1e8760f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C126.lean",
+          "source_sha256": "8dd5840cf743ba525886f03bf0ce8e3fe8a1e32bf4a70b2dfa35be08343ab530"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C127.lean",
+          "source_sha256": "42c603195154b1e8d9bc630f1837c2944c68d1c07405e01d7744cef0798a22f9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C128.lean",
+          "source_sha256": "c4fcab1f0c9b63ace0751990a848830e7043632b55a9e4839b6cc16f8b961182"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C129.lean",
+          "source_sha256": "534f3a76523d79b6d814af7922a9d87f05840a6362e526e25d9b64e7347a12a1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C13.lean",
+          "source_sha256": "7ebb37468d15de4ee829faf219d1a86a273b9955302a6993c36019d37c25f350"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C130.lean",
+          "source_sha256": "3d7e03190a1bf392a1664e83fcee6800daa2afb44b0135e6f1ea5a8b4f9bf3c2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C131.lean",
+          "source_sha256": "b60c499de11f9112f562fc6b988c1b18d4ea0ee410e29b24f4cb7a6738a0e693"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C132.lean",
+          "source_sha256": "49c44dba063609dfe4ec73950ad940f79d7750fd669d8f25749f3d94b13aa27f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C133.lean",
+          "source_sha256": "2c07cd55a2a441a1622f33f87334882d0f49462d307f1796c5b207427f6102f8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C134.lean",
+          "source_sha256": "332221258994e2f4d2701276209c597cf95bb73d3eb7e30f05e44340949099bc"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C135.lean",
+          "source_sha256": "6381621e815a69ddf3baf55382000408ea4695f420427a0b16dede0b75e4a2c9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C136.lean",
+          "source_sha256": "dfa03135229499442db7e31df0e695d83ac7a6557d38961787527a7b99dcceac"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C137.lean",
+          "source_sha256": "e4f42c202095e19bf07b3c4adaca3c4bb6180d21b07a173bcb02c7c213bd426e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C138.lean",
+          "source_sha256": "90c537f7d50d23ae9fd91ed9515f17e5a23e188ba7d5833b57bac99c065f20d7"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C139.lean",
+          "source_sha256": "5251d7246be36871573b0c0f0931138662a9b6a8a99af4abf62957ed94de0d33"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C14.lean",
+          "source_sha256": "08fdef2f1b917a304b8d3fad9152893e0f8a23659c65f01187035e2381808dee"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C140.lean",
+          "source_sha256": "c32993ba46eff99adb0e4c9976867bd6ef9b57b4c0f820b76ade806da009ab75"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C141.lean",
+          "source_sha256": "dc1d9ae4087b55c9bf6a53ee7e87130f2016593ff7a4ccb43c943b7573fbd9f5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C142.lean",
+          "source_sha256": "dd7a4d92d3d75990ef52067108d3f3115cb0d4c7afa1fea01c9bc54c4df88c32"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C143.lean",
+          "source_sha256": "cec1ac752a5ece077081b8bc286ac3942734021f2d21d66438d8024603cb2553"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C144.lean",
+          "source_sha256": "8277ba30a41c6d8f4bad95e034395ba4202dc3c37125b68a5c13cd9f2c69423f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C145.lean",
+          "source_sha256": "d1ba7903b54031ccbdb75764e5004269f15ea7ebd0f5207cec5aa64bf545fe8a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C146.lean",
+          "source_sha256": "da7a32dfb1498677afe6bc17f4ebb9577fba09e6ab0fff185ad24687bd373d87"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C147.lean",
+          "source_sha256": "1c9ab4658482bced08ba61fce5b2d23a384f099c29f530f8482e977f0f7f83d6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C148.lean",
+          "source_sha256": "2f258f3d281a10bb9367ae5dfd04fc4b161a6e651ac3333a947a032f91206f55"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C149.lean",
+          "source_sha256": "f78adc4fac43c218752c13d575e69103b8a513086b9d899dbe45ff8b2927e780"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C15.lean",
+          "source_sha256": "eb65006d3aa20d40813d57e905894fce93fcc6a1836fbf87dada204270ba464e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C150.lean",
+          "source_sha256": "037c200f5641662482bebd9b6cfcf7dc71517d9f095899fe73e82f9c4f747fe3"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C151.lean",
+          "source_sha256": "c7b4619b1a4c2f8d1078751fd268a1166ce5060bd4e0b9e2aff509b38b2d1e0c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C152.lean",
+          "source_sha256": "d308433826910e0a34bc1bd63d95f84eb75c577553dbcfcae9a7d2c95ba24b5c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C153.lean",
+          "source_sha256": "77a102fecdfec741b8afaba9d327133744c08abf6b2c029a2bff2c74da733f62"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C154.lean",
+          "source_sha256": "f7e9f75dc42dc40bb4b006a8e9e11ba28d103b96801d9debfdc2985c23c90713"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C155.lean",
+          "source_sha256": "45a74577a3fc56458634f3f6c594588e6edb27ff0bed1ae56bc186eaa7f8cdbb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C156.lean",
+          "source_sha256": "aa999ec289d5e0abcd8fdf15d5e1e9707e042051ae30e5ab5c7847606be99702"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C157.lean",
+          "source_sha256": "4d64257610908f9f57c6105f47ffec04cec024d9227251194e6c272cb44c6bdb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C158.lean",
+          "source_sha256": "1257091368c804d307096a08f76d3d96e7fda596146930465311a522a0856226"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C159.lean",
+          "source_sha256": "dba2fe9005e589d366aeba2e5ce0c145b15b0224b7cce040c490373b8329df0b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C16.lean",
+          "source_sha256": "90ecb5f5f6d0bac019066a9bac7162308d17b51cea82a9250559c7b3ee6f9460"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C160.lean",
+          "source_sha256": "49c829add6ad3e74fd05b1c374ebd87f9e86273c9da31142d833709da072b446"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C161.lean",
+          "source_sha256": "97c679509e0d03c8a6fa140f89e32e2d7dde0ff69fe6ab8d75de60f19e61fe4b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C162.lean",
+          "source_sha256": "c90eb655251e8c500a18c516e7c734fe9920be46f1231352f9e95c2138c3d6f4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C163.lean",
+          "source_sha256": "7d922d7adbb337ef2b65ea0d57b1e4cdafce9e6130925400c64a9bf670848906"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C164.lean",
+          "source_sha256": "1317b323e1d5ee41eabd2f1b6d862371e6a27284efb44562bcca7ec85985cc39"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C165.lean",
+          "source_sha256": "915ec36ddd8b926cead7ca7b948b9b7aee9e8d569ff7566b58ebd176dabbc8f7"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C166.lean",
+          "source_sha256": "37980a9abef8fa8ce6609e311b78fa4fa76daaa8042a37a2f1b28470bd816519"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C167.lean",
+          "source_sha256": "176f5bee6d7df269d7405abfd9a3d9e3abb6996d48846dcae9b1ac28ebaa87e4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C168.lean",
+          "source_sha256": "9c959f40e66af50df06e818b363833a854791887b5c2aae114cb770dd1398bcd"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C169.lean",
+          "source_sha256": "cad94436a9a0c1913dd61359729b9589e6c623bf5ff983dbb5b02a6fb4e24303"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C17.lean",
+          "source_sha256": "04a549bd6655b7701beaa855677819f70bc3e4d393fa65a2fc634db8579abf1e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C170.lean",
+          "source_sha256": "41bfd8916b3f07dc25cd20cf4a45f7cf9b2362413b57d03107c62fdf815b9093"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C171.lean",
+          "source_sha256": "5a323440a4170cb79b9a29acee53b1917022e2ad9273dc756e49af4938812646"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C172.lean",
+          "source_sha256": "250f6d45c581b1360f38098a952d5696755fe40f3ba063ddca812ad1c34ebe34"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C173.lean",
+          "source_sha256": "280f200afda0dfb136982237e6e19b9e69668c2a7d41fe8134b97c8ddd6f5c06"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C174.lean",
+          "source_sha256": "4dc8301a969ddb91f4d29a86d518670efe14e264bc460a7f43b7d2608cb1b19b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C175.lean",
+          "source_sha256": "43caa6949cb79f66e2a7b89efb00f1698a274c731180c59818ea86c3093dbdaf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C176.lean",
+          "source_sha256": "7d4748a58dad4c7f680ea871a83635a92df78d6961fe3f4ba1f039a0ec87c427"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C177.lean",
+          "source_sha256": "d2434dcf5a31023ea19de9f1d8efe64b5d4ce39f5619a7ea7f63afe14f7a432c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C178.lean",
+          "source_sha256": "832453a5929c78152f720345923c030bb856182f80a45037edf5b02996b21dac"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C179.lean",
+          "source_sha256": "1963a9c6a3838a2bb28e047fd84bce8f967055a2d2c35734a0373de7b06ba065"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C18.lean",
+          "source_sha256": "f4d3b50caec9b995c8022a68aba8cb53b3b68e5f16a73494f648f48c9a94c614"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C180.lean",
+          "source_sha256": "279991c69728eb169b37000382cac8b1edefb912dda37c4dfda1b4d649c04fda"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C181.lean",
+          "source_sha256": "34af47f10ddb52f72dcf6a69d67476c70b1a59f5a6c243f7502c1ad373de0809"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C182.lean",
+          "source_sha256": "a8c287ec2fe1e7b7be428da2cc1b2d23e451af9a77c224f4beb642efffb6fdaf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C183.lean",
+          "source_sha256": "c30d93205880a6b617156ba75bd651719104fb13761b48b5e673bbbe26d41a14"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C184.lean",
+          "source_sha256": "8019d92845e3152aedf461dd48b708afd43e8ddf933ed981d83896c17f61a178"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C185.lean",
+          "source_sha256": "0b54965485cb72b2d02bff33a0670b26c4bbf9f205eb4d93928ded8ffe96c707"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C186.lean",
+          "source_sha256": "47ef11fe8f2c1729b6e5596eff853bbda9014a37c5124b7a3e3c6897564c362b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C187.lean",
+          "source_sha256": "b9c5d62cee61fe571f2016696f2c3a49b3a0121915199c2e8e34e3bd9e3161ea"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C188.lean",
+          "source_sha256": "2d5a5dff0e26ee6a45a39e366ee760d5f2cb6b9fbea764599f52255ebebd6d43"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C189.lean",
+          "source_sha256": "7ecc4f105d88cfee0e4edec501dc06c0879e068b67b0d8aa156b626540262e62"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C19.lean",
+          "source_sha256": "3b5d15a0bb30c94fc32b0cae8611a05fb779e1e438f6e7332088d4eeae3aa88e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C190.lean",
+          "source_sha256": "59952dc92a7de7e4712723e5d8a7db1e95779a819495b1db00b417a614195464"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C191.lean",
+          "source_sha256": "de03415819817a7b3ee202fd75c260844f6838dd09f164978ab2172307e2f75e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C192.lean",
+          "source_sha256": "1bc75b04b19c1b3648af7068b267647957631daaa81a14933b07a706f692d463"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C193.lean",
+          "source_sha256": "84b65177b98a028ae441247e88891252bc0ab5fd71b083ed8015b6babb3570a6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C194.lean",
+          "source_sha256": "cafc9a8d9e425d642d919363e18ff76994f87a8aa1f1ae76d4d6bb5ae6c3f34c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C195.lean",
+          "source_sha256": "81190d42e7b0da35ef07d21285461f332f9cb47f89a131382e369df93ebf713d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C196.lean",
+          "source_sha256": "6b7bd6c782355d1e13b410e875ba94ae2f1861ce8091cc218e5890d7757deca5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C197.lean",
+          "source_sha256": "9db59c67dafa2bc4ccb18a6d90be342a1e2e8fd195dd60b1d080fd5ba8553aa4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C198.lean",
+          "source_sha256": "f92c6a3e3791f742b0ea845d06582c8aa45e88db57f51d49c8f686b37e4d1bc1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C199.lean",
+          "source_sha256": "acc5620c4ebd7f50f6341f20825bf182d58a0a99600c1737f3a25fb70a8ecae9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C2.lean",
+          "source_sha256": "d19112b524a81b482b34a2f4f5af9e636a7e6a59ce9d7f7788863dddaa5bda62"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C20.lean",
+          "source_sha256": "d020a158251695157011439065cbc78aeb30b6b2a185f0677253c495eccccfdb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C200.lean",
+          "source_sha256": "30032d05058ee2b9c98b3e9b1fa44f92434ec4c5235ed10df0a5634963b61912"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C201.lean",
+          "source_sha256": "f003737f86ebfe1e5e3fc9b4bf0c0a1a8db1e17f6ed976b5455b54aa58759875"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C202.lean",
+          "source_sha256": "0a1fed214b14376dab43d8fffaa0939d24a8fedcdf4b23cce3baed802bfbc8b7"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C203.lean",
+          "source_sha256": "8af7469d49934225b899b5e9fb27fb193a90e47fb07a69b4e4b663dc107f5992"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C204.lean",
+          "source_sha256": "0485cac92c816cb253f0f92311f24160bc7ad5d3c67a2e8482b8a85c5940eccf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C205.lean",
+          "source_sha256": "9a48700ad8f9c4536871e03b61bdcef05db0b946cf29d6ecf3f8b207f88d7e91"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C206.lean",
+          "source_sha256": "ae1870b33a52545f0d3e4b5eb888de9acefd3a73e12fe705a365f170b7e5ea0c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C207.lean",
+          "source_sha256": "9315e999acdd86d93710e536b2091f380e5f583a1d89e7fdb399cd1a2b86bfa8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C208.lean",
+          "source_sha256": "a0e56875c787729edea3d7f8226f3661825435c89c61cd5b3ef5f1c67c189540"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C209.lean",
+          "source_sha256": "59483d57c2ae400df40ab255d61ed058d24efb7f9e12d5986ada60404c8837a4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C21.lean",
+          "source_sha256": "fbd8ee968b40bf59cff0599fa5a26a5dd32f4e2aa21aa8ca1a518f4dad24eb7d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C210.lean",
+          "source_sha256": "5247917d2dcba4edc47141844158fbc35f57332a44fc3724a220386c7d8b6ba3"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C211.lean",
+          "source_sha256": "853c286b4e15929c1a98dbb176566a60a9c00e4bfc2f1ba862a03bee7dbe17b2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C212.lean",
+          "source_sha256": "4fbbaeff65cf988caae21cf755319362ab1168e2fbcb93f15ae371d435be754f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C213.lean",
+          "source_sha256": "4c4e52f9d2ce1366338cade88679deaa8bf0085cdd07d0b8f2e6e9615f1008a2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C214.lean",
+          "source_sha256": "3bbb81c19843861bd1dad5f40bec0b961bbc214e65ff31ec1786ecf603cc6750"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C215.lean",
+          "source_sha256": "304b54529213cdfaab968e747df907eafbf44525e48c7ec3bba45f88f6278e2f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C216.lean",
+          "source_sha256": "368d0af47ab8c2d36264780c2bc47b9100d06a304f826b540c46ef2406736d0e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C217.lean",
+          "source_sha256": "8361956a6fadbe33db830705f1274cd86a0bf010af40bf8e0fe0a5b60da15001"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C218.lean",
+          "source_sha256": "3bf965c0945521fc27442f1a7fdc7f155507fb29b4787e8996f5f55047274012"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C219.lean",
+          "source_sha256": "dc7adb8446ea26b1c6f4fd144983e5aae0888cd662702b7fc3b75c7c2a58207c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C22.lean",
+          "source_sha256": "f6d62f10d21fdac07fb8d6e020585242f099c42f5dd3b0c31a627d1860221216"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C220.lean",
+          "source_sha256": "453342c8bcb6490725e03cc614d1f9723cb52dfed88d47cc955d9ba03b973a44"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C221.lean",
+          "source_sha256": "766189f84f5c66621aa3cdf6890abec78b5236e5e49570d04309a024ee7d6baf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C222.lean",
+          "source_sha256": "9fdccafac80199077bde46be6333155d9d56611940aa96c7e3b150f1f599802b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C223.lean",
+          "source_sha256": "61d1f4db0a52b27abaae414d72b9afa29f8e9396c7f4ca99efa929fd42b764f5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C224.lean",
+          "source_sha256": "b939956329d753fba10e5e61bf1cf75d7b4e1cab5e864e3873b6e902db598e39"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C225.lean",
+          "source_sha256": "b068b4d92b8b3e8ff678fcc281c7acfaa2d76c442a88262caffc1d65dc07fb19"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C226.lean",
+          "source_sha256": "c24ab2329d0d053fad685616fddfd1e63d804ab0ef7383308809c1bb7ff0f1f1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C227.lean",
+          "source_sha256": "44061b3b00abfccc7b6237e3ab861578f60335ff33be65c356f4cfe7f6dbe010"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C228.lean",
+          "source_sha256": "5270f090b892199290d1c9247e5413e28aca3c9e4ee5f65bb0c95436ea7d4258"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C229.lean",
+          "source_sha256": "90b529c4215341d4a2aa8579a83af4d54554cdec069137cf393d509cbb531e3a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C23.lean",
+          "source_sha256": "ebe2a724e135073fa5c0f88e63affdfea564139fd2c4a7322b7603b726e422da"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C230.lean",
+          "source_sha256": "65d0b7b03a0e06c87be3d10da30279ca8302ba70368538dbedf0a0d756acd95c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C231.lean",
+          "source_sha256": "9616b5d15d7ba5363d6341871c12da562d2c6819a63edd925f41be2591ea580c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C232.lean",
+          "source_sha256": "2a205e0b4943081d8eb5906d9900671af3a5a9eded5dea7aaecac76e25ffd101"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C233.lean",
+          "source_sha256": "192bb2642862f4a49b28231ae0cdbf781ba739662e44bb1dcc5e2059dfcee4b4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C234.lean",
+          "source_sha256": "dc2a19e9078d597dcfc5d2d7827b94767bc7fd980773d7ea280ca73ca2bdc732"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C235.lean",
+          "source_sha256": "87be1aa4f01da45358b0357bda2dfe211f7acd0062dc01bb02abf0461bb7743d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C236.lean",
+          "source_sha256": "a06c553d21cb832cec630ec8ade7b640ef653526950c0f9ff37143d65aa14a9c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C237.lean",
+          "source_sha256": "ea11f34746c8209220eccc2ee12d10da9915a24cdc60f511a6c3913105e0e032"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C238.lean",
+          "source_sha256": "f3c997843468311bbd9592a9a6a08e2c92518857f364f53f085c577fd36d5162"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C239.lean",
+          "source_sha256": "b2457f10a989b67bad6604365ad6be032ecf191cf3cef5a01709200a31ba0f26"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C24.lean",
+          "source_sha256": "9261be8056f594efec8b7e5821ff2d89c0d24fe55ab78f25d9fb69cd69fdbee6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C240.lean",
+          "source_sha256": "727c5175f71009b2d0318e836800d9c20ccade81726ce4c5932ddd6968b827f5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C241.lean",
+          "source_sha256": "5e4c207520bc384c60165867fd191235705c2d324aa1f3983da725acb20538b7"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C242.lean",
+          "source_sha256": "56392ab0077444a6428388ed74f920730d64736fe51cc2e3e6ca4332947f2542"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C243.lean",
+          "source_sha256": "dd488b2fdf2afed43ffdc17684059bbf51dd0ea3f9efdc2305d60f8d9c450857"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C244.lean",
+          "source_sha256": "39d76928d4b1baec355c8bca07929f1128a1af0f89438de0d1a26d0257aa8df1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C245.lean",
+          "source_sha256": "160de2702b6c262df31f8ad2869bf7970a770cdde2953b50a4395279eca51753"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C246.lean",
+          "source_sha256": "87b05cecb58a6944bbce62c7e01fcd776f8b907336ab280e57c16372c6ab7034"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C247.lean",
+          "source_sha256": "0742333b6d852fb92e8e7f99780dad3cb17b795aaaed846bfcd89d0d9fcda7b5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C248.lean",
+          "source_sha256": "5ca1a634a46b20e001b2435213b70fd539b39858137f25923492192529220707"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C249.lean",
+          "source_sha256": "e2d322d5197933f3121404a4d99b6506dd73ef8c23383946163c02b638192040"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C25.lean",
+          "source_sha256": "71a040efea2bcb22aaa13a5e32662bb54100ff86c1e0f4ff9b74bcc56202aa17"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C250.lean",
+          "source_sha256": "88814829953d45c87db576ed94fe6e0f7cd0248b4a37ab8fa57b539cedb1ed56"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C251.lean",
+          "source_sha256": "9b301fd39b5fdb63a203151319bbcdebbde8538102ca2e13ec593350f84d0763"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C252.lean",
+          "source_sha256": "2b2a45b23c4d5deaf038711569daf657861600b20e78ffd7401bc9d34c55371c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C253.lean",
+          "source_sha256": "ad90f4135a350b14907ab173250347c09e8e8940440ecf03c5d687f6bba49cc7"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C254.lean",
+          "source_sha256": "aed54d9186612a27d23e893524ae3d83f9650850c9ff2be2e926374554ee32f8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C255.lean",
+          "source_sha256": "58be543aabadca346cbe2982f99a5bc24603478430b27299d5fe89dc9e4a65b6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C256.lean",
+          "source_sha256": "3d3d2ca09092a019771c4058c00c963e54baff062a6f15953e623d4a6992c26b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C257.lean",
+          "source_sha256": "c88f7c876fa88fdd8825e90b137e3f74a323c8f2c1b812ca3f9f104b54476ce8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C258.lean",
+          "source_sha256": "8b43e190ce0e249f67d970812bcddcd8a80ba8bcc08961d8c475fa3567d565ef"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C259.lean",
+          "source_sha256": "60f3047a7f7487bcc8b9fbd92233a46e2a3fdbed115c9ffcb7c79dc972e0bbc9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C26.lean",
+          "source_sha256": "1129a7cf73bd716dd128bbec5771df26c10e3627593a2e8aac15a0be7a986953"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C260.lean",
+          "source_sha256": "dc7088cc1a38516798982a0ea33df13501d4622248acbce70d220d9e67649c97"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C261.lean",
+          "source_sha256": "8bd5e821022d3dbcfe75967adf72f088754c6e68e2bec1967fc57f6455020cf8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C262.lean",
+          "source_sha256": "187768a048d6482dc6a2d84b895e1badb1616dbaf8600eaea4c378e97a653a81"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C263.lean",
+          "source_sha256": "a4f525eae58996bd2bf5c6f5caf7598c71e6d1c795b449bca44ad05c59d43ec5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C264.lean",
+          "source_sha256": "61cb4f1b6244679ba7c1ce6f6d4bf72c23004dacda682c0e3c3ecbbae21996a3"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C265.lean",
+          "source_sha256": "ce5f7586af3fdb36a374059db3c75a56573cef1704ad189132d6145285dfce1c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C266.lean",
+          "source_sha256": "96c00137ab4bf6e41225dd28ba349941888855287afde9dcd22353159aa1befc"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C267.lean",
+          "source_sha256": "8b15f78f2dc7fb3486108c82f83842242cd1ba88b2dca7019493fdc6cdb699ff"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C268.lean",
+          "source_sha256": "6e2f1ffce07f2cbad87d55c2d3c7ebc3185dcf1d2b825c3fc928ba358c5e3b4a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C269.lean",
+          "source_sha256": "4f1e2a53324faf835c24bf43af360782eb16a9c79d1eec7b154723433b36dce9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C27.lean",
+          "source_sha256": "7a8b91c7877df2dc56f8204729dcaddc6520027728fc8e8cccda50092c52bd49"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C270.lean",
+          "source_sha256": "b50d524526702dd8870b8e098a405c6a9a25aeb7212dc01a8226fcd96dd1d99d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C271.lean",
+          "source_sha256": "411b90fcff8a5fee81c1564aa9968fb43eb73e02d98c78d03a52c8684ec369a2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C272.lean",
+          "source_sha256": "9048dacc90cd71829043447380bbd019b98ba35e68d5c770394c4ba86c80a365"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C273.lean",
+          "source_sha256": "d61b523ed9224758d88ee9433a3bbaddd80b956a8288f0c363df3e8e4dc01584"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C274.lean",
+          "source_sha256": "6c03c93276e6e489a401cae386696ff2c8ec5bc3aae5042deddbbfd8fc7b68e4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C275.lean",
+          "source_sha256": "696290ff44cfce070df4ea10d16bf6cd3b961978c88bcdc95f77fdbc457cd3f0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C276.lean",
+          "source_sha256": "3d4956575854ab7b22c4e3a4998bbdc7637f52714398976adc27ae2e2d82ff4b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C277.lean",
+          "source_sha256": "fb9139f47e3955cd6910889eef87e30e3654c0777aac965c7506ba9de835733f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C278.lean",
+          "source_sha256": "e79e2e9b8dd6622f6e67bf29796849338fe9f34fecf21cacd03a38616d5d0d3c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C279.lean",
+          "source_sha256": "958a26d25132f1e98d5119c032ff763add0d1944d61e55697c05ba61d6a012d9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C28.lean",
+          "source_sha256": "95edf570354c2ac5ef5dea667de0da65215387df35b943bd7c5fd54a6f6cdd9c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C280.lean",
+          "source_sha256": "b648f405fa96d023ba114977ea100e62738359db9990dd0b7f8a4b6969bc9c95"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C281.lean",
+          "source_sha256": "667e2593938a18d1a95315430f29b3fc8fb9d4bb1e103a58ceda9471e91dde9d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C282.lean",
+          "source_sha256": "559081d1403c0c4e6189f74db7d4c82e01b5537e003025cd48c5a5160ebe7f7e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C283.lean",
+          "source_sha256": "154c8f8c08cfe3e92b3b7ea135823d39535972c83522f3323850bada9fe8ab46"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C29.lean",
+          "source_sha256": "48cac172d8a318edd6d2e48e45f5d1a5951036067774b0d2f419feb3265b5b66"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C3.lean",
+          "source_sha256": "a3da31a1e923c517f1da5c0eeddfe82620f1a27a1e7c71d6b8a93c0aaee841d1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C30.lean",
+          "source_sha256": "2a0690cd246678898faa9dc977d564c0b74462ddfce059415dbc7752ee20b8a0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C31.lean",
+          "source_sha256": "6825debbb2bd435b689e21f561ead2d24903f6f1e63ab8b4032d2a2ba3edbd49"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C32.lean",
+          "source_sha256": "adbf8f97f27d626c394e067214e886bb20c1402c8bfbd437c7a9cebe5d997d77"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C33.lean",
+          "source_sha256": "9651da4a98df6d316237427a8017445b556fe83fd76c7cde4362fbae7353ee46"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C34.lean",
+          "source_sha256": "1db61fb2ae8bb39bc51743df9f5cc6adb9b7abef48ae9700affa1eec02616548"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C35.lean",
+          "source_sha256": "5257276b76eae34f2d16499771b897bb781f25b3e43065c00bf7ab199765d08f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C36.lean",
+          "source_sha256": "25fce0a4f8d9d2004dafd1b92e7c249aa0edec242128ebf3ea0b93f33f114cac"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C37.lean",
+          "source_sha256": "afd4b70894e87f64622086bf961671f4ce3836b4087519ce5ff544a00eea75b0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C38.lean",
+          "source_sha256": "4f4cc868a480c32c8fe82090c7a310df373d96149ab0ce2dfcc9e519ef30180e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C39.lean",
+          "source_sha256": "2a596b927023bc9ab3110869d6f425e1f7897c52aed6d2cd6ed8e0346e560b1a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C4.lean",
+          "source_sha256": "c2e0ffabea8478eb56f6ca16ba2630680dfa31139e5557d3fa000797c7daa317"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C40.lean",
+          "source_sha256": "c7de97bf3ea9df25d6c174a80ac74c6b1d5b573a217572d6fdb4442379984ade"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C41.lean",
+          "source_sha256": "12eab94e6c305baa4a726421e27674d156663ab1888129c8d0a3dc7f99af3a24"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C42.lean",
+          "source_sha256": "f45a2d94000316263f2988ef7f5e59449ac05b402dff27a44b70132c9adda5a1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C43.lean",
+          "source_sha256": "f2463e51418d53fc7a844c7ed02c08d099b437e6bf6d65d3a2aec67b7907a02d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C44.lean",
+          "source_sha256": "97f46b2b4728e8a797f2e46b8ec5b3615311ef0f91def502ef20d6defedf23be"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C45.lean",
+          "source_sha256": "537492d33a4250e0d9dec710899c577b6a6ee5cff2b83a85bf2eb86fe2d25475"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C46.lean",
+          "source_sha256": "0e66f26018cf992489c9c1c9c18acd01082d32acc29a813ca5277a821fb70fc1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C47.lean",
+          "source_sha256": "89715351f611ea691744b9e53f0e8ead844822b7871d81966980d13fc0f7ec20"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C48.lean",
+          "source_sha256": "c9d0f8cbf4afae6f4c14281bf7c71a0a4191a8a1e7c270596d18091e7ea92d9a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C49.lean",
+          "source_sha256": "a91e0e41a1e1d4c20dd418bf72c64e957f3feef80a358e154c73cf68553cfa64"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C5.lean",
+          "source_sha256": "2e4f6fa36b40065d1fa63f7650d6138d9c381593438062b3ef856ee2c3c6b76f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C50.lean",
+          "source_sha256": "bd9622574c0070976577ec99c9b4d2946436ebeada6f89a18edd365bf883cc6b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C51.lean",
+          "source_sha256": "63367e51f0fa1db0d1d15e7deb88f9ad5c4451b7d4b9043ece7328e62af61974"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C52.lean",
+          "source_sha256": "8f2beee02d7749c437cbcec8e55fab9b596b5b93997987af45b591ef4f1ac162"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C53.lean",
+          "source_sha256": "4ce2a2200f8484dd60c3d27eaa57fd97ceb00d51c9b431a149c66b13761174d2"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C54.lean",
+          "source_sha256": "106ab47293ff896d772990b8d3e8c39e5ed83d11b6c78a80dbd7de474822f224"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C55.lean",
+          "source_sha256": "33c1132588906af983e6e39e8d3d82631a92390054f2e8b84b8ed2b2f779b85c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C56.lean",
+          "source_sha256": "f29a022c69d9bd932190244689a245f1ac14df677756f4cac5fe9253726dbdcc"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C57.lean",
+          "source_sha256": "85aedbcf2dea46a1408e9655ce096f2899650654f08b22693047643fac69bb64"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C58.lean",
+          "source_sha256": "3c2e7a624553f929fc8af31908b599b678f62f7ce53c523eddf61e99d937b597"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C59.lean",
+          "source_sha256": "e3b529add05c8e2b4bd79aa75aaaadd9cd0b5c0cf9715bf704b6233379ef367b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C6.lean",
+          "source_sha256": "1eb0acc9c6b4e918396ee51eba3aea3d07a1ba014959d1048e59b2574027800b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C60.lean",
+          "source_sha256": "815283741893e7585b53874be48ded28eb78d3e9dae99419004a237f7ca13b2f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C61.lean",
+          "source_sha256": "eb9f0caff7d05967cd75927938703dc9914f623ce611601066f892d90b8ad46e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C62.lean",
+          "source_sha256": "865d9fda27ad6fe15a61871842a06141f9a4d9d6af4090ba2db62b14ef6a5f0d"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C63.lean",
+          "source_sha256": "9416d4ab0fcb6d8d8128cc7266876bd9b1439e91e0e6c626e66f8ceb52411a3a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C64.lean",
+          "source_sha256": "a805f96ffbbc1413ca557f3182604acf8a169fd6f29b9142ccde5010f6b210ab"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C65.lean",
+          "source_sha256": "47f2cd78c89b3c65a01a7440f74ea4c578dc5a4b2fea8703b696bff6ff4712f4"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C66.lean",
+          "source_sha256": "1fa8d7e8d1774657e0ebab05bd956535224323b3f46b07fbb014ad2fafcaddf0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C67.lean",
+          "source_sha256": "87cab1dfa129540212e447f685503c71859b1f2ed9a0cc68e58b7f886e5b4d0a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C68.lean",
+          "source_sha256": "a35fa196cd1e62a9a48e2fc5aec0925c0bbf0986c44d690c5cfe4da31bb9d617"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C69.lean",
+          "source_sha256": "719bab5fa426529c580c03e51bf4b51a0db7282e139226cf36f53cf7f29dc3fa"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C7.lean",
+          "source_sha256": "31dffa9fd001f9b89848e3d3cdc8d8f27f5a72f86a58266d35dfa480923969f6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C70.lean",
+          "source_sha256": "dbd821ca30eafcb96cb2cb0a6a2fe8a1165e7d0814eaa2de107c8091d0052b74"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C71.lean",
+          "source_sha256": "550b57ef4fdc65840f554e166474bdf9882eb4ad92d7952135d2999f2a7f9cdb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C72.lean",
+          "source_sha256": "efdffb0896a09821cc4cf3e7f676f2298822818f693a09377e089c65a16e5f99"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C73.lean",
+          "source_sha256": "5b83128c3a40195d25658547c88c06e8377d4b16a88b0bdad78af6ee0fcf58e8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C74.lean",
+          "source_sha256": "0b121b32d60ee1f4a2bb47f8fbd46dbde23cd1cb3819f4583d20e5da354b6704"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C75.lean",
+          "source_sha256": "37303d709d48cb09f22656aca7e8cd7bb6d8836e412b1da6444b2a1f043c842f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C76.lean",
+          "source_sha256": "77508f2566946c14168c9ec7e532ec4200a131d2349505f2715a3a2b3decfc26"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C77.lean",
+          "source_sha256": "85c621163eb008147e240260fa9ae67435abbb4865bc011de107115203a3f485"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C78.lean",
+          "source_sha256": "f2910825a7f302ee8444883d5ded3da0bd0a273f5cf82e3fd739029c45da6825"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C79.lean",
+          "source_sha256": "fc29cab7a832b844ae869de5703ce4b60dd14105d35ea775f4bf24192ca1bbb3"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C8.lean",
+          "source_sha256": "c40d8fa0ddd7d5e465e8e894df778e4527bb8d2e1d917a0c2929e8c230a93aa5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C80.lean",
+          "source_sha256": "d1181849656252937909a5db47acc35bcb203e5fef0fa26834e8df035edbc134"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C81.lean",
+          "source_sha256": "f15fb48d4aa8dc4cbcde378401dc2e2054017dfcc83bc209b441e4112e674cb8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C82.lean",
+          "source_sha256": "ca3a9af45dfc126e53dcf5d6270602faa0606469ba8c88887e29fa8958c5062a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C83.lean",
+          "source_sha256": "d1a6f98242e33d7167ecd8426bd9f96f8f60cee46efa46a13316a76856226c14"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C84.lean",
+          "source_sha256": "2f1ba297cae614cbfcdab8df942b6c2502f6c658e33d5abc9eb654684edc6d8b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C85.lean",
+          "source_sha256": "210196d668d506cdc89ec5bbb0883616eb0eb80cae0c49b1ede7a9c46261d6b5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C86.lean",
+          "source_sha256": "316072dcc9671252c21dc30d561354977128ce356b18603dc698ecd9247c4712"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C87.lean",
+          "source_sha256": "4f202a580518935a8f1717257dd2f145c4a22c7f7c054c1f194cd8bf85a97049"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C88.lean",
+          "source_sha256": "d236c84fdaaceb2dedfdfac731021ced21da9d7e422d9b7ad3c0ca5d823d80d1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C89.lean",
+          "source_sha256": "fbdc700d717bac33587479106510b5094b6dc67538b5729b87f24ac7a9016266"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C9.lean",
+          "source_sha256": "38a4f5e187f8e3ed42dd3ea24d45dd906bb66694e387150066aa7b892bad9887"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C90.lean",
+          "source_sha256": "61a6d1a3ef88786c51e833c43b9b85ac58d9a0f4cc2c61edc9965284699a6413"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C91.lean",
+          "source_sha256": "aca0a9e4866986cc60417ea4136f1ee6c2cf7a0fcaedbc301cc10a5c67c14d08"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C92.lean",
+          "source_sha256": "6bd52a4a7738058973e9b09989c3181e14cd146e4e98d057f0b5628af5035a6e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C93.lean",
+          "source_sha256": "6b1f04351a00ff86a2b9f11cd69498632f8b78515d70794e53528b28d41253cb"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C94.lean",
+          "source_sha256": "c87bb652cf3aeea48870f6678358b2eec44674bb55ab86172fa00245ed79867e"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C95.lean",
+          "source_sha256": "c2005c7fa20121b5de28733fa672e9cf30da0867fb6daa43b1e8edf0ec2d4a35"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C96.lean",
+          "source_sha256": "31b1a1b18aee559aa99c52eccbc2380dbf2ca6f1fda76a48cc656a407e274c77"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C97.lean",
+          "source_sha256": "8cc2c6feb69d1ef34d5ea3b17d6866f5bbec01f4e2905635c3e1122823a18e2f"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C98.lean",
+          "source_sha256": "06d73f8fecfb6dfefbf8091cc6b4b80a4d7bbecaca93f891bfc7afd55ce36efc"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/C99.lean",
+          "source_sha256": "78ac519ad8d66acafafa6fb28c0bb4309a7187adbc4d1401490f38540537de26"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Core.lean",
+          "source_sha256": "71009ec228059fe1e9985ca15162171bc99b68735044d36eae7b9f6de9da06ba"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count000.lean",
+          "source_sha256": "6a4db74216e3c682e03c1e5b8d1cbae2df556059932343b5ba8146220d88b183"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count020.lean",
+          "source_sha256": "aba8517c5a31471609e3e7061a20edf4b563e18b48ac7de6f4dac1a994848f43"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count040.lean",
+          "source_sha256": "bbb2d16cba680fdd2a74feb5c92b77cbece234d264483027bbe7cffe0688d466"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count060.lean",
+          "source_sha256": "add6cb1ebddbc944ae44bb2fc5a08500a087060b49844e34e605ca1df82a0466"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count080.lean",
+          "source_sha256": "642538254bd5b5ea8decbe0112f643f0faa3df468a2b832dec3812f2223501e1"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count100.lean",
+          "source_sha256": "5fb7065fd87f56fb94ad851b1ec6680e76559fc733a0e4730e76f33c7506da29"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count120.lean",
+          "source_sha256": "045263cd9221085460e8df6fb096f318f45723ebf3edeb1031e32857f4efb79c"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count140.lean",
+          "source_sha256": "d6e7ec81a0c47f16b5eb3b32df8155f8c6c811b86dfd168af4f4be1591bd82d6"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count160.lean",
+          "source_sha256": "b353aaccde851a481e63298a3bc87ef84a9f5ede4d5b145b770efe9990323d83"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count180.lean",
+          "source_sha256": "3ed8775b888eef59fa9d0588f1f006de3e55dfb994848ac447f82c8a37ac3c41"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count200.lean",
+          "source_sha256": "f24ee30df2874534ee4d18da2f74cac266de7ac2eb2873be7ed621fdff069c92"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count220.lean",
+          "source_sha256": "25f7a0fe2acc3e2be5ce44ddfa1b08e067f509de3cd6a9545666c062dfa54ef9"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count240.lean",
+          "source_sha256": "e82930e704c0ad91db8b41553813d10ef5229c932138fb7b409d6b7d72156496"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count260.lean",
+          "source_sha256": "407f4029f20792f3a2701502a774523276405260e20dd9ffa1287f8628a5d304"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count280.lean",
+          "source_sha256": "b688aae16515667c81d1afe95abd4d51d43afe2f475f2535055040550e678113"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count300.lean",
+          "source_sha256": "9c538e66da95887857a910de53a5518403fe0fcc1788efc61e335c420a50fb71"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count320.lean",
+          "source_sha256": "42cdc3ba016b8d6812c642e61dbac1959c454f8bb29d5c1470cc9ed9060155cf"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count340.lean",
+          "source_sha256": "250b81745d27a26014c70dc747a6b5fb561c6f7bec4f2c97c4e89eb91fd64600"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count360.lean",
+          "source_sha256": "7e8f36aa91e62cfddd0f98e42579dcc57e9a32a8ad9b4defa2b27229e0e93c67"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count380.lean",
+          "source_sha256": "f05255d286ca1a3e85e804b0ec1becdc7b47bf6a3840f914f6ea12e05862fda0"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count400.lean",
+          "source_sha256": "67fff5e7a39c4cbf1423edc66207d1270a0ae187e86a443ee1a1ed2ffedad154"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count420.lean",
+          "source_sha256": "cfc7dbf088a0435d26b6bf4eb7d4400ab830617cc289f20a444ec3cc8fbeb143"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count440.lean",
+          "source_sha256": "4735e241b32e46ea6e3c1617f3a5471c9182c7f24980f5d4453c3f8eb17c08b5"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count460.lean",
+          "source_sha256": "a09d0b1b6c52661893db671ff95992ae137d7813f94ab49b7c248691dfcf55ae"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count480.lean",
+          "source_sha256": "bf581903a24f79f00aa36db5fc7ba41a6e38080714d13206f66e3f78f9d4723b"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Count500.lean",
+          "source_sha256": "d3fd7a357fbff28b2d3620b2240afb64251c5fa693998acf888079c28e00deb8"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/GlueCert.lean",
+          "source_sha256": "7244ce791ebaa0c2f759960c626bc135050fa26dd84696b514c09827b390bd39"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/GlueCount.lean",
+          "source_sha256": "0db2cecaa482a0fa7cca4d5436586ce01c6e5993a9143b9a470a49f37a72c3fe"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004/Statement.lean",
+          "source_sha256": "5787ceae753f010865b6f76289655c111c2cbe7ec11273e267cbac3fefe76d14"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A069004.lean",
+          "source_sha256": "d2d18c6120322a7507ade9ea75bcc598f604647659986986376cb435953cb54a"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A368628.lean",
+          "source_sha256": "e188dee07b9e40884bcc1204cd71714fa52cd4668da65cf14dcd1537e30aa3d7"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A368626.lean",
+          "source_sha256": "06ad7711980d1ea9469dc0ea018d18dba82180c4753465e3243ad9462db7f4f2"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A368629.lean",
+          "source_sha256": "967b2e5c9ae4bc5f2e538767965019cd438e9949aea33f79a60298eb38f1d4ad"
+        },
+        {
+          "module": "LeanOeisProofs/NewProofs/A368634.lean",
+          "source_sha256": "22cc16bbc25893d828c846a4c3c6f718ec1f201a5aae0092d96a04e32af2fd54"
+        },
+        {
+          "module": "LeanOeisProofs/NewFormalization/A368635.lean",
+          "source_sha256": "12915569b659c91e8813a855139df1c61a1f16bf969fc496aa65c5769368cfbf"
+        }
+      ],
+      "steps": [
+        {
+          "name": "A002454",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DautoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/NewFormalization/A002454.olean",
+            "LeanOeisProofs/NewFormalization/A002454.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 186.19,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A002454.log",
+          "output": "",
+          "module": "LeanOeisProofs/NewFormalization/A002454.lean",
+          "sha256": "9a81bf0351cb34f924aaceacd1abb021cc08299c373f8c733bc4939a93ba327e"
+        },
+        {
+          "name": "A396843",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DautoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/IndependentFormalization/A396843.olean",
+            "LeanOeisProofs/IndependentFormalization/A396843.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 17.58,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A396843.log",
+          "output": "",
+          "module": "LeanOeisProofs/IndependentFormalization/A396843.lean",
+          "sha256": "7bbe23b4d8de48e840761844ea0ed49e83923df200ba50d449dea90f62437943"
+        },
+        {
+          "name": "LeanOeisProofs",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DautoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs.olean",
+            "LeanOeisProofs.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 134.76,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/LeanOeisProofs.log",
+          "output": "",
+          "module": "LeanOeisProofs.lean",
+          "sha256": "ac8e01a311674b37707ad601a34be8af67b9a21184c8e9f004a3e111c553f1f1"
+        },
+        {
+          "name": "axioms",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DautoImplicit=false",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/axioms.lean"
+          ],
+          "exit_code": 0,
+          "seconds": 122.66,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/axioms.log",
+          "output": "'A002454.conjecture_frozen' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.permanent_rootMatrix_eq_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'A002454.det_calogero_minor' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.source_existence' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.rational_source_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OeisA396843.a_5' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        }
+      ]
+    },
+    "source_terms": {
+      "source": "https://oeis.org/A396843/b396843.txt",
+      "checked_on": "2026-10-28",
+      "first20_excerpt_sha256": "bbd5db004636400bca8ae059ac5abcfddcdbb1889af9d7459f7559d2bbb8f911",
+      "method": "Independent truncated integer power-series composition of the literal OEIS equation; set coefficient n to cancel output degree n+1.",
+      "range": [
+        1,
+        20
+      ],
+      "terms": [
+        1,
+        3,
+        15,
+        117,
+        975,
+        8631,
+        79839,
+        763209,
+        7477701,
+        74700315,
+        758027205,
+        7792075341,
+        80968633731,
+        849122117991,
+        8975430108207,
+        95526419313969,
+        1022842349889807,
+        11010529561615155,
+        119088263248757523,
+        1293532210166103045
+      ],
+      "all_terms_match": true,
+      "composition_matches_x_squared_through_degree": 21,
+      "modulo_nine_counterexample": {
+        "n": 5,
+        "value": 975,
+        "remainder": 3
+      },
+      "scope": "Finite source sanity check; the Lean theorem proves all positive indices."
+    },
+    "targets": {
+      "A002454": {
+        "config": {
+          "challenge_module": "Challenge",
+          "solution_module": "Solution",
+          "theorem_names": [
+            "A002454.conjecture_frozen"
+          ],
+          "definition_names": [
+            "OeisA2454.a"
+          ],
+          "permitted_axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "build_modules": [
+            "Challenge",
+            "Solution"
+          ]
+        },
+        "started_utc": "2026-10-29T01:42:24.866309+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Compile Challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Challenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Challenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile Solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Solution.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Solution.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/exports/compare/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/exports/compare/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/exports/compare/Replay.lean"
+            ],
+            "exit_code": 0
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/compare.log",
+        "sources": {
+          "Challenge": "c772c71728ab05bf7ea47e26cb25b1913503be87560a08f603401d9e5342ef1b",
+          "Solution": "9b1d3fd6b9ab36e8a88d4b458c2138d6264dbd09c25eef6f42afef05c5aae8db"
+        },
+        "challenge_export": {
+          "bytes": 22346050,
+          "sha256": "15b67498f33154ce5cd0a29cc59677e9c3a1829f7826d27448fc60029f8bc586"
+        },
+        "solution_export": {
+          "bytes": 122431184,
+          "sha256": "efb1f612bf5bc98d3b4bd24fb52fe012a074c99ceeaab1ac0ec68ce0fcd0251d"
+        },
+        "duration_seconds": 824.13,
+        "kernel_accepts": true,
+        "comparator_accepts": true,
+        "challenge": "import FormalConjectures.OEIS.\u00ab2454\u00bb\n\ntheorem A002454.conjecture_frozen : type_of% @OeisA2454.conjecture := by sorry\n",
+        "solution": "import LeanOeisProofs.NewFormalization.A002454\n",
+        "full_log": "Compile Challenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Challenge.lean:3:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A002454/Challenge.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.\n\nNote: This linter can be disabled with `set_option linter.style.moduleDocstring false`\nCompile Solution\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!\n"
+      },
+      "A396843": {
+        "config": {
+          "challenge_module": "Challenge",
+          "solution_module": "Solution",
+          "theorem_names": [
+            "OeisA396843.source_existence",
+            "OeisA396843.series_spec",
+            "OeisA396843.conjecture",
+            "OeisA396843.a_0",
+            "OeisA396843.a_1",
+            "OeisA396843.a_2",
+            "OeisA396843.a_3",
+            "OeisA396843.a_4",
+            "OeisA396843.a_5"
+          ],
+          "definition_names": [
+            "OeisA396843.SourceEquation",
+            "OeisA396843.series",
+            "OeisA396843.a"
+          ],
+          "permitted_axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "build_modules": [
+            "Challenge",
+            "Solution"
+          ]
+        },
+        "started_utc": "2026-10-29T01:56:09.002170+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Compile Challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile Solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Solution.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Solution.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/exports/compare/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/exports/compare/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/exports/compare/Replay.lean"
+            ],
+            "exit_code": 0
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/compare.log",
+        "sources": {
+          "Challenge": "b29dba90a3d2f5b691223cc676d49dca970f6694efea7b9047d6c7c05a522541",
+          "Solution": "79801c5a770232b88f524cd4acac72f164b68f029b8659a92208842606eb1725"
+        },
+        "challenge_export": {
+          "bytes": 35103902,
+          "sha256": "704e7d0d4264ffce5e9b33bac92f57ee39eb027b04baa836a40dca28278a5f9d"
+        },
+        "solution_export": {
+          "bytes": 67522702,
+          "sha256": "4450c81c75bac75fd54104831c37610c7c41be318739dbb2b283a3ecdc84b77d"
+        },
+        "duration_seconds": 80.8,
+        "kernel_accepts": true,
+        "comparator_accepts": true,
+        "challenge": "/-\nCopyright 2026 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\n\nimport Mathlib.RingTheory.PowerSeries.Substitution\n\n/-!\n# A compositional generating function\n\nThe ordinary generating function satisfies $A(xA(x)-3xA(x)^2)=x^2$,\nwith $A(0)=0$ and $a(1)=1$. Its coefficients form OEIS A396843.\n\n*References:*\n- [A396843](https://oeis.org/A396843), Paul D. Hanna, 2026.\n- [Earlier Lean proof](https://github.com/the-omega-institute/trureturing/pull/6773).\n- [Li26] Wentao Li, [Integral construction and oddness](https://github.com/VictorLiwentao/lean-oeis-proofs/blob/main/proofs/independent-formalization/A396843/PROOF.md), 2026.\n-/\n\n\nnamespace OeisA396843\nopen PowerSeries\n\n/-- The normalized ordinary generating-function equation defining OEIS A396843. -/\ndef SourceEquation (A : PowerSeries \u2124) : Prop :=\n  constantCoeff A = 0 \u2227 coeff 1 A = 1 \u2227\n    A.subst (X * A - 3 * X * A ^ 2) = X ^ 2\n\n/-- The normalized generating series of OEIS A396843. -/\nnoncomputable def series : PowerSeries \u2124 := Classical.epsilon SourceEquation\n\n/-- OEIS A396843, extended by $a(0)=0$ outside its offset-one domain. -/\nnoncomputable def a (n : \u2115) : \u2124 := coeff n series\n\n/-- The defining equation has a unique normalized integral solution; see [Li26]. -/\ntheorem source_existence : \u2203! A : PowerSeries \u2124, SourceEquation A := by\n  sorry\n\n/-- The selected series satisfies the defining equation and normalization. -/\ntheorem series_spec : SourceEquation series :=\n  Classical.epsilon_spec source_existence.exists\n\ntheorem a_0 : a 0 = 0 := by\n  simpa [a, coeff_zero_eq_constantCoeff] using series_spec.1\n\ntheorem a_1 : a 1 = 1 := series_spec.2.1\n\ntheorem a_2 : a 2 = 3 := by\n  sorry\n\ntheorem a_3 : a 3 = 15 := by\n  sorry\n\ntheorem a_4 : a 4 = 117 := by\n  sorry\n\ntheorem a_5 : a 5 = 975 := by\n  sorry\n\n/--\n\"Conjecture: all terms are odd.\"\n- Paul D. Hanna, Jul 01 2026.\n\nAn earlier Lean parity proof appears in `the-omega-institute/trureturing` PR #6773.\nWentao Li's formalization also proves integral existence and uniqueness; see [Li26].\nAI assistance was used for development and verification.\n-/\ntheorem conjecture (n : \u2115) (hn : 1 \u2264 n) : Odd (a n) := by\n  sorry\n\nend OeisA396843\n",
+        "solution": "import LeanOeisProofs.IndependentFormalization.A396843\n",
+        "full_log": "Compile Challenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:47:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:59:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:62:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:65:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:68:8: warning: declaration uses `sorry`\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/A396843/Challenge.lean:79:8: warning: declaration uses `sorry`\nCompile Solution\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!\n"
+      }
+    },
+    "runner": "Freshly compiled Comparator and exporter. Python macOS driver; Lean built-in kernel replay. No external kernel or sandbox. All three comparison modules match the pinned Comparator source. CheckerCore adapts Environment.replay to the current Lean API.",
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "publication_cache_layout_note": "The first direct build stopped at import lookup because a partial leading namespace directory shadowed the previous cache. Source-hash-matched prior outputs were assembled into the fresh library directory, then all new modules and the root were rebuilt.",
+    "publication_initial_cache_failure": {
+      "steps": [
+        {
+          "name": "A002454",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DautoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/NewFormalization/A002454.olean",
+            "LeanOeisProofs/NewFormalization/A002454.lean"
+          ],
+          "exit_code": 1,
+          "seconds": 2.31,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A002454.log",
+          "output": "LeanOeisProofs/NewFormalization/A002454.lean:21:0: error: object file '/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/NewFormalization/A001818.olean' of module LeanOeisProofs.NewFormalization.A001818 does not exist\n",
+          "module": "LeanOeisProofs/NewFormalization/A002454.lean",
+          "sha256": "9a81bf0351cb34f924aaceacd1abb021cc08299c373f8c733bc4939a93ba327e"
+        }
+      ]
+    },
+    "publication_initial_deprecation_failure": {
+      "failed_steps": [
+        {
+          "name": "A396843",
+          "command": [
+            "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+            "-DwarningAsError=true",
+            "-DrelaxedAutoImplicit=false",
+            "-DautoImplicit=false",
+            "-DmaxSynthPendingDepth=3",
+            "-o",
+            "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/lib/LeanOeisProofs/IndependentFormalization/A396843.olean",
+            "LeanOeisProofs/IndependentFormalization/A396843.lean"
+          ],
+          "exit_code": 1,
+          "seconds": 21.06,
+          "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/publication-4.34/A396843.log",
+          "output": "LeanOeisProofs/IndependentFormalization/A396843.lean:214:12: error: `if_neg` has been deprecated: Use `ite_eq_right` instead\nLeanOeisProofs/IndependentFormalization/A396843.lean:220:12: error: `if_pos` has been deprecated: Use `ite_eq_left` instead\nLeanOeisProofs/IndependentFormalization/A396843.lean:221:68: error: `if_false` has been deprecated: Use `ite_false` instead\n",
+          "module": "LeanOeisProofs/IndependentFormalization/A396843.lean",
+          "sha256": "6d51ae2ad9892c65493db33595036a5912fd21692ad859aa8e626d0d3bbc62ac"
+        }
+      ]
+    },
+    "compatibility": {
+      "A002454": {
+        "reason": "Lean 4.34 deprecates if_pos and if_neg; Lean 4.33 lacks their new names. The publication uses the new names and the reviewed Lean 4.33 copy retains the old names.",
+        "mapping_from_review_to_publication": {
+          "if_pos": "ite_eq_left",
+          "if_neg": "ite_eq_right"
+        },
+        "review_sha256": "dae7c3a658f890d0a0d897b420239485b5fc407cf4597c69187427be30c925d2",
+        "publication_sha256": "9a81bf0351cb34f924aaceacd1abb021cc08299c373f8c733bc4939a93ba327e",
+        "inverse_substitution_recovers_review_source_exactly": true,
+        "proof_statements_and_definitions_unchanged": true
+      },
+      "A396843": {
+        "reason": "Lean 4.34 renames conditional simplification lemmas; the reviewed Lean 4.33 copy retains the names from that release.",
+        "mapping_from_review_to_publication": {
+          "if_pos": "ite_eq_left",
+          "if_neg": "ite_eq_right",
+          "if_false": "ite_false"
+        },
+        "review_sha256": "6d51ae2ad9892c65493db33595036a5912fd21692ad859aa8e626d0d3bbc62ac",
+        "publication_sha256": "7bbe23b4d8de48e840761844ea0ed49e83923df200ba50d449dea90f62437943",
+        "inverse_substitution_recovers_review_source_exactly": true,
+        "proof_statements_and_definitions_unchanged": true
+      }
+    },
+    "statement_adaptation": {
+      "target": "A396843",
+      "original_proposed_statement_sha256": "af864217476e749fdf4cfff02960e83bacfb836cdc04e04c8fb2eb071f7cf6be",
+      "comparison_challenge_sha256": "b29dba90a3d2f5b691223cc676d49dca970f6694efea7b9047d6c7c05a522541",
+      "changes": [
+        "Remove module/public/expose repository metadata.",
+        "Replace aggregate FormalConjecturesUtil import with Mathlib.RingTheory.PowerSeries.Substitution.",
+        "Remove category, AMS and formal_proof attributes."
+      ],
+      "mathematical_declarations_unchanged": true,
+      "original_proposed_source": "/-\nCopyright 2026 The Formal Conjectures Authors.\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    https://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n-/\nmodule\n\npublic import FormalConjecturesUtil\n\n/-!\n# A compositional generating function\n\nThe ordinary generating function satisfies $A(xA(x)-3xA(x)^2)=x^2$,\nwith $A(0)=0$ and $a(1)=1$. Its coefficients form OEIS A396843.\n\n*References:*\n- [A396843](https://oeis.org/A396843), Paul D. Hanna, 2026.\n- [Earlier Lean proof](https://github.com/the-omega-institute/trureturing/pull/6773).\n- [Li26] Wentao Li, [Integral construction and oddness](https://github.com/VictorLiwentao/lean-oeis-proofs/blob/main/proofs/independent-formalization/A396843/PROOF.md), 2026.\n-/\n\n@[expose] public section\n\nnamespace OeisA396843\nopen PowerSeries\n\n/-- The normalized ordinary generating-function equation defining OEIS A396843. -/\ndef SourceEquation (A : PowerSeries \u2124) : Prop :=\n  constantCoeff A = 0 \u2227 coeff 1 A = 1 \u2227\n    A.subst (X * A - 3 * X * A ^ 2) = X ^ 2\n\n/-- The normalized generating series of OEIS A396843. -/\nnoncomputable def series : PowerSeries \u2124 := Classical.epsilon SourceEquation\n\n/-- OEIS A396843, extended by $a(0)=0$ outside its offset-one domain. -/\nnoncomputable def a (n : \u2115) : \u2124 := coeff n series\n\n/-- The defining equation has a unique normalized integral solution; see [Li26]. -/\n@[category API, AMS 11 13,\n  formal_proof using lean4 at \"https://github.com/VictorLiwentao/lean-oeis-proofs/blob/main/LeanOeisProofs/IndependentFormalization/A396843.lean\"]\ntheorem source_existence : \u2203! A : PowerSeries \u2124, SourceEquation A := by\n  sorry\n\n/-- The selected series satisfies the defining equation and normalization. -/\n@[category API, AMS 11 13]\ntheorem series_spec : SourceEquation series :=\n  Classical.epsilon_spec source_existence.exists\n\n@[category test, AMS 11]\ntheorem a_0 : a 0 = 0 := by\n  simpa [a, coeff_zero_eq_constantCoeff] using series_spec.1\n\n@[category test, AMS 11]\ntheorem a_1 : a 1 = 1 := series_spec.2.1\n\n@[category test, AMS 11]\ntheorem a_2 : a 2 = 3 := by\n  sorry\n\n@[category test, AMS 11]\ntheorem a_3 : a 3 = 15 := by\n  sorry\n\n@[category test, AMS 11]\ntheorem a_4 : a 4 = 117 := by\n  sorry\n\n@[category test, AMS 11]\ntheorem a_5 : a 5 = 975 := by\n  sorry\n\n/--\n\"Conjecture: all terms are odd.\"\n- Paul D. Hanna, Jul 01 2026.\n\nAn earlier Lean parity proof appears in `the-omega-institute/trureturing` PR #6773.\nWentao Li's formalization also proves integral existence and uniqueness; see [Li26].\nAI assistance was used for development and verification.\n-/\n@[category research solved, AMS 11,\n  formal_proof using lean4 at \"https://github.com/VictorLiwentao/lean-oeis-proofs/blob/main/LeanOeisProofs/IndependentFormalization/A396843.lean\"]\ntheorem conjecture (n : \u2115) (hn : 1 \u2264 n) : Odd (a n) := by\n  sorry\n\nend OeisA396843\n"
+    },
+    "controls": {
+      "pass": {
+        "config": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/pass.json",
+        "started_utc": "2026-10-29T01:37:33.154201+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "passed",
+        "steps": [
+          {
+            "name": "Compile Challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile Pass",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Pass.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Pass.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/pass/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/pass/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/pass/Replay.lean"
+            ],
+            "exit_code": 0
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/pass.log",
+        "sources": {
+          "Challenge": "ce2329bc9d9c6f20ca0b17f397885fb05e6941bc1ca1c3c37cefc8746d1e1ac7",
+          "Pass": "f72fb24e481f2dc3a1a49543e78c2133b84a073a82993729e3795cf90e10da61"
+        },
+        "challenge_export": {
+          "bytes": 982465,
+          "sha256": "d87dd06b28d0da99bfcf783e7ccc6a87c9d0ce7edd814e2fa3c766700578e670"
+        },
+        "solution_export": {
+          "bytes": 980485,
+          "sha256": "c4ae93e1c44d18aefd726511115fd6d4a092836d4a44de2e251ed2049783bfb4"
+        },
+        "duration_seconds": 7.61,
+        "kernel_accepts": true,
+        "comparator_accepts": true,
+        "full_log": "Compile Challenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean:1:8: warning: declaration uses `sorry`\nCompile Pass\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\nRunning Lean default kernel on solution.\nLean default kernel accepts the solution\nYour solution is okay!\n"
+      },
+      "mismatch": {
+        "config": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/mismatch.json",
+        "started_utc": "2026-10-29T01:37:40.767788+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "failed",
+        "steps": [
+          {
+            "name": "Compile Challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile Mismatch",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Mismatch.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Mismatch.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/mismatch/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/mismatch/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/mismatch/Replay.lean"
+            ],
+            "exit_code": 1
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/mismatch.log",
+        "sources": {
+          "Challenge": "ce2329bc9d9c6f20ca0b17f397885fb05e6941bc1ca1c3c37cefc8746d1e1ac7",
+          "Mismatch": "f717d213192637efabd9b612c20c6245cb2bd6727685f9ce779385a64e16d8a1"
+        },
+        "challenge_export": {
+          "bytes": 982465,
+          "sha256": "d87dd06b28d0da99bfcf783e7ccc6a87c9d0ce7edd814e2fa3c766700578e670"
+        },
+        "solution_export": {
+          "bytes": 982275,
+          "sha256": "1beda8473b1f4d50b1ed2d2bc610fdc5674165a2817ad16d1f2ebf8b5167dbab"
+        },
+        "error": "Compare types, definitions, axioms and replay kernel failed: 1",
+        "duration_seconds": 6.74,
+        "kernel_accepts": false,
+        "comparator_accepts": false,
+        "full_log": "Compile Challenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean:1:8: warning: declaration uses `sorry`\nCompile Mismatch\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/mismatch/Replay.lean:2:0: error: Challenge and solution theorem statement do not match: 'check'\nCompare types, definitions, axioms and replay kernel failed: 1\n"
+      },
+      "axiom": {
+        "config": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/axiom.json",
+        "started_utc": "2026-10-29T01:37:47.509042+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "failed",
+        "steps": [
+          {
+            "name": "Compile Challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile Axiom",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Axiom.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Axiom.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/axiom/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/axiom/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/axiom/Replay.lean"
+            ],
+            "exit_code": 1
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/axiom.log",
+        "sources": {
+          "Challenge": "ce2329bc9d9c6f20ca0b17f397885fb05e6941bc1ca1c3c37cefc8746d1e1ac7",
+          "Axiom": "1036d7e78dd88a92ce1a54259dffde7a6858938e08d7b215fe59e6adfc372c9b"
+        },
+        "challenge_export": {
+          "bytes": 982465,
+          "sha256": "d87dd06b28d0da99bfcf783e7ccc6a87c9d0ce7edd814e2fa3c766700578e670"
+        },
+        "solution_export": {
+          "bytes": 980616,
+          "sha256": "1aa3b5d6e8537518714d963ec0c7e6c16d18787fcfb71d7d366a0b8712d0a407"
+        },
+        "error": "Compare types, definitions, axioms and replay kernel failed: 1",
+        "duration_seconds": 9.42,
+        "kernel_accepts": false,
+        "comparator_accepts": false,
+        "full_log": "Compile Challenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/Challenge.lean:1:8: warning: declaration uses `sorry`\nCompile Axiom\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/axiom/Replay.lean:2:0: error: Illegal axiom detected: 'untrusted'\nCompare types, definitions, axioms and replay kernel failed: 1\n"
+      },
+      "definition": {
+        "config": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/definition.json",
+        "started_utc": "2026-10-29T01:37:56.935116+00:00",
+        "compiler": "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+        "status": "failed",
+        "steps": [
+          {
+            "name": "Compile DefinitionChallenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/DefinitionChallenge.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/DefinitionChallenge.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compile DefinitionChanged",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "-Dpp.unicode.fun=true",
+              "-DautoImplicit=false",
+              "-DrelaxedAutoImplicit=false",
+              "-DwarningAsError=true",
+              "-o",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/DefinitionChanged.olean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/DefinitionChanged.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export challenge",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/definition/challengeExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Export solution",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/definition/solutionExport.lean"
+            ],
+            "exit_code": 0
+          },
+          {
+            "name": "Compare types, definitions, axioms and replay kernel",
+            "command": [
+              "/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean",
+              "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/definition/Replay.lean"
+            ],
+            "exit_code": 1
+          }
+        ],
+        "log": "/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/definition.log",
+        "sources": {
+          "DefinitionChallenge": "fffe16d69de303ce440d969f8f26b23f5206cbd464bcb39b693f809528540a70",
+          "DefinitionChanged": "449e7712f0691b813632c4a286ca0405d4a2e56296fc4bd443703746decf9ca1"
+        },
+        "challenge_export": {
+          "bytes": 982512,
+          "sha256": "7783b59e64304ba0c9e7afda9449f28e42893244d4f1dd8690c02dff662f68f7"
+        },
+        "solution_export": {
+          "bytes": 980844,
+          "sha256": "b9f5e2208be0dd10f94bea2815b230b17e279a2bc99ce89d3a55c6082eece254"
+        },
+        "error": "Compare types, definitions, axioms and replay kernel failed: 1",
+        "duration_seconds": 6.64,
+        "kernel_accepts": false,
+        "comparator_accepts": false,
+        "full_log": "Compile DefinitionChallenge\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/DefinitionChallenge.lean:2:8: warning: declaration uses `sorry`\nCompile DefinitionChanged\nExport challenge\nExport solution\nCompare types, definitions, axioms and replay kernel\n/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/exports/definition/Replay.lean:2:0: error: Const does not match between challenge and target 'target'\nCompare types, definitions, axioms and replay kernel failed: 1\n"
+      }
+    },
+    "control_validation_log": "{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/pass.json\", \"status\": \"passed\", \"duration_seconds\": 7.61, \"kernel_accepts\": true, \"comparator_accepts\": true}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/mismatch.json\", \"status\": \"failed\", \"duration_seconds\": 6.74, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/axiom.json\", \"status\": \"failed\", \"duration_seconds\": 9.42, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"config\": \"/Volumes/Apps/lean-offload/.codex/worktrees/oeis-wowii-proof-publication/formal-conjectures/.publication/review-2026-10-28/tools/controls/definition.json\", \"status\": \"failed\", \"duration_seconds\": 6.64, \"kernel_accepts\": false, \"comparator_accepts\": false}\n{\"status\": \"passed\", \"validated_utc\": \"2026-10-29T01:38:03.573057+00:00\", \"controls\": {\"pass\": {\"expected\": \"passed\", \"observed\": \"passed\", \"expected_reason_observed\": true, \"kernel_accepts\": true, \"comparator_accepts\": true}, \"mismatch\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}, \"axiom\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}, \"definition\": {\"expected\": \"failed\", \"observed\": \"failed\", \"expected_reason_observed\": true, \"kernel_accepts\": false, \"comparator_accepts\": false}}}\n",
+    "reproduction_sources": {
+      "build_review.py": "import hashlib,json,os,subprocess,sys,time\nfrom pathlib import Path\nROOT=Path(__file__).resolve().parent\nWT=ROOT.parents[1]\nLEAN=Path('/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean')\nmanifest=json.loads((WT/'lake-manifest.json').read_text())\npackages=[WT/'.lake/packages'/p['name']/'.lake/build/lib/lean' for p in manifest['packages']]\nenv=dict(os.environ,LEAN_NUM_THREADS='2',LEAN_SYSROOT=str(LEAN.parent.parent),\n    LEAN_PATH=os.pathsep.join(map(str,[ROOT/'lib',WT/'.lake/build/lib/lean',*packages])))\nrecord={'compiler':str(LEAN),'baseline':subprocess.check_output(['git','rev-parse','HEAD'],cwd=WT,text=True).strip(),'steps':[]}\ndef step(name,command,cwd):\n    log=ROOT/(name+'.log')\n    print('START '+name,flush=True)\n    start=time.monotonic()\n    with log.open('w') as output:\n        result=subprocess.run(command,cwd=cwd,env=env,stdout=output,stderr=output)\n    record['steps'].append({'name':name,'command':command,'exit_code':result.returncode,'seconds':round(time.monotonic()-start,2),'log':str(log)})\n    (ROOT/'independent-build.json').write_text(json.dumps(record,indent=2)+'\\n')\n    print('END '+name+': '+str(result.returncode),flush=True)\n    print(log.read_text()[-1500:],flush=True)\n    if result.returncode:sys.exit(result.returncode)\nfor name,digest in json.loads((ROOT/'proof-sources.json').read_text()).items():\n    source=ROOT/'src'/name\n    assert hashlib.sha256(source.read_bytes()).hexdigest()==digest\n    dest=ROOT/'lib'/Path(name).with_suffix('.olean')\n    dest.parent.mkdir(parents=True,exist_ok=True)\n    flags=['-DwarningAsError=true','-DrelaxedAutoImplicit=false','-DmaxSynthPendingDepth=3']\n    if not name.endswith('A001818.lean'):flags+=['-DautoImplicit=false']\n    step(Path(name).stem,[str(LEAN),*flags,'-o',str(dest),name],ROOT/'src')\nstep('axioms',[str(LEAN),'-DwarningAsError=true','-DautoImplicit=false',str(ROOT/'axioms.lean')],ROOT)\nstep('comparator-tools',['python3',str(ROOT/'tools/build_tools.py')],ROOT)\nstep('comparator-controls',['python3',str(ROOT/'tools/validate_controls.py')],ROOT)\nstep('upstream-module',['lake','--wfail','build','FormalConjectures.OEIS.\u00ab2454\u00bb'],WT)\n",
+      "build_publication.py": "import hashlib,json,os,subprocess,sys,time\nfrom pathlib import Path\nROOT=Path(__file__).resolve().parent\nPUB=Path('/Volumes/Apps/lean-offload/Research/lean-oeis-proofs')\nOUT=ROOT/'publication-4.34';OUT.mkdir(exist_ok=True)\nLEAN=Path('/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean')\nCACHE=Path('/Users/wentaoli/Research/oeis-parity-publication/lib')\nold=json.loads((PUB/'verification/current.json').read_text())\nreused=[]\nfor row in old['modules']:\n    if row['module']=='LeanOeisProofs.lean':continue\n    source=PUB/row['module'];output=CACHE/Path(row['module']).with_suffix('.olean')\n    assert hashlib.sha256(source.read_bytes()).hexdigest()==row['sha256'],str(source)\n    assert output.is_file(),str(output)\n    reused.append({'module':row['module'],'source_sha256':row['sha256']})\n    # Lean selects the first directory for a namespace: assemble one complete library.\n    # Prior outputs are immutable dependencies; fresh files and the root are separate.\n    stem=output.with_suffix('')\n    family=list(output.parent.glob(stem.name+'.olean*'))+[stem.with_suffix('.ilean')]\n    for prior in family:\n        if not prior.is_file():continue\n        dest=OUT/'lib'/prior.relative_to(CACHE);dest.parent.mkdir(parents=True,exist_ok=True)\n        if not dest.exists():os.link(prior,dest)\n\nmanifest=json.loads((PUB/'lake-manifest.json').read_text())\npackages=[PUB/'.lake/packages'/p['name']/'.lake/build/lib/lean' for p in manifest['packages']]\nenv=dict(os.environ,LEAN_NUM_THREADS='2',LEAN_SYSROOT=str(LEAN.parent.parent),LEAN_PATH=os.pathsep.join(map(str,[OUT/'lib',*packages])))\nrecord={'compiler':str(LEAN),'environment':{k:env[k] for k in ['LEAN_NUM_THREADS','LEAN_SYSROOT','LEAN_PATH']},'reused_source_hash_matched':reused,'steps':[]}\nif '--resume' in sys.argv:\n    previous=json.loads((OUT/'build.json').read_text())\n    record['steps']=[x for x in previous['steps'] if x['exit_code']==0]\n\ndef step(name,command,cwd,source=None):\n    log=OUT/(name+'.log');print('START publication '+name,flush=True);start=time.monotonic()\n    with log.open('w') as output:result=subprocess.run(command,cwd=cwd,env=env,stdout=output,stderr=output)\n    row={'name':name,'command':command,'exit_code':result.returncode,'seconds':round(time.monotonic()-start,2),'log':str(log),'output':log.read_text()}\n    if source:row.update(module=source,sha256=hashlib.sha256((PUB/source).read_bytes()).hexdigest())\n    record['steps'].append(row);(OUT/'build.json').write_text(json.dumps(record,indent=2)+'\\n')\n    print('END publication '+name+': '+str(result.returncode),flush=True);print(log.read_text()[-1500:],flush=True)\n    if result.returncode:sys.exit(result.returncode)\nflags=['-DwarningAsError=true','-DrelaxedAutoImplicit=false','-DautoImplicit=false','-DmaxSynthPendingDepth=3']\nfor src in ['LeanOeisProofs/NewFormalization/A002454.lean','LeanOeisProofs/IndependentFormalization/A396843.lean','LeanOeisProofs.lean']:\n    dest=OUT/'lib'/Path(src).with_suffix('.olean');dest.parent.mkdir(parents=True,exist_ok=True)\n    prior=next((x for x in record['steps'] if x.get('module')==src),None)\n    if prior is not None and prior['sha256']==hashlib.sha256((PUB/src).read_bytes()).hexdigest() and dest.is_file():\n        print('RETAIN fresh successful '+src,flush=True);continue\n    step(Path(src).stem,[str(LEAN),*flags,'-o',str(dest),src],PUB,src)\nstep('axioms',[str(LEAN),'-DwarningAsError=true','-DautoImplicit=false',str(ROOT/'axioms.lean')],PUB)\n",
+      "tools/compare.py": "\"\"\"Run only inside the coordination gate. Private direct-compiler Comparator review.\n\nUses unchanged comparison/axiom modules and Lean 4.33.1 Environment.replay.\nThis is not the official Linux sandbox and does not use an external kernel.\n\"\"\"\nimport datetime\nimport fcntl\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport subprocess\nimport sys\nimport time\n\nROOT = Path(__file__).resolve().parent\nLEAN = Path('/Users/wentaoli/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean')\nPINS = json.loads((ROOT/'private-cache.json').read_text())\nCACHE = Path(PINS['cache'])\n\ndef run(config):\n    config = config.resolve()\n    conf = json.loads(config.read_text())\n    project = config.parent\n    export = project/'exports'/config.stem\n    export.mkdir(parents=True, exist_ok=True)\n    log = project/(config.stem+'.log')\n    record = dict(config=str(config), started_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),\n                  compiler=str(LEAN), status='running', steps=[], log=str(log))\n    env = dict(os.environ, LEAN_NUM_THREADS='2', LEAN_PATH=os.pathsep.join([\n        str(ROOT/'lib'), str(project), str(project/'.lake/build/lib/lean'), PINS.get('support_path', str(CACHE/'project/lib/lean')),\n        *[str(CACHE/'packages'/p['name']/'.lake/build/lib/lean') for p in PINS['packages']]]))\n    start = time.monotonic()\n    def save():\n        (project/(config.stem+'-result.json')).write_text(json.dumps(record, indent=2)+'\\n')\n    with log.open('w') as out:\n        def step(name, args, target=None):\n            print(name, file=out, flush=True)\n            proc = subprocess.run([str(LEAN), *map(str, args)], cwd=project, env=env,\n                                  stdout=target or out, stderr=out)\n            record['steps'].append(dict(name=name, command=[str(LEAN), *map(str, args)], exit_code=proc.returncode))\n            save()\n            if proc.returncode:\n                raise RuntimeError(name+' failed: '+str(proc.returncode))\n        try:\n            for module in conf.get('build_modules', [conf['challenge_module'], conf['solution_module']]):\n                path = project/(module.replace('.', '/')+'.lean')\n                record.setdefault('sources', {})[module] = hashlib.sha256(path.read_bytes()).hexdigest()\n                flags = ['-Dpp.unicode.fun=true', '-DautoImplicit=false', '-DrelaxedAutoImplicit=false']\n                if module != conf['challenge_module']:\n                    flags.append('-DwarningAsError=true')\n                step('Compile '+module, [*flags, '-o', path.with_suffix('.olean'), path])\n            driver = export/'Targets.lean'\n            driver.write_text('import ReplayCore\\n#eval auditReplay '+json.dumps(['targets', str(config)])+'\\n')\n            targets = subprocess.run([str(LEAN), str(driver)], cwd=project, env=env, capture_output=True, text=True, check=True)\n            names = json.loads(targets.stdout)\n            (export/'targets.json').write_text(json.dumps(names, indent=2)+'\\n')\n            for part in ['challenge', 'solution']:\n                module = conf[part+'_module']\n                driver = export/(part+'Export.lean')\n                driver.write_text('import ExportCore\\n#eval do\\n  let h \u2190 IO.FS.Handle.mk \"/dev/stdout\" .write\\n  IO.withStdout (IO.FS.Stream.ofHandle h) (auditExport '+json.dumps([module, '--', *names])+')\\n')\n                dump = export/(part+'.ndjson')\n                with dump.open('w') as stream:\n                    step('Export '+part, [driver], target=stream)\n                record[part+'_export'] = dict(bytes=dump.stat().st_size, sha256=hashlib.sha256(dump.read_bytes()).hexdigest())\n            driver = export/'Replay.lean'\n            driver.write_text('import ReplayCore\\n#eval auditReplay '+json.dumps(['verify', str(config), str(export/'challenge.ndjson'), str(export/'solution.ndjson')])+'\\n')\n            step('Compare types, definitions, axioms and replay kernel', [driver])\n            record['status'] = 'passed'\n        except Exception as error:\n            record.update(status='failed', error=str(error))\n            print(str(error), file=out)\n    record['duration_seconds'] = round(time.monotonic()-start, 2)\n    text = log.read_text()\n    record['kernel_accepts'] = 'Lean default kernel accepts the solution' in text\n    record['comparator_accepts'] = 'Your solution is okay!' in text\n    save()\n    print(json.dumps({k: record[k] for k in ['config', 'status', 'duration_seconds', 'kernel_accepts', 'comparator_accepts']}), flush=True)\n    return record\n\nif __name__ == '__main__':\n    results = []\n    for arg in sys.argv[1:]:\n        config = Path(arg).resolve()\n        with (config.parent/'.compare.lock').open('a+') as lock:\n            try:\n                fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)\n            except BlockingIOError:\n                print('This review directory is already being checked.', flush=True)\n                sys.exit(75)\n            results.append(run(config))\n    sys.exit(0 if all(r['status'] == 'passed' for r in results) else 1)\n",
+      "tools/src/CheckerCore.lean": "/-\nCopyright (c) 2025 Lean FRO, LLC. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nAuthors: Henrik B\u00f6ving\n-/\n-- B03 adapter: use Lean 4.33.1 Environment.replay; comparator logic is unchanged.\nimport Lean\nimport Comparator\nimport Export.Parse\n\nnamespace Comparator\n\nstructure Context where\n  projectDir : System.FilePath\n  challengeModule : Lean.Name\n  solutionModule : Lean.Name\n  theoremNames : Array Lean.Name\n  definitionNames : Array Lean.Name\n  legalAxioms : Array Lean.Name\n  leanPrefix : System.FilePath\n  gitLocation : System.FilePath\n  whichLandrun : String\n  whichLean4Export : String\n  externalKernels : (Std.TreeMap String (Array String))\n\nabbrev M := ReaderT Context IO\n\nstructure LandrunArgs where\n  cmd : String\n  args : Array String\n  envPass : Array String\n  envOverride : Array (String \u00d7 Option String) := #[]\n  readablePaths : Array System.FilePath\n  writablePaths : Array System.FilePath\n  executablePaths : Array System.FilePath\n\n@[inline]\ndef getExternalKernels : M (Std.TreeMap String (Array String)) := do return (\u2190 read).externalKernels\n\n@[inline]\ndef getTheoremNames : M (Array Lean.Name) := do return (\u2190 read).theoremNames\n\n@[inline]\ndef getDefinitionNames : M (Array Lean.Name) := do return (\u2190 read).definitionNames\n\n@[inline]\ndef getProjectDir : M System.FilePath := do return (\u2190 read).projectDir\n\n@[inline]\ndef getChallengeModule : M Lean.Name := do return (\u2190 read).challengeModule\n\n@[inline]\ndef getSolutionModule : M Lean.Name := do return (\u2190 read).solutionModule\n\n@[inline]\ndef getLegalAxioms : M (Array Lean.Name) := do return (\u2190 read).legalAxioms\n\n@[inline]\ndef getLeanPrefix : M System.FilePath := do return (\u2190 read).leanPrefix\n\n@[inline]\ndef getGitLocation : M System.FilePath := do return (\u2190 read).gitLocation\n\ndef queryGitLocation : IO System.FilePath := do\n  let out \u2190 IO.Process.run {\n    cmd := \"which\",\n    args := #[\"git\"],\n    stdout := .piped,\n  }\n  return out.trimAscii.toString\n\ndef queryLeanPrefix (projectDir : System.FilePath) : IO System.FilePath := do\n  let out \u2190 IO.Process.run {\n    cmd := \"lean\",\n    args := #[\"--print-prefix\"],\n    stdout := .piped,\n    cwd := projectDir\n  }\n  return out.trimAscii.toString\n\ndef buildLandrunArgs (spawnArgs : LandrunArgs) : Array String :=\n  let args := #[\"--best-effort\", \"--ro\", \"/\", \"--rw\", \"/dev\", \"-ldd\", \"-add-exec\"]\n  let args := spawnArgs.envPass.foldl (init := args) (fun acc env => acc ++ #[\"--env\", env])\n  let args := spawnArgs.readablePaths.foldl (init := args) (fun acc path => acc ++ #[\"--ro\", path.toString])\n  let args := spawnArgs.writablePaths.foldl (init := args) (fun acc path => acc ++ #[\"--rwx\", path.toString])\n  let args := spawnArgs.executablePaths.foldl (init := args) (fun acc path => acc ++ #[\"--rox\", path.toString])\n  args ++ #[\"--\", spawnArgs.cmd] ++ spawnArgs.args\n\ndef runSandBoxedWithStdout (spawnArgs : LandrunArgs) : M String := do\n  let args := buildLandrunArgs spawnArgs\n  let { stdout, stderr, exitCode } \u2190 IO.Process.output {\n    cmd := (\u2190 read).whichLandrun,\n    args,\n    env := spawnArgs.envOverride\n    cwd := (\u2190 getProjectDir)\n  }\n  IO.eprint stderr\n  if exitCode != 0 then\n    throw <| .userError s!\"Child exited with {exitCode}\"\n  return stdout\n\n\ndef runSandBoxed (spawnArgs : LandrunArgs) : M Unit := do\n  let args := buildLandrunArgs spawnArgs\n  let proc \u2190 IO.Process.spawn {\n    cmd := (\u2190 read).whichLandrun,\n    args,\n    env := spawnArgs.envOverride\n    cwd := (\u2190 getProjectDir)\n  }\n  let ret \u2190 proc.wait\n  if ret != 0 then\n    throw <| .userError s!\"Child exited with {ret}\"\n\ndef safeLakeBuild (target : Lean.Name) : M Unit := do\n  IO.println s!\"Building {target}\"\n  let leanPrefix \u2190 getLeanPrefix\n  let projectDir \u2190 getProjectDir\n  let dotLakeDir := projectDir / \".lake\"\n  let gitLocation \u2190 getGitLocation\n\n  if !(\u2190 System.FilePath.pathExists dotLakeDir) then\n    IO.FS.createDir dotLakeDir\n\n  runSandBoxed {\n    cmd := \"lake\",\n    args := #[\"build\", target.toString],\n    envPass := #[\"PATH\", \"HOME\", \"LEAN_ABORT_ON_PANIC\"]\n    envOverride := #[(\"LEAN_ABORT_ON_PANIC\", some \"1\")]\n    readablePaths := #[projectDir]\n    writablePaths := #[dotLakeDir]\n    executablePaths := #[leanPrefix, gitLocation]\n  }\n\ndef safeExport (module : Lean.Name) (decls : Array Lean.Name) : M String := do\n  IO.println s!\"Exporting {decls} from {module}\"\n  let baseArgs := #[module.toString, \"--\"]\n  let args := decls.foldl (\u00b7.push <| \u00b7.toString) baseArgs\n\n  let leanPrefix \u2190 getLeanPrefix\n  let projectDir \u2190 getProjectDir\n  let dotLakeDir := projectDir / \".lake\"\n  runSandBoxedWithStdout {\n    cmd := (\u2190 read).whichLean4Export\n    args := args,\n    envPass := #[\"PATH\", \"HOME\", \"LEAN_PATH\", \"LEAN_ABORT_ON_PANIC\"]\n    envOverride := #[(\"LEAN_ABORT_ON_PANIC\", some \"1\")]\n    readablePaths := #[projectDir, dotLakeDir]\n    writablePaths := #[]\n    executablePaths := #[leanPrefix]\n  }\n\ndef runExternalKernel (kernelName : String) (kernelCommand : Array String)\n    (solutionExport : String) : M (Option String) := do\n  IO.println s!\"Running {kernelName} kernel on solution\"\n  -- just always put out a nanoda-like config file for now\n  IO.FS.withTempFile fun configHandle configPath => do\n  IO.FS.withTempFile fun solutionHandle solutionPath => do\n    let legalAxioms \u2190 getLegalAxioms\n    configHandle.putStr <| Lean.Json.compress <| Lean.Json.mkObj [\n      (\"use_stdin\", false),\n      (\"export_file_path\", solutionPath.toString),\n      (\"permitted_axioms\", .arr <| legalAxioms.map (.str \u2218 Lean.Name.toString)),\n      (\"unpermitted_axiom_hard_error\", true),\n      (\"num_threads\", 4),\n      (\"nat_extension\", true),\n      (\"string_extension\", true),\n    ]\n    configHandle.flush\n\n    solutionHandle.putStr solutionExport\n    solutionHandle.flush\n\n    let mut kernelArgs := kernelCommand[1...*].toArray\n    if isNanodaKernel kernelName then\n      kernelArgs := kernelArgs.push configPath.toString\n    else\n      kernelArgs := kernelArgs.push solutionPath.toString\n\n    let spawnArgs := {\n      cmd := kernelCommand[0]!,\n      args := kernelArgs,\n      envPass := #[]\n      readablePaths := #[configPath.toString, solutionPath.toString]\n      writablePaths := #[]\n      executablePaths := #[]\n    }\n    let args := buildLandrunArgs spawnArgs\n\n    try\n      let proc \u2190 IO.Process.spawn {\n        cmd := (\u2190 read).whichLandrun,\n        args,\n        env := spawnArgs.envOverride\n        cwd := (\u2190 getProjectDir)\n      }\n\n      let ret \u2190 proc.wait\n      if ret != 0 then\n        IO.println s!\"{kernelName} kernel rejected the solution\"\n        return some s!\"{kernelName} exited with {ret}\"\n      else\n        IO.println s!\"{kernelName} kernel accepts the solution\"\n        return none\n    catch e => do\n      IO.println s!\"Error while interacting with {kernelName} kernel\"\n      return some s!\"Error while interacting with {kernelName} kernel: {e.toString}\"\nwhere\n  isNanodaKernel (kernelName : String) : Bool :=\n    -- TODO: get rid of this heuristic\n    kernelName.contains \"noda\"\n\ndef runBuiltinKernel (solution : Export.ExportedEnv) : M (Option String) := do\n  IO.println \"Running Lean default kernel on solution.\"\n  let env \u2190 Lean.mkEmptyEnvironment\n  let mut kernelEnv := env.toKernelEnv\n  let origConstMap := solution.constMap\n  -- Lean's kernel interprets just the addition of `Quot as adding all of these so adding them\n  -- multiple times leads to errors.\n  let quotTargets := [`Quot.mk, `Quot.lift, `Quot.ind]\n  let kernelConstMap := quotTargets.foldl (init := origConstMap) (\u00b7.erase \u00b7)\n  try\n    kernelEnv := (\u2190 (Lean.Environment.ofKernelEnv kernelEnv).replay kernelConstMap).toKernelEnv\n    IO.println \"Lean default kernel accepts the solution\"\n  catch e =>\n    IO.println \"Lean default kernel rejects the solution\"\n    return some e.toString\n\n  try\n    let verifyTargets := `Quot :: quotTargets\n    for quotTarget in verifyTargets do\n      if let some info := origConstMap[quotTarget]? then\n        let some info' := kernelEnv.find? quotTarget |\n          throw <| .userError s!\"Could not find quotient constant in final kernel env: {quotTarget}\"\n        if info != info' then\n          throw <| .userError s!\"Quotient constant mismatch on: {quotTarget}\"\n    return none\n  catch e =>\n    IO.println \"Quotient post-check rejects the solution\"\n    return some e.toString\n\ndef primitiveTargets : M (Array Lean.Name) := do\n  -- The challenge needs to have all the built-in constants of the kernel, as the\n  -- kernel makes no guarantees when fed other definitions here.\n  -- List from `git grep new_persistent_expr_const src/kernel/`\n  return #[\n    -- ``Nat.zero,\n    -- ``Nat.succ,\n    ``Nat.add,\n    ``Nat.sub,\n    ``Nat.mul,\n    ``Nat.pow,\n    ``Nat.gcd,\n    ``Nat.div,\n    ``Nat.mod,\n    ``Nat.beq,\n    ``Nat.ble,\n    ``Nat.land,\n    ``Nat.lor,\n    ``Nat.xor,\n    ``Nat.shiftLeft,\n    ``Nat.shiftRight,\n    ``String.ofList,\n    ``Char.ofNat,\n    ``List,\n    ``eagerReduce,\n    ``Nat,\n    ``String,\n    ``String.mk,\n    ``Char,\n    ``optParam,\n    ``autoParam,\n    ``semiOutParam,\n    ``outParam\n  ]\n\ndef builtinTargets : M (Array Lean.Name) := do\n  let mut additional := #[]\n  if (\u2190 getLegalAxioms).contains ``Quot.sound then\n    additional := additional ++ #[``Quot, ``Quot.mk, ``Quot.lift, ``Quot.ind]\n  return additional\n\ndef stringStream (s : String) : BaseIO IO.FS.Stream := do\n  let ref \u2190 IO.mkRef {\n    data := s.toByteArray\n  }\n  return IO.FS.Stream.ofBuffer ref\n\ndef verifyMatch (challengeExport : String) (solutionExport : String) :\n    M Unit := do\n  let challenge \u2190 Export.parseStream (\u2190 stringStream challengeExport)\n  let solution \u2190 Export.parseStream (\u2190 stringStream solutionExport)\n  let theoremNames \u2190 getTheoremNames\n  let definitionNames \u2190 getDefinitionNames\n  let targets := (\u2190 getTheoremNames) ++ (\u2190 getLegalAxioms)\n  IO.ofExcept <| Comparator.compareAt challenge solution targets definitionNames (\u2190 primitiveTargets)\n  IO.ofExcept <| Comparator.checkAxioms solution theoremNames definitionNames (\u2190 getLegalAxioms)\n  let mut result := none\n  for (kernelName, kernelCommand) in \u2190 getExternalKernels do\n    result := result <|> (\u2190 runExternalKernel kernelName kernelCommand solutionExport)\n  result := result <|> (\u2190 runBuiltinKernel solution)\n  if let some error := result then\n    throw <| IO.userError error\n\ndef compareIt : M Unit := do\n  let exportTargets := (\u2190 builtinTargets) ++ (\u2190 getTheoremNames) ++ (\u2190 getLegalAxioms)\n    ++ (\u2190 primitiveTargets) ++ (\u2190 getDefinitionNames)\n\n  let challengeModule \u2190 getChallengeModule\n  safeLakeBuild challengeModule\n  let challengeExport \u2190 safeExport challengeModule exportTargets\n\n  let solutionModule \u2190 getSolutionModule\n  safeLakeBuild solutionModule\n  let solutionExport \u2190 safeExport solutionModule exportTargets\n\n  verifyMatch challengeExport solutionExport\n\n  IO.println \"Your solution is okay!\"\n\nstructure Config where\n  challenge_module : String\n  solution_module : String\n  theorem_names : Array String\n  definition_names : Option (Array String) := none\n  permitted_axioms : Array String\n  enable_nanoda? : Option Bool\n  external_kernels? : Option (Std.TreeMap String (Array String))\n  deriving Lean.FromJson, Lean.ToJson, Repr\n\ndef M.run (x : M \u03b1) (cfg : Config) : IO \u03b1 := do\n  let cwd \u2190 IO.Process.getCurrentDir\n  let leanPrefix \u2190 queryLeanPrefix cwd\n  let gitLocation \u2190 queryGitLocation\n  let whichLean4Export := (\u2190 IO.getEnv \"COMPARATOR_LEAN4EXPORT\").getD \"lean4export\"\n  let whichLandrun := (\u2190 IO.getEnv \"COMPARATOR_LANDRUN\").getD \"landrun\"\n  let mut externalKernels := cfg.external_kernels?.getD {}\n  let defaultNanoda := \"nanoda_bin\"\n  let nanodaOverride? \u2190 IO.getEnv \"COMPARATOR_NANODA\"\n\n  if cfg.enable_nanoda?.getD false && !externalKernels.isEmpty then\n    throw <| .userError \"Cannot use enable_nanoda and an external kernel list at the same time, register nanoda in the list instead.\"\n\n  for (kernelName, kernelCommand) in externalKernels do\n    if kernelCommand.isEmpty then\n      throw <| .userError s!\"{kernelName} has an empty command\"\n\n  if cfg.enable_nanoda?.getD false then\n    let whichNanoda := nanodaOverride?.getD defaultNanoda\n    externalKernels := externalKernels.insert \"nanoda\" #[whichNanoda]\n  else if let some nanodaOverride := nanodaOverride? then\n    externalKernels := externalKernels.modify \"nanoda\" fun cmd => cmd.set! 0 nanodaOverride\n\n  ReaderT.run x {\n    projectDir := cwd\n    challengeModule := cfg.challenge_module.toName,\n    solutionModule := cfg.solution_module.toName,\n    theoremNames := cfg.theorem_names.map String.toName,\n    definitionNames := cfg.definition_names.getD #[] |>.map String.toName,\n    legalAxioms := cfg.permitted_axioms.map String.toName,\n    leanPrefix := leanPrefix,\n    gitLocation := gitLocation,\n    whichLean4Export := whichLean4Export,\n    whichLandrun := whichLandrun,\n    externalKernels := externalKernels\n  }\n\nend Comparator\n",
+      "check_source_terms.py": "import hashlib,json,urllib.request\nfrom pathlib import Path\nroot=Path(__file__).resolve().parent\nN=20;M=N+2\n# First twenty entries read independently through the web tool on October 28.\nraw = b\"\"\"1 1\n2 3\n3 15\n4 117\n5 975\n6 8631\n7 79839\n8 763209\n9 7477701\n10 74700315\n11 758027205\n12 7792075341\n13 80968633731\n14 849122117991\n15 8975430108207\n16 95526419313969\n17 1022842349889807\n18 11010529561615155\n19 119088263248757523\n20 1293532210166103045\n\"\"\"\n(root/'b396843-first20.txt').write_bytes(raw)\nexpected={int(a):int(b) for line in raw.decode().splitlines() for a,b in [line.split()]}\ndef mul(a,b):\n out=[0]*M\n for i,x in enumerate(a):\n  for j,y in enumerate(b[:M-i]):out[i+j]+=x*y\n return out\ndef output(f):\n sq=mul(f,f);h=[0]+[f[i]-3*sq[i] for i in range(M-1)]\n result=[0]*M;power=[1]+[0]*(M-1)\n for c in f:\n  result=[a+c*b for a,b in zip(result,power)];power=mul(power,h)\n return result\nf=[0,1]+[0]*(M-2)\nfor n in range(2,N+1):f[n]=-output(f)[n+1]\nassert all(f[n]==expected[n] for n in range(1,N+1))\nassert output(f)[:N+2]==[0,0,1]+[0]*(N-1)\nrecord={'source':'https://oeis.org/A396843/b396843.txt','checked_on':'2026-10-28','first20_excerpt_sha256':hashlib.sha256(raw).hexdigest(),'method':'Independent truncated integer power-series composition of the literal OEIS equation; set coefficient n to cancel output degree n+1.','range':[1,N],'terms':f[1:N+1],'all_terms_match':True,'composition_matches_x_squared_through_degree':N+1,'modulo_nine_counterexample':{'n':5,'value':f[5],'remainder':f[5]%9},'scope':'Finite source sanity check; the Lean theorem proves all positive indices.'}\n(root/'source-terms.json').write_text(json.dumps(record,indent=2)+'\\n');print(json.dumps(record))\n"
+    },
+    "publication_base_commit": "9d4a205da2a4094800f9c600a7b0b5223eda51ce",
+    "duplicate_search_refresh": {
+      "date": "2026-10-28",
+      "repository": "google-deepmind/formal-conjectures",
+      "results": [
+        {
+          "query": "\"A002454\"",
+          "state": "all",
+          "matches": [
+            {
+              "number": 5447,
+              "url": "https://github.com/google-deepmind/formal-conjectures/pull/5447",
+              "title": "chore: status corrections across seven problem files"
+            }
+          ],
+          "isError": false
+        },
+        {
+          "query": "\"OeisA2454\"",
+          "state": "all",
+          "matches": [],
+          "isError": false
+        },
+        {
+          "query": "\"A396843\"",
+          "state": "all",
+          "matches": [],
+          "isError": false
+        },
+        {
+          "query": "\"396843\"",
+          "state": "all",
+          "matches": [],
+          "isError": false
+        }
+      ]
+    },
+    "source_review": {
+      "A002454": {
+        "source": "https://arxiv.org/html/2208.12167v2",
+        "clause": "Theorem 1.3(ii)",
+        "scope": "Every natural n and every primitive complex (2n+1)-th root; integer exponent differences; n=0 empty matrix included.",
+        "original_definition_checked": "OeisA2454.a",
+        "prior_partial_Lean": "Epoch Research, fd09021e79869476ef83cda231312f1a2a89c8d7, oeis_2454_conjecture_0/Submission/Spec.lean",
+        "duplicate_search": "A002454, 2454, OeisA2454 and OEIS/2454 across all DeepMind PR states. Only the status-only #5447 matched the target."
+      },
+      "A396843": {
+        "source": "https://oeis.org/A396843/internal",
+        "revision": "12, July 30 2026",
+        "scope": "Literal ordinary generating-function equation over integers, constant coefficient zero, linear coefficient one. Oddness at every index n>=1. Existence and unique choice-to-construction bridge checked.",
+        "prior_Lean": "ElonSG / the-omega-institute/trureturing PR #6773 at 7062f8c5bbbbee596703ca08a64d26123d4861b0",
+        "known_counterexample": "Danial Asaria, a(5)=975=3 mod9; separate modulo-nine conjecture excluded.",
+        "duplicate_search": "A396843, 396843 and compositional oddness across all DeepMind PR states; no matching entry or proof PR found."
+      }
+    }
   }
 }

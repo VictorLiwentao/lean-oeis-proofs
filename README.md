@@ -2,7 +2,7 @@
 
 **Wentao Li**
 
-Results for **21 OEIS sequences**, with readable explanations and Lean 4 verification: nine new proofs/disproofs, ten new formalizations of known mathematics, and two independent formalizations with existing public Lean coverage:
+Results for **23 OEIS sequences**, with readable explanations and Lean 4 verification: nine new proofs/disproofs, eleven new formalizations of known mathematics, and three independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original
 
 ## New Formalizations
 
-These ten packages formalize known mathematics. This category is reserved for
+These eleven packages formalize known mathematics. This category is reserved for
 contributions whose exact Lean coverage was not located elsewhere in the dated
 search recorded in `SOURCE.md`; it is not an absolute first-ever claim. A397588
 has mixed coverage: the new contribution is the defining-series bridge and
@@ -43,6 +43,7 @@ its supporting recurrence-parity theorem has earlier public Lean coverage.
 | OEIS / target | Outcome | Formalized result and scope | Statement / prior work | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
 | [A001818](https://oeis.org/A001818) | **Proved** | C1: She–Sun–Xia permanent identity | [Source](proofs/new-formalization/A001818/SOURCE.md) | [Proof](proofs/new-formalization/A001818/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A001818.lean) |
+| [A002454](https://oeis.org/A002454) | **Proved** | She–Sun–Xia odd-order permanent identity, for every primitive root | [Source](proofs/new-formalization/A002454/SOURCE.md) | [Proof](proofs/new-formalization/A002454/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A002454.lean) |
 | [A361033](https://oeis.org/A361033) | **Proved** | Factorial-ratio parity via classical valuations; integrality included | [Source](proofs/new-formalization/A361033/SOURCE.md) | [Proof](proofs/new-formalization/A361033/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A361033.lean) |
 | [A368633](https://oeis.org/A368633) | **Proved** | C1: Catalan parity; defining generating-function identity included | [Source](proofs/new-formalization/A368633/SOURCE.md) | [Proof](proofs/new-formalization/A368633/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A368633.lean) |
 | [A382590](https://oeis.org/A382590) | **Proved** | Tao–Jagy eventual period three for distinct prime factors | [Source](proofs/new-formalization/A382590/SOURCE.md) | [Proof](proofs/new-formalization/A382590/PROOF.md) | [Lean](LeanOeisProofs/NewFormalization/A382590.lean) |
@@ -55,7 +56,7 @@ its supporting recurrence-parity theorem has earlier public Lean coverage.
 
 ## Independent Formalizations — existing Lean proofs
 
-These two packages overlap public Lean proofs of the same assigned claims.
+These three packages overlap public Lean proofs of the same assigned claims.
 They remain available as independently developed work, but are excluded from
 **New Formalizations** and from first-public-Lean claims. This classification
 records overlap; it does not establish who completed the work first.
@@ -64,6 +65,7 @@ records overlap; it does not establish who completed the work first.
 | --- | --- | --- | --- | --- | --- |
 | [A051903](https://oeis.org/A051903) | **Negative answer (C2)** | C2: no odd universal example; independent formalization, public Lean overlap | [Source](proofs/independent-formalization/A051903/SOURCE.md) | [Proof](proofs/independent-formalization/A051903/PROOF.md) | [Lean](LeanOeisProofs/IndependentFormalization/A051903.lean) |
 | [A237271](https://oeis.org/A237271) | **Proved** | Carmichael bound, plus all odd composites; independent formalization, public Lean overlap | [Source](proofs/independent-formalization/A237271/SOURCE.md) | [Proof](proofs/independent-formalization/A237271/PROOF.md) | [Lean](LeanOeisProofs/IndependentFormalization/A237271.lean) |
+| [A396843](https://oeis.org/A396843) | **Proved** | Original composition equation, integral existence, uniqueness and oddness; prior parity proof credited | [Source](proofs/independent-formalization/A396843/SOURCE.md) | [Proof](proofs/independent-formalization/A396843/PROOF.md) | [Lean](LeanOeisProofs/IndependentFormalization/A396843.lean) |
 
 ## Reading a proof or disproof
 

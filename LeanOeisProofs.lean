@@ -24,3 +24,5 @@ import LeanOeisProofs.NewProofs.A368626
 import LeanOeisProofs.NewProofs.A368629
 import LeanOeisProofs.NewProofs.A368634
 import LeanOeisProofs.NewFormalization.A368635
+import LeanOeisProofs.NewFormalization.A002454
+import LeanOeisProofs.IndependentFormalization.A396843

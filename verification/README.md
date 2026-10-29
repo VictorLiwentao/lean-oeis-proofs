@@ -1,11 +1,46 @@
 # Current verification report
 
-Updated October 11, 2026. The [machine-readable report](current.json) covers
-**21 canonical problem entry points, A069004 certificate support, and the root library**. Every recorded compiler check passed. A069004's entry point, its 314 support
-modules, and the combined root library were freshly compiled on October 11.
-A368628 was additionally compiled earlier today. A368626, A368629, A368634,
-A368635 and the combined root library were freshly compiled for this publication.
-The other proofs retain their source-hash-matched earlier records.
+Updated October 28, 2026. The [machine-readable report](current.json) covers
+**23 canonical problem entry points, A069004 certificate support, and the root library**.
+A002454, A396843 and the combined root were freshly compiled for this publication.
+The other 335 modules retain source-hash-matched earlier checks and cached outputs;
+their original verification dates and compiler output are preserved.
+
+## A002454 and A396843
+
+Both complete publication files compile with the pinned Lean 4.34.0-rc2 compiler
+and warnings as errors. A separate review checkout at current Formal Conjectures
+commit `5a2fb85045c86e4a184b15ce7531ba199a3c4580` freshly compiles the unchanged
+A001818 dependency and both new proofs with Lean 4.33.1. Both proofs use
+compatibility copies: `ite_eq_left`, `ite_eq_right` and `ite_false` have the names
+`if_pos`, `if_neg` and `if_false` in Lean 4.33. These lemma-name substitutions are
+the only source differences; the report records each mapping and both hashes.
+
+Comparator checks A002454 against the existing DeepMind statement, including its
+sequence definition. It covers every natural index, every primitive root and the
+empty-matrix endpoint. The mathematical identity is She–Sun–Xia, Theorem 1.3(ii).
+
+A396843 is a new DeepMind entry. Comparator checks the proposed parity theorem,
+unique integral existence, the defining equation and six initial-value certificates.
+It also compares the source predicate, selected generating series and sequence
+definitions. The comparison removes repository-only metadata and narrows the
+aggregate import; mathematical declarations are unchanged. The public series is proved equal to the explicit integral construction.
+The normalized rational solution is separately proved to be the image of that series.
+The literal OEIS equation, offset and normalization were reviewed against revision 12;
+an independent truncated-series calculation matches the first twenty official b-file
+terms. Danial Asaria's separate modulo-nine counterexample is recorded in the source notes.
+
+Both full theorem closures pass fresh built-in Lean kernel replay and use only
+`propext`, `Classical.choice` and `Quot.sound`. The checker tools were rebuilt from
+pinned source. Controls accepted a valid proof and rejected a changed statement,
+a changed underlying definition and an extra axiom. The direct macOS adapter uses
+Comparator's comparison and axiom checks with Lean 4.33.1's replay API. No external
+kernel or Linux sandbox was used for these checks.
+
+The report includes exact configurations, challenge and solution wrappers, compiler
+commands, source/export hashes, axiom output, dependency pins and complete logs.
+Older proof sources and the `v1.0.0` release tag are unchanged. Compilation of the
+proof library uses the direct compiler; this is not reported as a `lake build`.
 
 ## A368626, A368629, A368634 and A368635
 
@@ -107,12 +142,12 @@ export hashes, and complete Comparator logs for reproducible inspection.
 
 ## Environment
 
-Lean is `4.34.0-rc2`; dependency commits are pinned by `lake-manifest.json` and
+The proof-library compiler is `4.34.0-rc2`; dependency commits are pinned by `lake-manifest.json` and
 verified against clean dependency checkouts. Existing Mathlib caches are trusted.
 Comparator source is `ca04cfc72b550331658ec314bf47685281bfd4bf`; the compatible
 lean4export version is `cacf989bd75f608700820f6afc595f32e7a99a4d`.
 
-The macOS runner uses Python and direct Lean compilation to invoke Comparator's
+The earlier sandboxed macOS runner uses Python and direct Lean compilation to invoke Comparator's
 unchanged comparison, axiom-checking, and kernel-replay functions. macOS sandbox-exec
 restricts network access and filesystem writes. This is an adapted macOS runner;
 the standard Linux Landrun deployment was not used. No external kernel was run.
@@ -122,7 +157,7 @@ and `lake build`.
 
 ## Layout and attribution
 
-There are six New Proofs, nine New Formalizations, and two Independent Formalizations.
+There are nine New Proofs, eleven New Formalizations, and three Independent Formalizations.
 Each sequence has one canonical Lean entry point and one proof/source pair.
 A069004 also has distinct checker and certificate support files, each stored once. A003162 imports
 A003161's shared arithmetic development. The original theorem statements and mathematical arguments were preserved during
