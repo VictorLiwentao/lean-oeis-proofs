@@ -212,3 +212,20 @@ simplification lemma names for Lean 4.34; their Lean 4.33 review copies retain t
 corresponding names from that release. Independent compilation,
 exact-statement and definition comparison, axiom checks, and fresh Lean kernel
 replay are recorded in `verification/current.json`.
+
+## A368630: original EGF equation and all three congruences
+
+Wentao Li developed and reviewed the proof with OpenAI Codex assistance.
+Paul D. Hanna introduced the sequence and conjectures in January 2024. The
+reviewed research commit is `e67fdb296cd6a2f718ac8caaf20a0a65aba13fe9`.
+
+Publication preserves the complete mathematical development and adds the exact
+submitted sequence interface and initial-value certificates from the research
+audit. The same source compiles under Lean 4.33.1 and 4.34.0-rc2. Comparator
+checks the submitted definitions and theorems, together with a separately written
+obligation for the original rational EGF equation; fresh Lean kernel replay
+accepts their closures with only the three standard axioms.
+
+The dated search and Hanna's source credit appear in
+[A368630's source notes](proofs/new-proofs/A368630/SOURCE.md). The shared file also
+contains the A368631 modulo-three result, without claiming its parity clause.

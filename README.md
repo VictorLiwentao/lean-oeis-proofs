@@ -2,7 +2,7 @@
 
 **Wentao Li**
 
-Results for **23 OEIS sequences**, with readable explanations and Lean 4 verification: nine new proofs/disproofs, eleven new formalizations of known mathematics, and three independent formalizations with existing public Lean coverage:
+Results for **24 OEIS sequences**, with readable explanations and Lean 4 verification: ten new proofs/disproofs, eleven new formalizations of known mathematics, and three independent formalizations with existing public Lean coverage:
 
 | Category | Contribution | Read the proofs | Lean source |
 | --- | --- | --- | --- |
@@ -12,7 +12,7 @@ Results for **23 OEIS sequences**, with readable explanations and Lean 4 verific
 
 ## New Proofs
 
-All nine results below are complete, Lean-verified, and published in this repository. The outcome records whether the original conjecture was proved or disproved.
+All ten results below are complete, Lean-verified, and published in this repository. The outcome records whether the original conjecture was proved or disproved.
 
 | OEIS / target | Outcome | Result | Statement | Readable proof | Lean proof |
 | --- | --- | --- | --- | --- | --- |
@@ -25,6 +25,7 @@ All nine results below are complete, Lean-verified, and published in this reposi
 | [A368626](https://oeis.org/A368626) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368626/SOURCE.md) | [Proof](proofs/new-proofs/A368626/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368626.lean) |
 | [A368629](https://oeis.org/A368629) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368629/SOURCE.md) | [Proof](proofs/new-proofs/A368629/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368629.lean) |
 | [A368634](https://oeis.org/A368634) | **Proved** | Original generating-function bridge, uniqueness, integrality and oddness exactly at `2^k - 1` | [Source](proofs/new-proofs/A368634/SOURCE.md) | [Proof](proofs/new-proofs/A368634/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368634.lean) |
+| [A368630](https://oeis.org/A368630) | **Proved** | Original EGF equation, unique integral existence, all terms one modulo 3, and both parity clauses | [Source](proofs/new-proofs/A368630/SOURCE.md) | [Proof](proofs/new-proofs/A368630/PROOF.md) | [Lean](LeanOeisProofs/NewProofs/A368630.lean) |
 
 Each proof has a neighboring `SOURCE.md` with the exact conjecture, its original attribution, publication links, and prior-work notes. The A220119 and A098275 proofs cover their divisibility conjectures. A280246's OEIS entry credits Li (2026).
 

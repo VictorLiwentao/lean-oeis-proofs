@@ -1,10 +1,40 @@
 # Current verification report
 
 Updated October 28, 2026. The [machine-readable report](current.json) covers
-**23 canonical problem entry points, A069004 certificate support, and the root library**.
-A002454, A396843 and the combined root were freshly compiled for this publication.
-The other 335 modules retain source-hash-matched earlier checks and cached outputs;
-their original verification dates and compiler output are preserved.
+**24 canonical problem entry points, A069004 certificate support, and the root library**.
+A368630 and the combined root were freshly compiled for this publication. The
+other 337 component modules retain source-hash-matched earlier checks and cached
+outputs; their original verification dates and compiler output are preserved.
+
+## A368630
+
+The complete canonical file compiles with warnings as errors under both pinned
+Lean versions: 4.34.0-rc2 for this repository and 4.33.1 at current DeepMind commit
+`5a2fb85045c86e4a184b15ce7531ba199a3c4580`. The same source is used for both checks.
+The original research namespace and mathematical proof bodies are preserved;
+the public interface and five initial-value certificates are added for submission.
+
+Comparator accepts the three congruences, unique integral existence, the source
+equation for the selected sequence, and all five initial-value certificates.
+It also compares the EGF, source predicate and selected sequence definitions.
+A separately written literal-source obligation verifies unique normalized
+rational existence, integer EGF coefficients, and all three congruences for every
+solution of the original equation. The proposed DeepMind file is new; its
+translation was independently reviewed against Hanna's OEIS entry. Direct
+rational-series calculation from the original equation matches b-file terms
+zero through sixteen, including the exceptional value at index one.
+
+Fresh built-in Lean kernel replay accepts the full compared closures, with only
+`propext`, `Classical.choice` and `Quot.sound`. The checker tools were rebuilt
+from pinned source. Controls accept a valid proof and reject a changed theorem,
+a changed definition and an extra axiom. The direct macOS adapter uses the
+unchanged Comparator comparison and axiom code with the Lean 4.33.1 replay API;
+no external kernel or Linux sandbox was used. The report records complete logs,
+configurations, source/export hashes, tool provenance and reproduction scripts.
+
+The complete proof library is checked with the direct compiler and previously
+verified, source-hash-matched dependencies; this is not reported as a new
+`lake build`. Earlier proof sources and the `v1.0.0` release tag are unchanged.
 
 ## A002454 and A396843
 
@@ -157,7 +187,7 @@ and `lake build`.
 
 ## Layout and attribution
 
-There are nine New Proofs, eleven New Formalizations, and three Independent Formalizations.
+There are ten New Proofs, eleven New Formalizations, and three Independent Formalizations.
 Each sequence has one canonical Lean entry point and one proof/source pair.
 A069004 also has distinct checker and certificate support files, each stored once. A003162 imports
 A003161's shared arithmetic development. The original theorem statements and mathematical arguments were preserved during
